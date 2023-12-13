@@ -21,6 +21,12 @@
             margin-left: 40px;
         }
 
+        dl div {
+            width: 390px;
+            height: 156px;
+            background-image: url(img/bg-example.jpg);
+        }
+
         dt {
             color: green
         }
@@ -75,28 +81,50 @@
                 списка определений. Каждый такой список начинается с контейнера &lt;dl&gt;, куда входит тег &lt;dt&gt;
                 создающий термин и тег &lt;dd&gt; задающий определение этого термина. Закрывающий тег &lt;/dl&gt;
                 обязателен.</dd>
-            <img src="img/dl-synt.jpg" alt="синтаксис">
-            <img src="img/dl-exmp.jpg" alt="синтаксис">
-            <img src="img/dl-rslt.jpg" alt="синтаксис"><br>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <span style="color: darkgreen;">&lt;dl&gt; &lt;--Список терминов--&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Термин&lt;/dt&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Определение термина&lt;/dd&gt;<br>
+                <span style="color: darkgreen;">&lt;/dl&gt;</span>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="dt">2. &lt;тег&gt; &lt;dt&gt;</dt>
-            <dd>Тег &lt;dl&gt; входит в тройку элементов &lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;, предназначенных для
+            <dd>Тег &lt;dt&gt; входит в тройку элементов &lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;, предназначенных для
                 создания
                 списка определений. Каждый такой список начинается с контейнера &lt;dl&gt;, куда входит тег &lt;dt&gt;
                 создающий термин и тег &lt;dd&gt; задающий определение этого термина. Закрывающий тег &lt;/dt&gt; не
                 обязателен, поскольку следующий тег сообщает о завершении предыдущего элемента. Тем не менее, хорошим
                 стилем является закрывать все теги.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                &lt;dl&gt; &lt;--Список терминов--&gt;<br>
+                <span style="color: darkgreen;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Термин&lt;/dt&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Определение термина&lt;/dd&gt;<br>
+                &lt;/dl&gt;
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="dd">3. &lt;тег&gt; &lt;dd&gt;</dt>
-            <dd>Тег &lt;dl&gt; входит в тройку элементов &lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;, предназначенных для
+            <dd>Тег &lt;dd&gt; входит в тройку элементов &lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;, предназначенных для
                 создания
                 списка определений. Каждый такой список начинается с контейнера &lt;dl&gt;, куда входит тег &lt;dt&gt;
                 создающий термин и тег &lt;dd&gt; задающий определение этого термина. Закрывающий тег &lt;/dd&gt; не
                 обязателен, поскольку следующий тег сообщает о завершении предыдущего элемента. Тем не менее, хорошим
                 стилем
                 является закрывать все теги.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                &lt;dl&gt; &lt;--Список терминов--&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Термин&lt;/dt&gt;<br>
+                <span style="color: darkgreen;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Определение
+                    термина&lt;/dd&gt;</span><br>
+                &lt;/dl&gt;
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="pre">4. &lt;тег&gt; &lt;pre&gt;</dt>
@@ -107,6 +135,16 @@
                 отображать текст как требуется разработчику. В отличие от тега &lt;plaintext&gt;, использование которого
                 осуждается в HTML 4, внутри контейнера &lt;pre&gt; допустимо применять любые теги кроме следующих:
                 &lt;big&gt;, &lt;img&gt;, &lt;object&gt;, &lt;small&gt;, &lt;sub&gt; и &lt;sup&gt;.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <pre style="color: darkgreen;">
+||\  /||
+|| \/ ||
+||    ||
+||    ||
+                </pre>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="code">5. &lt;тег&gt; &lt;code&gt;</dt>
@@ -115,54 +153,128 @@
                 обычно отображают содержимое контейнера &lt;code&gt; как моноширинный текст уменьшенного размера.
                 В отличие от тега &lt;pre&gt; дополнительные пробелы внутри контейнера &lt;code&gt; не учитываются, так
                 же, как и переносы текста. Поэтому используйте тег &lt;br&gt; или &lt;p&gt; для создания переносов.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <code style="background-color: black; color: green;">#!/usr/bin/env python<br>
+        print 'Hello. I am a python program.'<br>
+        name = raw_input("What is your name?")<br>
+        print "Hello there, " + name + "!"
+    </code>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="tt">6. &lt;тег&gt; &lt;tt&gt;</dt>
             <dd>Контейнер &lt;tt&gt; отображает текст моноширинным текстом. Этот тег относится к группе тегов
                 физического форматирования.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <tt>&lt;tt&gt;Тут машинописный текст&lt;/tt&gt;</tt>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id kbd>7. &lt;тег&gt; &lt;kbd&gt;</dt>
             <dd>Тег &lt;kbd&gt; используется для обозначения текста, который набирается на клавиатуре или для названия
                 клавиш. Браузеры обычно помечают текст в контейнере &lt;kbd&gt; моноширинным шрифтом.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <kbd>&lt;kbd&gt;Alt+Shift+A&lt;/kbd&gt;</kbd>
+                <p>сочетание для создания комментария в VSCode</p>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="var">8. &lt;тег&gt; &lt;var&gt;</dt>
             <dd>Тег &lt;var&gt; используется для выделения переменных компьютерных программ. Браузеры обычно помечают
                 текст в контейнере &lt;var&gt; курсивным начертанием.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <var>a</var> != <var>b</var> + <var>c</var>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="sup">9. &lt;тег&gt; &lt;sup&gt;</dt>
             <dd>Отображает шрифт в виде верхнего индекса. Шрифт при этом отображается выше базовой линии текста и
                 уменьшенного размера.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <span>ТЕКСТ<sup>верхний индекс</sup></span>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="sub">10. &lt;тег&gt; &lt;sub&gt;</dt>
             <dd>Отображает шрифт в виде нижнего индекса. Текст при этом располагается ниже базовой линии остальных
                 символов строки и уменьшенного размера.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <span>ТЕКСТ<sub>нижний индекс</sub></span>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="blockquote">11. &lt;тег&gt; &lt;blockquote&gt;</dt>
             <dd>Тег &lt;blockquote&gt; предназначен для выделения длинных цитат внутри документа. Текст, обозначенный
                 этим тегом, традиционно отображается как выровненный блок с отступами слева и справа (примерно по 40
                 пикселов), а также с отбивкой сверху и снизу.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <blockquote cite="https://www.culture.ru">
+                    <pre>
+                О сколько нам открытий чудных
+                Готовят просвещенья дух
+                И опыт, сын ошибок трудных,
+                И гений, парадоксов друг,
+                И случай, бог изобретатель...
+                    </pre>
+                    <footer>—Alexander Pushkin, <cite>Poems</cite></footer>
+                </blockquote>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="q">12. &lt;тег&gt; &lt;q&gt;</dt>
             <dd>Тег &lt;q&gt; используется для выделения в тексте цитат. Содержимое контейнера автоматически
                 отображается в браузере в кавычках. </dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <p>
+                    <q cite="https://ru.wikipedia.org">
+                        <em>И всё таки она вертится!</em>
+                    </q>
+                </p>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="ins">13. &lt;тег&gt; &lt;ins&gt;</dt>
             <dd> Тег &lt;ins&gt; предназначен для выделения текста, который был добавлен в новую версию документа.
                 Подобное форматирование позволяет отследить, какие изменения в тексте документа были сделаны.
                 Браузеры обычно помечают текст в контейнере &lt;ins&gt; как подчеркнутый.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <span>Lorem ipsum, dolor sit amet <ins style="color: green;">consectetur adipisicing elit.</ins> Eveniet
+                    quos est illum, aliquid
+                    perspiciatis cumque consequuntur minima neque laborum. Alias aut illum libero ipsam vel suscipit
+                    laudantium non nulla atque.</span>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="del">14. &lt;тег&gt; &lt;del&gt;</dt>
             <dd>Тег &lt;del&gt; используется для выделения текста, который был удален в новой версии документа. Подобное
                 форматирование позволяет отследить, какие изменения в тексте документа были сделаны. Браузеры обычно
                 помечают текст в контейнере &lt;del&gt; как перечеркнутый.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <span>Lorem ipsum, dolor sit amet <del style="color: red;">consectetur adipisicing elit.</del> Eveniet
+                    quos est illum, aliquid
+                    perspiciatis cumque consequuntur minima neque laborum. Alias aut illum libero ipsam vel suscipit
+                    laudantium non nulla atque.</span>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="address">15. &lt;тег&gt; &lt;address&gt;</dt>
@@ -171,6 +283,11 @@
                 анализировать содержимое этого тега для сбора информации об авторах сайтов.
                 По умолчанию текст внутри контейнера &lt;address&gt; отображается курсивным начертанием. Если эта
                 особенность не требуется, используйте стили для изменения начертания шрифта. </dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <address>224001, Brest, Lenin str. 1, room 1a</address>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="nobr">16. &lt;тег&gt; &lt;nobr&gt;</dt>
@@ -181,11 +298,30 @@
                 без переносов, одной строкой, что может привести к появлению горизонтальной полосы прокрутки.
                 Пользователям придется прокручивать текст по горизонтали, чтобы увидеть его полностью, чего обычно
                 делать никто не любит.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <nobr>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi placeat vero quaerat incidunt esse
+                    similique laborum officiis amet. Itaque impedit molestiae, unde sequi laudantium cumque ea similique
+                    perferendis nemo aliquam.</nobr>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
             <hr>
             <dt id="wbr">17. &lt;тег&gt; &lt;wbr&gt;</dt>
             <dd>Тег &lt;wbr&gt; указывает браузеру место, где допускается делать перенос строки в тексте, если этого
                 требует ширина родительского элемента.</dd>
+            <h5>Пример:</h5>
+            <div style="padding: 100px 20px;">
+                <span>с &lt;wbr&gt;</span><br>
+                <span style="width: 150px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qu-<wbr>asi placeat vero quaerat incidunt esse
+                    similique laborum  of-<wbr>ficiis amet. Itaque impedit molestiae, unde sequi laudantium cumque ea similique
+                    perferendis nemo aliquam.</span><br>
+                <span>без &lt;wbr&gt;</span><br>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi placeat vero quaerat incidunt esse
+                    similique laborum officiis amet. Itaque impedit molestiae, unde sequi laudantium cumque ea similique
+                    perferendis nemo aliquam.</span>
+            </div>
+            <br>
             <a href="#title">к заглавию</a>
         </dl>
     </div>
