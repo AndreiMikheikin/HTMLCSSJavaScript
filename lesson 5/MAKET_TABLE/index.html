@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maket_table</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{font-family: Arial, sans-serif;}
+        table{max-width: 755px;margin-left: auto;margin-right: auto; border-collapse: collapse;}
+        thead {height: 45px;}
+        tfoot {height: 65px;}
+        .topbot{
+            background-color: rgb(173, 216, 230);
+            text-transform: uppercase;
+            color: blue;
+            text-align: center;
+        }
+        h3, h4 {
+            line-height: 300%;
+        }
+        #nav {vertical-align: top;background-color: rgb(240, 230, 140);}
+        #main{background: url(/img/ball.png) top right repeat-y;}
+        h2{font-weight: lighter;}
+        ul{margin-left: .5em; margin-top: 0.5em;}
+        li{margin-left: 1em; font-size: .9em;}
+        h3{text-align: center; text-transform: uppercase;}
+        img{float: left; margin: 0 20px 15px 20px;}
+        p {margin-bottom: 1em; margin-left: 20px; font-size: .9em;}
+    </style>
+</head>
+<body>
+    <table>
+        <thead class="topbot">
+            <td colspan="2"><h2>привет участникам соревнований!</h2></td>
+            
+        </thead>
+        <tbody>
+            <td width="200px" id="nav">
+                <ul><h4>Виды спорта:</h4>
+                    <li><a href="http://skating.by/konkobezhnyj-sport/" target="_blank">конькобежный спорт</a></li>
+                    <li><a href="https://biathlon.by/" target="_blank">биатлон</a></li>
+                    <li><a href="#2" target="_self">футбол</a></li>
+                    <li><a href="http://www.archery.by/" target="_blank">стрельба из лука</a></li>
+                    <li><a href="https://athletics.by/pryzhki/" target="_blank">прыжки в длину</a></li>
+                    <li><a href="https://athletics.by/pryzhki/" target="_blank">прыжки в высоту</a></li>
+                </ul>
+            </td>
+            <td id="main">
+                <h3>Футбол</h3>
+                <img src="/img/fifa'94 cup.jpg" alt="">
+                <p>Футбол &mdash; командный вид спорта, в котором целью является
+                    забить мяч в ворота соперниканогами или другими частями тела
+                    (кроме рук) большее количество раз, чем команда соперника. 
+                <p>Есть 17 официальных правил игры, каждое из которых содержит
+                    список оговорок и руководящих принципов. Эти правила предназначены
+                    для примененения на всех уровнях футбола, хотя есть некоторые изменения
+                    для таких групп, как юниоры, взрослые, женщины и люди с ограниченными 
+                    физическими возможностями. Законы очень часто формулировались в общих 
+                    чертах, которые позволяют упростить их применения в зависимости от характера игры.
+                </p>
+            </td>
+        </tbody>
+        <tfoot class="topbot">
+            <td colspan="2"><h2>главное не победа, а участие!</h2></td>
+        </tfoot>
+
+    </table>
+    
+</body>
+</html>
