@@ -8,6 +8,7 @@
         * {margin: 0;padding: 0;box-sizing: border-box;}
         ul{margin-left: 1em;margin-top: 0.5em;}
         li{display: inline; list-style: none; color:green;text-decoration: underline; line-height: 2; padding: .5em .5em;}
+        li:hover{color: red;}
         /* первый способ  добавление стилей не первому потомку независимо от уровня вложенности */
         ul:nth-child(1) li:not(:first-child) {border-left: 2px solid red;}
         /* второй способ  добавление стилей не последнему потомку независимо от уровня вложенности */
@@ -19,10 +20,14 @@
         /* пятый способ добвление стилей всем li после первого того же уровня вложенности */
         ul:nth-child(5) li~li {border-left: 2px solid red;}
         /* также с >, т.е. с непосредственной вложенностью */
-
-        /* ul:nth-child(*) кол-во возможных вариантов записи будет ~ равно x!, где x - селектор или псевдоселектор, подходящий для выбора определенного элемента списка */
+        /* и т.д. */
+        /* ul:nth-child(*) подозреваю, что кол-во возможных вариантов записи будет ~ равно x!,
+         где x - кол-во селекторов элементов и псевдоэлементов, подходящих для выбора определенного элемента
+         списка + вариации записи формул для nth-child() + картинка + ,возможно, еще что-то, чего я не знаю*/
         ul:nth-child(6)>li:nth-child(n+2){border-left: 2px solid red;}
-        ul:nth-child(7) li:before {background-image: url(../../lesson5/im);}
+        ul:nth-child(7) li:not(:first-child):before {content: url('img/line.png'); vertical-align: -15px;}
+        ul:nth-child(8) li:nth-child(even) {content: url('img/line.png'); vertical-align: -20px;}
+        /* возможно я что-то не так понял в задании */
     </style>
 </head>
 <body>
@@ -73,6 +78,17 @@
         <li>вторая ссылка</li>
         <li>третья ссылка</li>
         <li>четвертая ссылка</li>
+        <li>пятая ссылка</li>
+    </ul>
+    <ul>
+        <li>первая ссылка</li>
+        <li></li>
+        <li>вторая ссылка</li>
+        <li></li>
+        <li>третья ссылка</li>
+        <li></li>
+        <li>четвертая ссылка</li>
+        <li></li>
         <li>пятая ссылка</li>
     </ul>
 </body>
