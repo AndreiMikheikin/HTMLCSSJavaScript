@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0;padding: 0;box-sizing: border-box;}
+        ul{margin-left: 1em;margin-top: 0.5em;}
+        li{display: inline; list-style: none; color:green;text-decoration: underline; line-height: 2; padding: .5em .5em;}
+        /* первый способ  добавление стилей не первому потомку независимо от уровня вложенности */
+        ul:nth-child(1) li:not(:first-child) {border-left: 2px solid red;}
+        /* второй способ  добавление стилей не последнему потомку независимо от уровня вложенности */
+        ul:nth-child(2) li:not(:last-child) {border-right: 2px solid red;}
+        /* третий способ добавление стилей не первому непосредственному потомку*/
+        ul:nth-child(3)>li:not(:first-child) {border-left: 2px solid red;}
+        /* четвертый способ добавление стилей не последнему непосредственному потомку*/
+        ul:nth-child(4)>li:not(:last-child) {border-right: 2px solid red;}
+        /* пятый способ добвление стилей всем li после первого того же уровня вложенности */
+        ul:nth-child(5) li~li {border-left: 2px solid red;}
+        /* также с >, т.е. с непосредственной вложенностью */
+
+        /* ul:nth-child(*) кол-во возможных вариантов записи будет ~ равно x!, где x - селектор или псевдоселектор, подходящий для выбора определенного элемента списка */
+        ul:nth-child(6)>li:nth-child(n+2){border-left: 2px solid red;}
+        ul:nth-child(7) li:before {background-image: url(../../lesson5/im);}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>первая ссылка</li>
+        <li>вторая ссылка</li>
+        <li>третья ссылка</li>
+        <li>четвертая ссылка</li>
+        <li>пятая ссылка</li>
+    </ul>
+    <ul>
+        <li>первая ссылка</li>
+        <li>вторая ссылка</li>
+        <li>третья ссылка</li>
+        <li>четвертая ссылка</li>
+        <li>пятая ссылка</li>
+    </ul>
+    <ul>
+        <li>первая ссылка</li>
+        <li>вторая ссылка</li>
+        <li>третья ссылка</li>
+        <li>четвертая ссылка</li>
+        <li>пятая ссылка</li>
+    </ul>
+    <ul>
+        <li>первая ссылка</li>
+        <li>вторая ссылка</li>
+        <li>третья ссылка</li>
+        <li>четвертая ссылка</li>
+        <li>пятая ссылка</li>
+    </ul>
+    <ul>
+        <li>первая ссылка</li>
+        <li>вторая ссылка</li>
+        <li>третья ссылка</li>
+        <li>четвертая ссылка</li>
+        <li>пятая ссылка</li>
+    </ul>
+    <ul>
+        <li>первая ссылка</li>
+        <li>вторая ссылка</li>
+        <li>третья ссылка</li>
+        <li>четвертая ссылка</li>
+        <li>пятая ссылка</li>
+    </ul>
+    <ul>
+        <li>первая ссылка</li>
+        <li>вторая ссылка</li>
+        <li>третья ссылка</li>
+        <li>четвертая ссылка</li>
+        <li>пятая ссылка</li>
+    </ul>
+</body>
+</html>
