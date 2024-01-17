@@ -1,95 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {margin: 0;padding: 0;box-sizing: border-box;}
-        ul{margin-left: 1em;margin-top: 0.5em;}
-        li{display: inline; list-style: none; color:green;text-decoration: underline; line-height: 2; padding: .5em .5em;}
-        li:hover{color: red;}
-        /* первый способ  добавление стилей не первому потомку независимо от уровня вложенности */
-        ul:nth-child(1) li:not(:first-child) {border-left: 2px solid red;}
-        /* второй способ  добавление стилей не последнему потомку независимо от уровня вложенности */
-        ul:nth-child(2) li:not(:last-child) {border-right: 2px solid red;}
-        /* третий способ добавление стилей не первому непосредственному потомку*/
-        ul:nth-child(3)>li:not(:first-child) {border-left: 2px solid red;}
-        /* четвертый способ добавление стилей не последнему непосредственному потомку*/
-        ul:nth-child(4)>li:not(:last-child) {border-right: 2px solid red;}
-        /* пятый способ добвление стилей всем li после первого того же уровня вложенности */
-        ul:nth-child(5) li~li {border-left: 2px solid red;}
-        /* также с >, т.е. с непосредственной вложенностью */
-        /* и т.д. */
-        /* ul:nth-child(*) подозреваю, что кол-во возможных вариантов записи будет ~ равно x!,
-         где x - кол-во селекторов элементов и псевдоэлементов, подходящих для выбора определенного элемента
-         списка + вариации записи формул для nth-child() + картинка + ,возможно, еще что-то, чего я не знаю*/
-        ul:nth-child(6)>li:nth-child(n+2){border-left: 2px solid red;}
-        ul:nth-child(7) li:not(:first-child):before {content: url('img/line.png'); vertical-align: -15px;}
-        ul:nth-child(8) li:nth-child(even) {content: url('img/line.png'); vertical-align: -20px;}
-        /* возможно я что-то не так понял в задании */
+        /* общие стили */
+        * {margin: 0;padding: 0;}
+        body>div {margin: 1em;}
+        li {list-style-type: none;}
+        a {color: green;}
+        a:hover {color: red;}
+
+        /* табличная верстка */
+        .num1 tr>td {padding: 0 5px;}
+        td:nth-child(even) {
+            border-left: 2px solid red;
+            border-right: 2px solid red;
+        }
+
+        /* блочная верстка с float */
+        div.num2>div {
+            float: left;
+            padding: 0 5px;
+        }
+        div.num2>div:nth-child(even){border-left:  2px solid red; border-right:  2px solid red;}
+        div.num2+div{clear: both;}
+
+        /* бочная верстка с ul, где li строчный элемент */
+        div.num3 ul{padding-top: 15px;}
+        div.num3 ul>li {
+            display: inline;
+            padding: 0 5px;
+        }
+        div.num3 ul>li:nth-child(even){border-left:  2px solid red; border-right:  2px solid red;}
+
+        /* верстка через flex-container */
+        .num4 {display: flex;}
+        .num4 div {padding: 0 5px;}
+        .num4>div:nth-child(even){border-left:  2px solid red; border-right:  2px solid red;}
+
+        /* верстка через grid-container */
+        .num5 {width: 200px;display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+        .num5>div:nth-child(even){border-left:  2px solid red; border-right:  2px solid red;}
+        .num5>div {padding: 0 5px;}
     </style>
 </head>
+
 <body>
-    <ul>
-        <li>первая ссылка</li>
-        <li>вторая ссылка</li>
-        <li>третья ссылка</li>
-        <li>четвертая ссылка</li>
-        <li>пятая ссылка</li>
-    </ul>
-    <ul>
-        <li>первая ссылка</li>
-        <li>вторая ссылка</li>
-        <li>третья ссылка</li>
-        <li>четвертая ссылка</li>
-        <li>пятая ссылка</li>
-    </ul>
-    <ul>
-        <li>первая ссылка</li>
-        <li>вторая ссылка</li>
-        <li>третья ссылка</li>
-        <li>четвертая ссылка</li>
-        <li>пятая ссылка</li>
-    </ul>
-    <ul>
-        <li>первая ссылка</li>
-        <li>вторая ссылка</li>
-        <li>третья ссылка</li>
-        <li>четвертая ссылка</li>
-        <li>пятая ссылка</li>
-    </ul>
-    <ul>
-        <li>первая ссылка</li>
-        <li>вторая ссылка</li>
-        <li>третья ссылка</li>
-        <li>четвертая ссылка</li>
-        <li>пятая ссылка</li>
-    </ul>
-    <ul>
-        <li>первая ссылка</li>
-        <li>вторая ссылка</li>
-        <li>третья ссылка</li>
-        <li>четвертая ссылка</li>
-        <li>пятая ссылка</li>
-    </ul>
-    <ul>
-        <li>первая ссылка</li>
-        <li>вторая ссылка</li>
-        <li>третья ссылка</li>
-        <li>четвертая ссылка</li>
-        <li>пятая ссылка</li>
-    </ul>
-    <ul>
-        <li>первая ссылка</li>
-        <li></li>
-        <li>вторая ссылка</li>
-        <li></li>
-        <li>третья ссылка</li>
-        <li></li>
-        <li>четвертая ссылка</li>
-        <li></li>
-        <li>пятая ссылка</li>
-    </ul>
+    <div class="num1">
+        <table>
+            <tr>
+                <td><a href="#">link1</a></td>
+                <td><a href="#">link2</a></td>
+                <td><a href="#">link3</a></td>
+                <td><a href="#">link4</a></td>
+                <td><a href="#">link5</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="num2">
+        <div><a href="#">link1</a></div>
+        <div><a href="#">link2</a></div>
+        <div><a href="#">link3</a></div>
+        <div><a href="#">link4</a></div>
+        <div><a href="#">link5</a></div>
+    </div>
+    <div></div>
+    <div class="num3">
+        <ul>
+            <li><a href="#">link1</a></li>
+            <li><a href="#">link2</a></li>
+            <li><a href="#">link3</a></li>
+            <li><a href="#">link4</a></li>
+            <li><a href="#">link5</a></li>
+        </ul>
+    </div>
+    <div class="num4">
+        <div><a href="#">link1</a></div>
+        <div><a href="#">link2</a></div>
+        <div><a href="#">link3</a></div>
+        <div><a href="#">link4</a></div>
+        <div><a href="#">link5</a></div>
+    </div>
+    <div class="num5">
+        <div><a href="#">link1</a></div>
+        <div><a href="#">link2</a></div>
+        <div><a href="#">link3</a></div>
+        <div><a href="#">link4</a></div>
+        <div><a href="#">link5</a></div>
+    </div>
+
 </body>
+
 </html>
