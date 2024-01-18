@@ -9,47 +9,47 @@
         /* общие стили */
         * {margin: 0;padding: 0;}
         body>div {margin: 1em;}
-        li {list-style-type: none;}
         a {color: green;}
         a:hover {color: red;}
 
         /* табличная верстка */
-        .num1 tr>td {padding: 0 5px;}
-        td:nth-child(even) {
+        div.SPOSOB001 tr>td {padding: 0 5px;}
+        div.SPOSOB001 li {list-style-type: none;}
+        div.SPOSOB001 td:nth-child(even) {
             border-left: 2px solid red;
             border-right: 2px solid red;
         }
 
         /* блочная верстка с float */
-        div.num2>div {
+        div.SPOSOB002>div {
             float: left;
             padding: 0 5px;
         }
-        div.num2>div:nth-child(even){border-left:  2px solid red; border-right:  2px solid red;}
-        div.num2+div{clear: both;}
+        div.SPOSOB002>div:nth-child(even){border-left:  2px solid red; border-right:  2px solid red;}
+        div.SPOSOB002+div{clear: both;}
 
         /* бочная верстка с ul, где li строчный элемент */
-        div.num3 ul{padding-top: 15px;}
-        div.num3 ul>li {
+        div.SPOSOB003 ul{padding-top: 15px;}
+        div.SPOSOB003 ul>li {
             display: inline;
             padding: 0 5px;
         }
-        div.num3 ul>li:nth-child(even){border-left:  2px solid red; border-right:  2px solid red;}
+        div.SPOSOB003 ul>li:nth-child(even){border-left:  2px solid red; border-right:  2px solid red;}
 
         /* верстка через flex-container */
-        .num4 {display: flex;}
-        .num4 div {padding: 0 5px;}
-        .num4>div:nth-child(even){border-left:  2px solid red; border-right:  2px solid red;}
+        div.SPOSOB004 {display: flex;}
+        div.SPOSOB004 div {padding: 0 5px;}
+        div.SPOSOB004>div:nth-child(even){border-left:  2px solid red; border-right:  2px solid red;}
 
         /* верстка через grid-container */
-        .num5 {width: 200px;display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
-        .num5>div:nth-child(even){border-left:  2px solid red; border-right:  2px solid red;}
-        .num5>div {padding: 0 5px;}
+        div.SPOSOB005 {width: 200px;display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+        div.SPOSOB005>div:nth-child(even){border-left:  2px solid red; border-right:  2px solid red;}
+        div.SPOSOB005>div {padding: 0 5px;}
     </style>
 </head>
 
 <body>
-    <div class="num1">
+    <div class="SPOSOB001">
         <table>
             <tr>
                 <td><a href="#">link1</a></td>
@@ -60,7 +60,7 @@
             </tr>
         </table>
     </div>
-    <div class="num2">
+    <div class="SPOSOB002">
         <div><a href="#">link1</a></div>
         <div><a href="#">link2</a></div>
         <div><a href="#">link3</a></div>
@@ -68,7 +68,7 @@
         <div><a href="#">link5</a></div>
     </div>
     <div></div>
-    <div class="num3">
+    <div class="SPOSOB003">
         <ul>
             <li><a href="#">link1</a></li>
             <li><a href="#">link2</a></li>
@@ -77,14 +77,14 @@
             <li><a href="#">link5</a></li>
         </ul>
     </div>
-    <div class="num4">
+    <div class="SPOSOB004">
         <div><a href="#">link1</a></div>
         <div><a href="#">link2</a></div>
         <div><a href="#">link3</a></div>
         <div><a href="#">link4</a></div>
         <div><a href="#">link5</a></div>
     </div>
-    <div class="num5">
+    <div class="SPOSOB005">
         <div><a href="#">link1</a></div>
         <div><a href="#">link2</a></div>
         <div><a href="#">link3</a></div>
