@@ -127,39 +127,27 @@ p {
 
 /* стили для экранов <=300px */
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 420px) {
     * {
         font-size: 90%;
     }
 
     #nav {
-        display: table;
         width: 100%;
         float: none;
     }
 
     ul {
-        display: table-row;
         list-style: none;
-    }
-    ul~ul{
-        display: table-cell;
-        width: 50%;
     }
 
     li {
-        border: 2px solid grey;
-        border-radius: 3px;
-        margin-bottom: 5px;
-        padding: 10px 0 10px 0;
-        text-align: center;
-        width: 110px;               
+        display: inline;               
     }
 
     a {
         font-size: larger;
-        padding: 10px 10px 10px 10px;
-
+        text-align: justify;
     }
 
     #main {
