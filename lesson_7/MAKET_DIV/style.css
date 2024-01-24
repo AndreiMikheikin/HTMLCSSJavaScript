@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* стили для всех */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    line-height: 45px;
+
+}
+
+footer {
+    line-height: 65px;
+}
+
+.topbot {
+    width: 100%;
+    background-color: rgb(173, 216, 230);
+    color: blue;
+
+}
+
+h2,
+h3 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-weight: lighter;
+}
+
+h3,
+h4 {
+    line-height: 300%;
+}
+
+h4 {
+    margin-left: .5em;
+    padding-top: .5em;
+}
+
+ul {
+    margin-left: .5em;
+    list-style: disc;
+}
+
+li {
+    margin: 0 1em 0 1em;
+    font-size: .9em;
+}
+
+.content {
+    background-color: rgb(240, 230, 140);
+}
+
+#main {
+    background: white url(img/ball.png) top right repeat-y;
+    margin-left: 200px;
+}
+
+#copyright {
+    float: right;
+    display: none;
+}
+
+#copyright+div {
+    display: none;
+}
+
+#nav {
+    width: 200px;
+    float: left;
+}
+
+img {
+    float: left;
+    margin: 0 20px 15px 20px;
+}
+
+p {
+    padding-bottom: 1em;
+    margin-left: 20px;
+    font-size: .9em;
+}
+
+/* отображение печатных форм */
+
+@media only print {
+    * {
+        color: rgb(100, 100, 100);
+        background: none !important;
+    }
+
+    img {
+        display: none;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    header,
+    footer,
+    #nav {
+        display: none;
+    }
+
+    #main {
+        margin: 0 !important;
+    }
+
+    #copyright {
+        display: block !important;
+        font-size: 1.5em;
+    }
+
+    #copyright+div {
+        display: block !important;
+    }
+}
+
+/* стили для экранов <=300px */
+
+@media only screen and (max-width: 300px) {
+    * {
+        font-size: 90%;
+    }
+
+    #nav {
+        display: table;
+        width: 100%;
+        float: none;
+    }
+
+    ul {
+        display: table-row;
+        list-style: none;
+    }
+    ul~ul{
+        display: table-cell;
+        width: 50%;
+    }
+
+    li {
+        border: 2px solid grey;
+        border-radius: 3px;
+        margin-bottom: 5px;
+        padding: 10px 0 10px 0;
+        text-align: center;
+        width: 110px;               
+    }
+
+    a {
+        font-size: larger;
+        padding: 10px 10px 10px 10px;
+
+    }
+
+    #main {
+        margin: 0;
+        background: none white;
+        text-align: center;
+    }
+    #copyright{display: none;}
+    img {
+        float: none;
+    }
+    p {margin: .5em;text-align: justify;text-indent: 10px;}
+}
