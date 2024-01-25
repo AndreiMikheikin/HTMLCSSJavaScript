@@ -125,9 +125,9 @@ p {
     }
 }
 
-/* стили для экранов <=300px */
+/* стили для экранов <=422px */
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 422px) {
     * {
         font-size: 90%;
     }
@@ -158,6 +158,9 @@ p {
     #copyright{display: none;}
     img {
         float: none;
+        width: 95%;
+        text-align: center;
+        margin: 0 auto;
     }
     p {margin: .5em;text-align: justify;text-indent: 10px;}
 }
