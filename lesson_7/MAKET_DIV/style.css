@@ -80,12 +80,13 @@ li {
 
 img {
     float: left;
-    margin: 0 20px 15px 20px;
+    margin: 0 0 15px 20px;
+    padding-right: 20px;
 }
 
 p {
-    padding-bottom: 1em;
-    margin-left: 20px;
+    
+    padding: 0 0 1em 20px;
     font-size: .9em;
 }
 
@@ -161,6 +162,7 @@ p {
         width: 95%;
         text-align: center;
         margin: 0 auto;
+        padding-right: 0px;
     }
     p {margin: .5em;text-align: justify;text-indent: 10px;}
 }
