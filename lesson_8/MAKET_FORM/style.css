@@ -1,0 +1,65 @@
+fieldset {
+    border: 3px inset red;
+}
+label {
+    width: 180px;
+}
+
+.input {
+    margin-left: 188px;
+    margin-right: -8px;
+}
+
+.name-input {
+    display: block;
+    width: 100%;
+    float: right;
+}
+
+.container {
+    display: block;
+    width: 180px;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.radio {
+    display: inline-block;
+}
+
+.clear {
+    clear: both;
+    height: 2px;
+}
+
+.break {
+    display: none;
+}
+
+textarea {
+    width: 100%;
+}
+
+@media only screen and (max-width: 580px) {
+    label,
+    select,
+    div.input,
+    div.radio {
+        float: none;
+        display: block;
+    }
+
+    .input {
+        margin-left: 8px;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .break {
+        display: inline;
+    }
+    .break1 {display: none;}
+}

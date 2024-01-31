@@ -8,6 +8,18 @@
 body {
     font-family: Arial, sans-serif;
 }
+.fixed {
+    position: fixed;
+    text-align: center;
+    top: 15px;
+    right: 15px;
+    border: 1px solid green;
+    background: lightgreen;
+    color: blue;
+    text-transform: uppercase;
+    text-decoration: underline;
+    padding: 5px;
+}
 
 header {
     line-height: 45px;

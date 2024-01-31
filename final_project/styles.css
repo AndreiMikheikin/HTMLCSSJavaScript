@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 10000px;
+}
+
+/* ----------------------------------шапка сайта------------------------------------------ */
+header {
+    position: absolute;
+    max-width: 1950px;
+    width: 100%;
+    height: 9em;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* логотип и переход на главную */
+.logo {
+    justify-self: start;
+    position: fixed;
+    margin-left: 1.5em;
+    padding: 2em .5em 0 .5em;
+    border-bottom-left-radius: 49% 3.5em;
+    border-bottom-right-radius: 49% 3.5em;
+}
+
+.logo img {
+    width: 6em;
+}
+
+.logo:hover {
+    outline: .1em solid #3d3d3d;
+}
+
+/* панель навигации */
+nav {
+    margin: 0 0 0 20%;
+    border-bottom: 3px solid #ebeb43;
+    align-self: center;
+    padding: 0 150px 35px 0;
+}
+
+nav ul li {
+    display: inline;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #ebeb43;
+    text-shadow: -1px -1px #3d3d3d;
+    padding: 0 15px 35px 0;
+}
+
+nav ul li:not(:first-child) {
+    padding-left: 1em;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid #3d3d3d;
+    color: #3d3d3d;
+    text-shadow: #ebeb43 1px -1px 1px, #ebeb43 -1px 1px 1px;
+}
+
+/* Контакты */
+div.contacts {
+    position: relative;
+    width: 20%;
+    text-align: right;
+    margin: 0 0 0 5%;
+}
+
+.phone {
+    height: 60px;
+    margin: 1em 2em 0 0;
+    padding: .1em 0 0 0;
+}
+
+.phone a {
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
+.phone a span {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.phone a:hover {
+    background-color: #ebeb43a8;
+    border: 1px solid #ebeb43;
+    border-top-left-radius: 5% 50%;
+    border-bottom-left-radius: 5% 50%;
+    border-top-right-radius: 5% 50%;
+    border-bottom-right-radius: 5% 50%;
+}
+
+.social {
+    align-self: flex-end;
+    margin: 1em 2em 1em 0;
+}
+
+.social a>img {
+    width: 30px;
+    height: 30px;
+    background-color: #ebeb43;
+    border-radius: 5px;
+}
+
+/* ---------------------------------конец шапки сайта---------------------------------------- */
+
+/* --------------------------------------главная--------------------------------------------- */
+/* ---------------------------------загрузочный экран---------------------------------------- */
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1950px;
+    width: 100%;
+    background-color: #d3d3d3;
+
+}
+
+section.load-screen {
+    width: 100%;
+    height: 550px;
+    background: url(img/фото/1-56.jpg) no-repeat;
+    background-size: cover;
+    background-position: 0px -100px;
+    padding: 0 2em;
+}
+
+section.load-screen p {
+    font-size: 130px;
+    color: #ebeb43;
+    text-shadow: 1px 1px 5px #3d3d3d, -1px -1px 5px #3d3d3d;
+    text-transform: uppercase;
+    text-align: right;
+    padding: 0 10px 5px 0;
+    border-bottom: 3px solid #ebeb43;
+}
+
+section.load-screen p:first-child {
+    font-size: 70px;
+    color: #fff;
+    margin: 2em 0 0 0;
+    padding: 0 10px 0 0;
+    border: none;
+}
+
+section.load-screen h2 {
+    text-align: right;
+    color: #fff;
+    font-size: 20px;
+    padding: 40px 5em 50px 0;
+    font-weight: normal;
+    text-shadow: 1px 1px #3d3d3d, -1px -1px #3d3d3d;
+}
+
+section.load-screen article {
+    text-align: right;
+}
+
+section.load-screen article:first-of-type {
+    width: 550px;
+    height: 120px;
+    border: 10px solid #d3d3d3;
+    border-bottom: #d3d3d3;
+    background-color: #ebeb43;
+    background-image: url(img/фото/IMG_2103.jpg);
+    background-size: cover;
+    background-position: 0 -80px;
+    border-top-left-radius: 12% 50%;
+    border-bottom-left-radius: 12% 50%;
+    border-top-right-radius: 12% 50%;
+    border-bottom-right-radius: 12% 50%;
+    padding: 25px 10px 0 10px;
+    margin: -5px 0 0 10%;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 5px #3d3d3d, -1px -1px 5px #3d3d3d;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+section.load-screen article input {
+    position: relative;
+    right: 3.7em;
+    bottom: 4.7em;
+    width: 400px;
+    height: 60px;
+    border: 3px solid #ebeb43a8;
+    background-color: #ebeb43;
+    border-top-left-radius: 1.5em 50%;
+    border-bottom-left-radius: 1.5em 50%;
+    border-top-right-radius: 1.5em 50%;
+    border-bottom-right-radius: 1.5em 50%;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: #3d3d3d;
+    box-shadow: 2px 2px 5px #3d3d3d;
+}
+
+section.load-screen article input:hover, section.about-scroll article input:hover {
+    background-color: #3d3d3d;
+    border-color: #3d3d3d;
+    color: #9a9a9a;
+}
+
+section.about-scroll {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 2px solid #3d3d3d; */
+}
+
+section.about-scroll h2 {
+    color: #3d3d3d;
+    font-size: 40px;
+    margin: 1.5em 0 0 13%;
+    padding-top: 1em;
+    font-weight: normal;
+    text-shadow: 1px 1px 5px #3d3d3d, -1px -1px #3d3d3d;
+}
+
+section.about-scroll article:nth-child(even) {
+    display: flex;
+    justify-content: end;
+    margin-left: 2em;
+}
+section.about-scroll article:nth-child(odd) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    margin:3em 2em 0 0;
+}
+section.about-scroll article div h3 {
+    color: #3d3d3d;
+    font-size: 30px;
+    margin: 1em 0 0 0;
+    text-align: center;
+    font-weight: normal;
+    text-shadow: 1px 1px 5px #3d3d3d, -1px -1px #3d3d3d;
+}
+
+section.about-scroll article div p {
+    text-align: justify;
+    margin: 95px 0 0 15%;
+    width: 70%;
+    color: #1d1d1d;
+    font-weight: normal;
+}
+
+section.about-scroll article:nth-child(even) div img {
+    justify-self: flex-end;
+    width: 650px;
+    height: 350px;
+    border: 15px solid #3d3d3d;
+    border-right: none;
+    border-top-left-radius: 20% 40%;
+    border-bottom-right-radius: 20% 40%;
+    background-image: url(img/фото/IMG_2103.jpg);
+    background-size: cover;
+}
+section.about-scroll article:nth-child(odd) div img {
+    justify-self: flex-end;
+    width: 650px;
+    height: 350px;
+    border: 15px solid #3d3d3d;
+    border-left: none;
+    border-top-right-radius: 20% 40%;
+    border-bottom-left-radius: 20% 40%;
+    background-image: url(img/фото/IMG_2027.jpg);
+    background-size: cover;
+}
+section.about-scroll article input {
+    position: relative;
+    left: 20%;
+    top: 65px;
+    width: 400px;
+    height: 60px;
+    border: 3px solid #ebeb43a8;
+    background-color: #ebeb43;
+    border-top-left-radius: 1.5em 50%;
+    border-bottom-left-radius: 1.5em 50%;
+    border-top-right-radius: 1.5em 50%;
+    border-bottom-right-radius: 1.5em 50%;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: #3d3d3d;
+    box-shadow: 2px 2px 5px #3d3d3d;
+}

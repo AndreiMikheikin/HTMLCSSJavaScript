@@ -1,0 +1,12 @@
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+img {position: absolute;}
+#MW {top: 0; right: 0;}
+#YY {bottom: 0; left: 100px;}
+#N_S{top: 75px; left: 75px;}
+
+#MW:hover, #YY:hover, #bio:hover, #N_S:hover {z-index: 1;}
