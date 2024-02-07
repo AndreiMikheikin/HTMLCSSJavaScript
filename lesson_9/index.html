@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 420px;
+            height: 600px;
+            overflow-y: scroll;
+        }
+        iframe{
+            margin: 15px 0 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Мои любимые мультфильмы:</h4>
+    <div class="container">
+        <div>
+            <iframe width="400" height="315" src="https://www.youtube.com/embed/VyXykkFc_Gk?si=2adEXd5sGfRU9Dt7"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <a href="https://www.youtube.com/watch?v=VyXykkFc_Gk" target="_blank" rel="noopener noreferrer">смотреть в
+                отдельном окне</a>
+            <iframe width="400" height="315" src="https://www.youtube.com/embed/ltt3LNTGuns?si=im1wvsYgjeM7dSRV"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <a href="https://www.youtube.com/watch?v=ltt3LNTGuns" target="_blank" rel="noopener noreferrer">смотреть в
+                отдельном окне</a>
+            <iframe width="400" height="315" src="https://www.youtube.com/embed/tX4BU49z7sY?si=HCaQ0hLohllTNH0o"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <a href="https://www.youtube.com/watch?v=tX4BU49z7sY" target="_blank" rel="noopener noreferrer">смотреть в
+                отдельном окне</a>
+        </div>
+    </div>
+    <div id="star-five"></div>
+</body>
+
+</html>

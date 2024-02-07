@@ -2,6 +2,9 @@
 /* font-family */
 /* font-size */
 /* color */
+@media only all and (max-width: 1500px) {
+  main {
+    background-position-x: -600px !important; } }
 /* normolize */
 * {
   margin: 0;
@@ -21,7 +24,8 @@ body {
   font-weight: 400;
   background: #fff;
   /* header */
-  /* main-block */ }
+  /* main */
+  /* booking form */ }
   body header {
     position: relative;
     width: 100%;
@@ -140,9 +144,9 @@ body {
             opacity: 0; }
           body header .container .main-menu ul a:hover {
             color: #ffc107; }
-      body header .container .header-btn {
+      body header .container .link-btn {
         position: relative; }
-        body header .container .header-btn a {
+        body header .container .link-btn a {
           padding: 11px 30px 10px;
           color: #222;
           background: #fff;
@@ -156,9 +160,11 @@ body {
           z-index: 1;
           letter-spacing: 1px;
           font-weight: 500;
+          -webkit-transition: .5s;
+          transition: .5s;
           text-transform: uppercase;
           text-decoration: none; }
-        body header .container .header-btn a:hover {
+        body header .container .link-btn a:hover {
           color: #fff;
           background-color: #ffc107; }
   body main {
@@ -171,6 +177,144 @@ body {
     right: 0;
     margin: 0 auto;
     background: url(../img/main_background.jpg) no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    background-position: -200px 0; }
+    body main .container {
+      min-height: 750px;
+      padding: 100px 15px;
+      position: relative;
+      max-width: 1320px;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      body main .container .inner {
+        position: relative;
+        max-height: 750px; }
+        body main .container .inner h4 {
+          position: relative;
+          display: block;
+          font-size: 16px;
+          font-weight: 500;
+          color: #ffc107;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          line-height: 1.25em; }
+        body main .container .inner h1 {
+          color: #2c2a49;
+          position: relative;
+          text-transform: capitalize;
+          line-height: 1;
+          font-weight: 700;
+          font-size: 64px;
+          font-family: "Cormorant", Georgia, "Times New Roman", Times, serif;
+          margin: 0 0 20px; }
+        body main .container .inner p {
+          color: #2c2a49;
+          position: relative;
+          font-size: 18px;
+          line-height: 32px;
+          margin: 0 0 15px; }
+        body main .container .inner .link-btn {
+          position: relative;
+          padding-top: 20px;
+          margin: 0 -10px; }
+          body main .container .inner .link-btn a {
+            margin: 0 10px 10px;
+            padding: 17px 35px 16px;
+            color: #222;
+            background: #ffc107;
+            border: 1px solid #e5e5e5;
+            position: relative;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            overflow: hidden;
+            text-align: center;
+            z-index: 1;
+            letter-spacing: 1px;
+            font-weight: 500;
+            -webkit-transition: .5s;
+            transition: .5s;
+            text-transform: uppercase;
+            text-decoration: none; }
+          body main .container .inner .link-btn a:hover {
+            color: #fff;
+            background-color: #2c2a49; }
+  body .auto-container {
+    width: 100%;
+    max-width: 1920px;
+    padding: 20px 0 8px;
+    background-color: #faf5f2;
+    margin: 0 auto; }
+    body .auto-container .booking-form {
+      position: relative;
+      max-width: 1310px;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
+      body .auto-container .booking-form .form-group {
+        margin: 0 10px 20px;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1; }
+        body .auto-container .booking-form .form-group label {
+          color: #2b2d42;
+          font-weight: 500;
+          text-transform: uppercase;
+          margin-bottom: 7px;
+          font-size: 15px;
+          text-align: center;
+          line-height: 1.8; }
+        body .auto-container .booking-form .form-group input[type=date], body .auto-container .booking-form .form-group select {
+          border-color: 1px solid #fff;
+          background: #fff;
+          width: 85%;
+          height: 80px;
+          padding: 0 10px;
+          font-size: inherit;
+          line-height: inherit; }
+        body .auto-container .booking-form .form-group input[type=checkbox] {
+          margin-right: 5px; }
+        body .auto-container .booking-form .form-group span {
+          color: #2b2d42;
+          font-size: 13px;
+          text-transform: uppercase; }
+        body .auto-container .booking-form .form-group input[type=submit] {
+          cursor: pointer;
+          width: -webkit-max-content;
+          width: -moz-max-content;
+          width: max-content;
+          color: #2c2a49;
+          position: relative;
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          overflow: hidden;
+          padding: 30px 35px 31px;
+          text-align: center;
+          z-index: 1;
+          letter-spacing: 1px;
+          font-weight: 500;
+          text-transform: uppercase;
+          -webkit-transition: .5s;
+          transition: .5s;
+          background-color: #ffc107; }
+        body .auto-container .booking-form .form-group input[type=submit]:hover {
+          color: #fff;
+          background-color: #2c2a49; }
 
 /*# sourceMappingURL=style.css.map */

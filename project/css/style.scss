@@ -1,4 +1,6 @@
-@import 'fonts.scss'; @import 'variables.scss';
+@import 'fonts.scss';
+@import 'variables.scss';
+@import 'media.scss';
 
 /* normolize */
 * {
@@ -17,7 +19,7 @@ body {
     color: $common;
     line-height: 1.7em;
     font-weight: 400;
-    background: #fff;
+    background: $backg;
 
 
     /* header */
@@ -28,7 +30,7 @@ body {
         margin: 0 auto;
         height: 75.15px;
         min-height: 75px;
-    
+
         .container {
             position: relative;
             width: 100%;
@@ -69,7 +71,7 @@ body {
             }
 
             /* navigation */
-            .main-menu{
+            .main-menu {
                 position: relative;
                 font-size: 100%;
                 visibility: visible;
@@ -77,7 +79,7 @@ body {
                 font-weight: 400;
                 font-family: $text;
 
-                ul{
+                ul {
                     width: 500.05px;
                     height: 110px;
                     position: relative;
@@ -89,14 +91,14 @@ body {
                     border: none;
                     outline: none;
                     font-size: 100%;
-                        
-                    li{
+
+                    li {
                         position: relative;
                         padding: 37px 0;
                         margin-right: 30px;
                         transition: all .3s ease;
 
-                        a{
+                        a {
                             padding-right: 15px;
                             position: relative;
                             display: block;
@@ -110,11 +112,11 @@ body {
                             opacity: 1;
                         }
 
-                        a:hover{
+                        a:hover {
                             color: $yellow;
                         }
 
-                        a.expand-more::before{
+                        a.expand-more::before {
                             position: absolute;
                             content: "\e5cf";
                             right: -15px;
@@ -122,7 +124,7 @@ body {
                             font-family: 'Material Symbols Outlined';
                         }
 
-                        ul{
+                        ul {
                             position: absolute;
                             left: 0;
                             top: 100%;
@@ -130,8 +132,8 @@ body {
                             min-width: 250px;
                             z-index: 100;
                             background-color: $title-color;
-                            
-                            li{
+
+                            li {
                                 position: relative;
                                 width: 100%;
                                 padding: 0 25px;
@@ -139,7 +141,7 @@ body {
                         }
                     }
 
-                    li::before{
+                    li::before {
                         position: absolute;
                         content: "";
                         bottom: 30px;
@@ -148,42 +150,44 @@ body {
                         height: 1px;
                         opacity: 0;
                     }
-                    
-                    a:hover{
+
+                    a:hover {
                         color: $yellow;
                     }
                 }
             }
 
             /* header button */
-            .header-btn {
+            .link-btn {
                 position: relative;
 
-                a{
-                padding: 11px 30px 10px;
-                color: $btn-text;
-                background: $backg;
-                border: 1px solid $btn-border;
-                position: relative;
-                display: inline-flex;
-                overflow: hidden;
-                text-align: center;
-                z-index: 1;
-                letter-spacing: 1px;
-                font-weight: 500;
-                text-transform: uppercase;
-                text-decoration: none;
+                a {
+                    padding: 11px 30px 10px;
+                    color: $btn-text;
+                    background: $backg;
+                    border: 1px solid $btn-border;
+                    position: relative;
+                    display: inline-flex;
+                    overflow: hidden;
+                    text-align: center;
+                    z-index: 1;
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    transition: .5s;
+                    text-transform: uppercase;
+                    text-decoration: none;
                 }
-                a:hover{
+
+                a:hover {
                     color: $backg;
                     background-color: $yellow;
                 }
             }
-        }    
+        }
     }
-    
+
     /* main */
-    main{
+    main {
         width: 100%;
         max-width: 1919px;
         height: 100%;
@@ -193,9 +197,10 @@ body {
         right: 0;
         margin: 0 auto;
         background: url(../img/main_background.jpg) no-repeat;
-        background-size: contain;
+        background-size: cover;
+        background-position: -200px 0;
 
-        .container{
+        .container {
             min-height: 750px;
             padding: 100px 15px;
             position: relative;
@@ -204,12 +209,13 @@ body {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
 
-            .inner{
+            .inner {
                 position: relative;
-                
-                h4{
+                max-height: 750px;
+
+                h4 {
                     position: relative;
                     display: block;
                     font-size: $simple-text;
@@ -221,6 +227,127 @@ body {
                     line-height: 1.25em;
                 }
 
+                h1 {
+                    color: $title-color;
+                    position: relative;
+                    text-transform: capitalize;
+                    line-height: 1;
+                    font-weight: 700;
+                    font-size: $logo-text*2;
+                    font-family: $title;
+                    margin: 0 0 20px;
+                }
+
+                p {
+                    color: $title-color;
+                    position: relative;
+                    font-size: $under-title-text;
+                    line-height: $logo-text;
+                    margin: 0 0 15px;
+                }
+
+                .link-btn {
+                    position: relative;
+                    padding-top: 20px;
+                    margin: 0 -10px;
+
+                    a {
+                        margin: 0 10px 10px;
+                        padding: 17px 35px 16px;
+                        color: $btn-text;
+                        background: $yellow;
+                        border: 1px solid $btn-border;
+                        position: relative;
+                        display: inline-flex;
+                        overflow: hidden;
+                        text-align: center;
+                        z-index: 1;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                        transition: .5s;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        color: $backg;
+                        background-color: $title-color;
+                    }
+                }
+            }
+        }
+    }
+
+    /* booking form */
+    .auto-container{
+        width: 100%;
+        max-width: 1920px;
+        padding: 20px 0 8px;
+        background-color: $bf-bg;
+        margin: 0 auto;
+
+        .booking-form{
+            position: relative;
+            max-width: 1310px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-end;
+            
+
+            .form-group{
+                margin: 0 10px 20px;
+                flex-grow: 1;
+                
+                label{
+                    color: $bf-text;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    margin-bottom: 7px;
+                    font-size: $book-text;
+                    text-align: center;
+                    line-height: 1.8;
+                }
+
+                input[type=date], select{
+                    border-color: 1px solid $backg;
+                    background: $backg;
+                    width: 85%;
+                    height: 80px;
+                    padding: 0 10px;
+                    font-size: inherit;
+                    line-height: inherit;
+                }
+                
+                input[type=checkbox]{
+                    margin-right: 5px;
+                }
+
+                span{
+                    color: $bf-text;
+                    font-size: $book-text - 2px;
+                    text-transform: uppercase;
+                }
+
+                input[type=submit]{
+                    cursor: pointer;
+                    width: max-content;
+                    color: $title-color;
+                    position: relative;
+                    display: inline-flex;
+                    overflow: hidden;
+                    padding: 30px 35px 31px;
+                    text-align: center;
+                    z-index: 1;
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    transition: .5s;
+                    background-color: $yellow;
+                }
+                input[type=submit]:hover{
+                    color: $backg;
+                    background-color: $title-color;
+                }
             }
         }
     }

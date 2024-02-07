@@ -26,9 +26,10 @@
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
-            <div class="header-btn">
-                <a href="#">Оставить бронь</a>
-                <span></span>
+            <div class="link-btn">
+                <a href="#">Оставить бронь
+                    <span></span>
+                </a>             
             </div>
         </div>
     </header>
@@ -36,8 +37,77 @@
         <div class="container">
             <div class="inner">
                 <h4>Отдых круглый год</h4>
+                <h1>Аренда усадьбы<br> для отдыха<br> и проведения<br> мероприятий</h1>
+                <p>Комфортный отдых на природе<br> 15 км от Бреста</p>
+                <div class="link-btn">
+                    <a href="#">забронировать
+                        <span></span>
+                    </a>             
+                </div>
             </div>
         </div>
     </main>
+    <div class="auto-container">
+        <form action="#" method="get" class="booking-form">
+            <div class="form-group">
+                <label for="check-in"><p>въезд:</p></label>
+                <input type="date" name="check-in" id="check-in">
+            </div>
+            <div class="form-group">
+                <label for="check-out"><p>выезд:</p></label>
+                <input type="date" name="check-out" id="check-out">
+            </div>
+            <div class="form-group">
+                <label for=""><p>Выбор:</p></label>
+                <input type="checkbox" name="house" id="house"><span>дом</span><br>
+                <input type="checkbox" name="hall" id="hall"><span>каминый зал</span><br>
+                <input type="checkbox" name="big-hall" id="big-hall"><span>банкетный зал</span>
+            </div>
+            <div class="form-group">
+                <label for="adult"><p>взрослые:</p></label>
+                <select name="adult-select" id="adult">
+                    <option value="2" selected>2 взрослых</option>
+                    <option value="3">3 взрослых</option>
+                    <option value="4">4 взрослых</option>
+                    <option value="5">5 взрослых</option>
+                    <option value="6">6 взрослых</option>
+                    <option value="7">7 взрослых</option>
+                    <option value="8">8 взрослых</option>
+                    <option value="9">9 взрослых</option>
+                    <option value="10">10 взрослых</option>
+                    <option value="11">11 взрослых</option>
+                    <option value="12">12 взрослых</option>
+                    <option value="20">20 взрослых</option>
+                    <option value="30">30 взрослых</option>
+                    <option value="40">40 взрослых</option>
+                    <option value="50">50 взрослых</option>
+                    <option value="60">60 взрослых</option>
+                    <option value="70">70 взрослых</option>
+                    <option value="80">80 взрослых</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="child"><p>дети:</p></label>
+                <select name="child-select" id="child">
+                    <option value="0">0 детей</option>
+                    <option value="1" selected>1 ребёнок</option>
+                    <option value="2">2 ребёнка</option>
+                    <option value="3">3 ребёнка</option>
+                    <option value="4">4 ребёнка</option>
+                    <option value="5">5 детей</option>
+                    <option value="6">6 детей</option>
+                    <option value="7">7 детей</option>
+                    <option value="8">8 детей</option>
+                    <option value="9">9 детей</option>
+                    <option value="10">10 детей</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="проверить дату">
+                <span></span>
+            </div>
+        </form>
+            
+    </div>
 </body>
 </html>
