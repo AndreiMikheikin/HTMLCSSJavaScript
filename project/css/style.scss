@@ -353,7 +353,7 @@ body {
     }
 
     /* spesial offers block */
-    .section-padding{
+    .section-offer-padding{
         padding: 190px 0 120px;
         position: relative;
         width: 100%;
@@ -523,5 +523,254 @@ body {
             }
         }
 
+    }
+
+    /* about us section */
+    .section-about-padding{
+        padding: 80px 0 120px;
+        background-color: $bf-bg;
+        position: relative;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        
+        .auto-container{
+            position: static;
+            max-width: 1320px;
+            padding: 0 15px;
+            margin: 0 auto;
+
+            .row{
+                margin: 0 -15px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .about-block{
+                    padding: 0 15px;
+                    flex: 0 0 auto;
+                    width: 50%;
+                    max-width: 100%;
+
+                    .about-image{
+                        margin-bottom: 30px;
+                        position: relative;
+
+                        #circles {
+                            position: absolute;
+                            left: -120px;
+                            top: -110px;
+                            transition: all .7s ease;
+                        }
+                        #circles:hover{
+                            transform: rotate(-90deg);
+                        }
+                
+                        #circles:hover #g1 #p1,
+                        #circles:hover #g1 #p2,
+                        #circles:hover #g1 #p3,
+                        #circles:hover #g1 #p4,
+                        #circles:hover #g1 #p5,
+                        #circles:hover #g1 #p6,
+                        #circles:hover #g1 #p7,
+                        #circles:hover #g1 #p8,
+                        #circles:hover #g1 #p9,
+                        #circles:hover #g1 #p10,
+                        #circles:hover #g1 #p11,
+                        #circles:hover #g1 #p12,
+                        #circles:hover #g1 #p13,
+                        #circles:hover #g1 #p14,
+                        #circles:hover #g1 #p15,
+                        #circles:hover #g1 #p16,
+                        #circles:hover #g1 #p17,
+                        #circles:hover #g1 #p18,
+                        #circles:hover #g1 #p19,
+                        #circles:hover #g1 #p20,
+                        #circles:hover #g1 #p21,
+                        #circles:hover #g1 #p22,
+                        #circles:hover #g1 #p23,
+                        #circles:hover #g1 #p24,
+                        #circles:hover #g1 #p25,
+                        #circles:hover #g1 #p26,
+                        #circles:hover #g1 #p27,
+                        #circles:hover #g1 #p28,
+                        #circles:hover #g1 #p29,
+                        #circles:hover #g1 #p30,
+                        #circles:hover #g1 #p31 {
+                        fill: $title-color !important;
+                        transition-delay: .2s;
+                        }
+                
+                        #circles:hover #g2 #p1,
+                        #circles:hover #g2 #p2,
+                        #circles:hover #g2 #p3,
+                        #circles:hover #g2 #p4,
+                        #circles:hover #g2 #p5,
+                        #circles:hover #g2 #p6,
+                        #circles:hover #g2 #p7,
+                        #circles:hover #g2 #p8,
+                        #circles:hover #g2 #p9,
+                        #circles:hover #g2 #p10,
+                        #circles:hover #g2 #p11,
+                        #circles:hover #g2 #p12,
+                        #circles:hover #g2 #p13,
+                        #circles:hover #g2 #p14,
+                        #circles:hover #g2 #p15,
+                        #circles:hover #g2 #p16,
+                        #circles:hover #g2 #p17,
+                        #circles:hover #g2 #p18,
+                        #circles:hover #g2 #p19,
+                        #circles:hover #g2 #p20,
+                        #circles:hover #g2 #p21,
+                        #circles:hover #g2 #p22,
+                        #circles:hover #g2 #p23,
+                        #circles:hover #g2 #p24,
+                        #circles:hover #g2 #p25,
+                        #circles:hover #g2 #p26,
+                        #circles:hover #g2 #p27,
+                        #circles:hover #g2 #p28,
+                        #circles:hover #g2 #p29,
+                        #circles:hover #g2 #p30,
+                        #circles:hover #g2 #p31,
+                        #circles:hover #g2 #p32,
+                        #circles:hover #g2 #p33,
+                        #circles:hover #g2 #p34,
+                        #circles:hover #g2 #p35,
+                        #circles:hover #g2 #p36,
+                        #circles:hover #g2 #p37,
+                        #circles:hover #g2 #p38,
+                        #circles:hover #g2 #p39,
+                        #circles:hover #g2 #p40,
+                        #circles:hover #g2 #p41,
+                        #circles:hover #g2 #p42 {
+                        fill: $title-color !important;
+                        transition-delay: .3s;
+                        }
+                
+                        #circles:hover #g3 #p1,
+                        #circles:hover #g3 #p2,
+                        #circles:hover #g3 #p3,
+                        #circles:hover #g3 #p4,
+                        #circles:hover #g3 #p5,
+                        #circles:hover #g3 #p6,
+                        #circles:hover #g3 #p7,
+                        #circles:hover #g3 #p8,
+                        #circles:hover #g3 #p9,
+                        #circles:hover #g3 #p10,
+                        #circles:hover #g3 #p11,
+                        #circles:hover #g3 #p12,
+                        #circles:hover #g3 #p13,
+                        #circles:hover #g3 #p14,
+                        #circles:hover #g3 #p15,
+                        #circles:hover #g3 #p16,
+                        #circles:hover #g3 #p17,
+                        #circles:hover #g3 #p18,
+                        #circles:hover #g3 #p19,
+                        #circles:hover #g3 #p20,
+                        #circles:hover #g3 #p21,
+                        #circles:hover #g3 #p22,
+                        #circles:hover #g3 #p23,
+                        #circles:hover #g3 #p24,
+                        #circles:hover #g3 #p25 {
+                        fill: $title-color !important;
+                        transition-delay: .4s;
+                        }
+                
+                        #circles:hover #g4 #p1,
+                        #circles:hover #g4 #p2,
+                        #circles:hover #g4 #p3,
+                        #circles:hover #g4 #p4,
+                        #circles:hover #g4 #p5,
+                        #circles:hover #g4 #p6,
+                        #circles:hover #g4 #p7,
+                        #circles:hover #g4 #p8,
+                        #circles:hover #g4 #p9,
+                        #circles:hover #g4 #p10,
+                        #circles:hover #g4 #p11,
+                        #circles:hover #g4 #p12,
+                        #circles:hover #g4 #p13,
+                        #circles:hover #g4 #p14 {
+                        fill: $title-color !important;
+                        transition-delay: .5s;
+                        }
+                        .image{
+                            position: relative;
+                            overflow: hidden;
+                            transition: all .8s ease;
+                        }
+                        .image:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                .about-discription{
+                    padding: 20px 0;
+                    padding-left: 3rem;
+                    flex: 0 0 auto;
+                    width: 50%;
+                    max-width: 100%;
+
+                    .section-heading{
+                        position: relative;
+                        z-index: 1;
+                        margin-bottom: 20px;
+                        
+                        span{
+                            font-size: $simple-text;
+                            color: $yellow;
+                            margin-bottom: 6px;
+                            display: inline-block;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            letter-spacing: 5px;
+                            position: relative;
+                        }
+                        h2{
+                            font-size: $logo-text * 2 - 4px;
+                            font-weight: 700;
+                            line-height: 1;
+                            position: relative;
+                            color: $bf-text;
+                            font-family: $title;
+                            text-transform: capitalize;
+                        }
+                        p{
+                            position: relative;
+                            margin-bottom: 0;
+                            line-height: 1.8;
+                            font-size: $simple-text;
+                        }
+                    }
+                    .about-btn{
+                        position: relative;
+                        padding-top: 20px;
+                        margin: 0 -10px;
+    
+                        a {
+                            margin: 0 10px 10px;
+                            padding: 17px 35px 16px;
+                            color: $btn-text;
+                            background: $yellow;
+                            border: 1px solid $btn-border;
+                            position: relative;
+                            display: inline-flex;
+                            overflow: hidden;
+                            text-align: center;
+                            z-index: 1;
+                            letter-spacing: 1px;
+                            font-weight: 500;
+                            transition: .5s;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                        }
+    
+                        a:hover {
+                            color: $backg;
+                            background-color: $title-color;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
