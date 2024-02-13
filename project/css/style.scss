@@ -192,7 +192,7 @@ body {
     /* main */
     main {
         width: 100%;
-        max-width: 1919px;
+        max-width: 1920px;
         height: 100%;
         position: relative;
         top: 0;
@@ -201,13 +201,13 @@ body {
         margin: 0 auto;
         background: url(../img/main_background.jpg) no-repeat;
         background-size: cover;
-        background-position: -200px 0;
+        background-position: 0 0;
 
         .container {
             min-height: 750px;
             padding: 100px 15px;
             position: relative;
-            max-width: 1320px;
+            max-width: 1290px;
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
@@ -217,6 +217,7 @@ body {
             .inner {
                 position: relative;
                 max-height: 750px;
+                padding: 0 10px;
 
                 h4 {
                     position: relative;
@@ -291,9 +292,10 @@ body {
 
         .booking-form{
             position: relative;
-            max-width: 1310px;
+            max-width: 1290px;
             margin: 0 auto;
             display: flex;
+            flex-wrap: wrap;
             align-items: flex-end;
             
 
@@ -374,7 +376,7 @@ body {
 
         .auto-container{
             position: static;
-            max-width: 1320px;
+            max-width: 1290px;
             padding: 0 15px;
             margin: 0 auto;
             background: $backg;
@@ -707,7 +709,7 @@ body {
                     }
                 }
                 .about-discription{
-                    padding: 20px 0;
+                    padding: 20px 10px;
                     padding-left: 3rem;
                     flex: 0 0 auto;
                     width: 50%;

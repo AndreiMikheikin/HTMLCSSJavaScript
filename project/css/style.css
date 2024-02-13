@@ -179,7 +179,7 @@ body {
           background-color: #ffc107; }
   body main {
     width: 100%;
-    max-width: 1919px;
+    max-width: 1920px;
     height: 100%;
     position: relative;
     top: 0;
@@ -188,12 +188,12 @@ body {
     margin: 0 auto;
     background: url(../img/main_background.jpg) no-repeat;
     background-size: cover;
-    background-position: -200px 0; }
+    background-position: 0 0; }
     body main .container {
       min-height: 750px;
       padding: 100px 15px;
       position: relative;
-      max-width: 1320px;
+      max-width: 1290px;
       margin: 0 auto;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -208,7 +208,8 @@ body {
               justify-content: space-between; }
       body main .container .inner {
         position: relative;
-        max-height: 750px; }
+        max-height: 750px;
+        padding: 0 10px; }
         body main .container .inner h4 {
           position: relative;
           display: block;
@@ -268,11 +269,13 @@ body {
     margin: 0 auto; }
     body .auto-container .booking-form {
       position: relative;
-      max-width: 1310px;
+      max-width: 1290px;
       margin: 0 auto;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       -webkit-box-align: end;
           -ms-flex-align: end;
               align-items: flex-end; }
@@ -341,7 +344,7 @@ body {
       background-color: #faf5f2; }
     body .section-offer-padding .auto-container {
       position: static;
-      max-width: 1320px;
+      max-width: 1290px;
       padding: 0 15px;
       margin: 0 auto;
       background: #fff; }
@@ -647,7 +650,7 @@ body {
               -webkit-transform: scale(1.1);
                       transform: scale(1.1); }
         body .section-about-padding .auto-container .row .about-discription {
-          padding: 20px 0;
+          padding: 20px 10px;
           padding-left: 3rem;
           -webkit-box-flex: 0;
               -ms-flex: 0 0 auto;
