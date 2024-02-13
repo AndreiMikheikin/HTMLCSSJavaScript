@@ -500,10 +500,8 @@ body {
                 justify-content: center; }
         body .section-about-padding .auto-container .row .about-block {
           padding: 0 15px;
-          -webkit-box-flex: 0;
-              -ms-flex: 0 0 auto;
-                  flex: 0 0 auto;
-          width: 50%;
+          /* flex: 0 0 auto; */
+          width: auto;
           max-width: 100%; }
           body .section-about-padding .auto-container .row .about-block .about-image {
             margin-bottom: 30px;
@@ -651,10 +649,8 @@ body {
                       transform: scale(1.1); }
         body .section-about-padding .auto-container .row .about-discription {
           padding: 20px 10px;
-          padding-left: 3rem;
-          -webkit-box-flex: 0;
-              -ms-flex: 0 0 auto;
-                  flex: 0 0 auto;
+          padding-left: 2rem;
+          /* flex: 0 0 auto; */
           width: 50%;
           max-width: 100%; }
           body .section-about-padding .auto-container .row .about-discription .section-heading {
