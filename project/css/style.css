@@ -671,12 +671,13 @@ body {
               letter-spacing: 5px;
               position: relative; }
             body .section-about-padding .auto-container .row .about-discription .section-heading h2 {
-              font-size: 60px;
+              font-size: 56.8px;
               font-weight: 700;
               line-height: 1;
               position: relative;
               color: #2b2d42;
               font-family: "Cormorant", Georgia, "Times New Roman", Times, serif;
+              padding-right: 15px;
               text-transform: capitalize; }
             body .section-about-padding .auto-container .row .about-discription .section-heading p {
               position: relative;

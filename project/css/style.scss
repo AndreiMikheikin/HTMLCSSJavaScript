@@ -731,12 +731,13 @@ body {
                             position: relative;
                         }
                         h2{
-                            font-size: $logo-text * 2 - 4px;
+                            font-size: $logo-text * 1.9 - 4px;
                             font-weight: 700;
                             line-height: 1;
                             position: relative;
                             color: $bf-text;
                             font-family: $title;
+                            padding-right: 15px;
                             text-transform: capitalize;
                         }
                         p{
