@@ -651,7 +651,7 @@ body {
                       transform: scale(1.05); }
         body .section-about-padding .auto-container .row .about-discription {
           padding: 20px 10px;
-          padding-left: .5rem;
+          padding-left: 20px;
           -webkit-box-flex: 0;
               -ms-flex: 0 0 auto;
                   flex: 0 0 auto;
