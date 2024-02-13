@@ -704,13 +704,13 @@ body {
                             transition: all .8s ease;
                         }
                         .image:hover{
-                            transform: scale(1.1);
+                            transform: scale(1.05);
                         }
                     }
                 }
                 .about-discription{
                     padding: 20px 10px;
-                    padding-left: 2rem;
+                    padding-left: .5rem;
                     flex: 0 0 auto;
                     width: 50%;
                     max-width: 100%;

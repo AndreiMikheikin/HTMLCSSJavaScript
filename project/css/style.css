@@ -647,11 +647,11 @@ body {
               -webkit-transition: all .8s ease;
               transition: all .8s ease; }
             body .section-about-padding .auto-container .row .about-block .about-image .image:hover {
-              -webkit-transform: scale(1.1);
-                      transform: scale(1.1); }
+              -webkit-transform: scale(1.05);
+                      transform: scale(1.05); }
         body .section-about-padding .auto-container .row .about-discription {
           padding: 20px 10px;
-          padding-left: 2rem;
+          padding-left: .5rem;
           -webkit-box-flex: 0;
               -ms-flex: 0 0 auto;
                   flex: 0 0 auto;
