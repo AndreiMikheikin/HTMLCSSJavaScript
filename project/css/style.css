@@ -58,7 +58,15 @@ body {
         height: 48.15px;
         min-height: 48px; }
         body header .container .logo a {
-          text-decoration: none; }
+          text-decoration: none;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
           body header .container .logo a img {
             display: inline-block;
             vertical-align: middle;
@@ -80,7 +88,7 @@ body {
         font-weight: 400;
         font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
         body header .container .main-menu ul {
-          width: 500.05px;
+          width: 500px;
           height: 110px;
           position: relative;
           margin: 0 0 0 50px;
@@ -504,8 +512,8 @@ body {
               -webkit-transition: all .7s ease;
               transition: all .7s ease; }
             body .section-about-padding .auto-container .row .about-block .about-image #circles:hover {
-              -webkit-transform: rotate(-90deg);
-                      transform: rotate(-90deg); }
+              -webkit-transform: rotate(-150deg);
+                      transform: rotate(-150deg); }
             body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p1,
             body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p2,
             body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p3,
