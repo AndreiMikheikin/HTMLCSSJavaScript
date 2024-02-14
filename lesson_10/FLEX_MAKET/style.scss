@@ -45,8 +45,6 @@ header {
     display: flex;
 
     #nav {
-        display: flex;
-        flex-direction: column;
         flex: 0 0 200px;
         padding: 0 10px;
         background: $nav-bg;
@@ -68,7 +66,8 @@ header {
     }
     #main{
         background: $main-bg url(img/ball.png) top right repeat-y;
-    
+        flex: 0 1 auto;
+
         #copyright {
             float: right;
             display: none;
@@ -155,9 +154,11 @@ footer {
 
             ul{
                 list-style: none;
-                display: flex;
-                flex-wrap: wrap;
                 margin: 0;
+                
+                li{
+                    display: inline;
+                }
             }
         }
 

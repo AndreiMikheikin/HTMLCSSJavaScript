@@ -33,13 +33,6 @@ header {
   display: -ms-flexbox;
   display: flex; }
   .content #nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 200px;
             flex: 0 0 200px;
@@ -55,7 +48,10 @@ header {
         margin: 0 1em 0 1em;
         font-size: .9em; }
   .content #main {
-    background: white url(img/ball.png) top right repeat-y; }
+    background: white url(img/ball.png) top right repeat-y;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto; }
     .content #main #copyright {
       float: right;
       display: none; }
@@ -124,12 +120,9 @@ footer {
               flex: 0 0 auto; }
       .content #nav ul {
         list-style: none;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
         margin: 0; }
+        .content #nav ul li {
+          display: inline; }
     .content #main {
       margin: 0;
       background: none white;
