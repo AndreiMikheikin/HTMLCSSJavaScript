@@ -1,0 +1,220 @@
+$nav-bg: #f0e68c;
+$hf-bg: #add8e6;
+$main-bg: white;
+$border-color: green;
+$window-bg: lightgreen;
+$header-text-color: blue;
+
+$main-text-size: 100%;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: $main-text-size;
+}
+
+.fixed {
+    position: fixed;
+    text-align: center;
+    top: 15px;
+    right: 15px;
+    border: 1px solid $border-color;
+    background: $window-bg;
+    color: $header-text-color;
+    text-transform: uppercase;
+    text-decoration: underline;
+    padding: 5px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 200px 20px) 1fr 50px;
+    grid-template-rows: repeat(2, 45px) 133px 1fr 65px;
+
+    header{
+        grid-column: 1/7;
+        grid-row: 1;
+        line-height: 45px;
+        background-color: $hf-bg;
+        color: $header-text-color;
+        h2{
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: lighter;
+        }
+    }
+    #nav{
+        grid-column: 1;
+        grid-row: 2/5;
+        padding: 0 10px;
+        background: $nav-bg;
+
+        h4{
+            line-height: $main-text-size * 3;
+            margin-left: .5em;
+        }
+
+        ul {
+            margin-left: .5em;
+            list-style: disc;
+
+            li {
+                margin: 0 1em 0 1em;
+                font-size: .9em;
+            }
+        }
+    }
+    
+    #main{
+        grid-column: 2/7;
+        grid-row: 2/5;
+        background: $main-bg url(img/ball.png) top right repeat-y;
+        
+        #copyright {
+            float: right;
+            display: none;
+        }
+        
+        #copyright+div {
+            display: none;
+        }
+
+        h3{
+            text-transform: uppercase;
+            text-align: center;
+            line-height: $main-text-size * 3;
+        }
+
+        img {
+            float: left;
+            margin: 0 20px 15px 20px;
+        }
+
+        p {
+            padding: 0 0 1em 1em;
+            font-size: .9em;
+        }
+    }
+
+    footer{
+        grid-column: 1/7;
+        grid-row: 5;
+        line-height: 65px;
+        width: $main-text-size;
+        background-color: $hf-bg;
+        color: $header-text-color;
+
+        h2{
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: lighter;
+        }
+    }
+}
+
+@media only print {
+    * {
+        color: #646464;
+        background: none !important;
+    }
+
+    img {
+        display: none;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    header,
+    footer,
+    .fixed,
+    #nav {
+        display: none !important;
+    }
+
+    #main {
+        grid-column: 1/7 !important;
+        margin: 0 !important;
+    }
+
+    #copyright {
+        display: block !important;
+        font-size: 1.5em;
+    }
+
+    #copyright+div {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .fixed{top: 48px;}
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: repeat(4, auto);
+
+        header{
+            grid-column: 1;
+            grid-row: 1;
+            width: $main-text-size;
+        }
+
+        #nav{
+            grid-column: 1;
+            grid-row: 3;
+            width: $main-text-size;
+
+            ul{
+                list-style: none;
+                margin: 0;
+                
+                li{
+                    display: inline;
+                }
+            }
+        }
+
+        #main {
+            grid-column: 1;
+            grid-row: 2;
+            margin: 0;
+            background: none $main-bg;
+            text-align: center;
+
+            #copyright{display: none;}
+
+            img {
+                float: none;
+                width: 95%;
+                text-align: center;
+                margin: 0 auto;
+                margin-top: 7px;
+            }
+
+            p {
+                margin: 0;
+                padding: 0 10px;
+                text-align: justify;
+                text-indent: 10px;
+            }
+        }
+        footer{
+            grid-column: 1;
+            grid-row: 4;
+            width: $main-text-size;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .fixed{top: 94px;}
+    h3{
+        text-align: left !important;
+        margin-left: .5em;
+    }
+}
