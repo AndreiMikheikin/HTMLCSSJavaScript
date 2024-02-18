@@ -314,7 +314,7 @@ body {
                 }
 
                 input[type=date], select{
-                    border-color: 1px solid $backg;
+                    border: 1px solid $backg;
                     background: $backg;
                     width: 85%;
                     height: 80px;
@@ -357,7 +357,7 @@ body {
         }
     }
 
-    /* spesial offers block */
+    /* spesial offers section */
     .section-offer-padding{
         padding: 190px 0 120px;
         position: relative;
@@ -571,130 +571,130 @@ body {
                             transform: rotate(-150deg);
                         }
                 
-                        #circles:hover #g1 #p1,
-                        #circles:hover #g1 #p2,
-                        #circles:hover #g1 #p3,
-                        #circles:hover #g1 #p4,
-                        #circles:hover #g1 #p5,
-                        #circles:hover #g1 #p6,
-                        #circles:hover #g1 #p7,
-                        #circles:hover #g1 #p8,
-                        #circles:hover #g1 #p9,
-                        #circles:hover #g1 #p10,
-                        #circles:hover #g1 #p11,
-                        #circles:hover #g1 #p12,
-                        #circles:hover #g1 #p13,
-                        #circles:hover #g1 #p14,
-                        #circles:hover #g1 #p15,
-                        #circles:hover #g1 #p16,
-                        #circles:hover #g1 #p17,
-                        #circles:hover #g1 #p18,
-                        #circles:hover #g1 #p19,
-                        #circles:hover #g1 #p20,
-                        #circles:hover #g1 #p21,
-                        #circles:hover #g1 #p22,
-                        #circles:hover #g1 #p23,
-                        #circles:hover #g1 #p24,
-                        #circles:hover #g1 #p25,
-                        #circles:hover #g1 #p26,
-                        #circles:hover #g1 #p27,
-                        #circles:hover #g1 #p28,
-                        #circles:hover #g1 #p29,
-                        #circles:hover #g1 #p30,
-                        #circles:hover #g1 #p31 {
+                        #circles:hover #g1-0 #p1-0-1-1,
+                        #circles:hover #g1-0 #p1-0-1-2,
+                        #circles:hover #g1-0 #p1-0-1-3,
+                        #circles:hover #g1-0 #p1-0-1-4,
+                        #circles:hover #g1-0 #p1-0-1-5,
+                        #circles:hover #g1-0 #p1-0-1-6,
+                        #circles:hover #g1-0 #p1-0-1-7,
+                        #circles:hover #g1-0 #p1-0-1-8,
+                        #circles:hover #g1-0 #p1-0-1-9,
+                        #circles:hover #g1-0 #p1-0-1-10,
+                        #circles:hover #g1-0 #p1-0-1-11,
+                        #circles:hover #g1-0 #p1-0-1-12,
+                        #circles:hover #g1-0 #p1-0-1-13,
+                        #circles:hover #g1-0 #p1-0-1-14,
+                        #circles:hover #g1-0 #p1-0-1-15,
+                        #circles:hover #g1-0 #p1-0-1-16,
+                        #circles:hover #g1-0 #p1-0-1-17,
+                        #circles:hover #g1-0 #p1-0-1-18,
+                        #circles:hover #g1-0 #p1-0-1-19,
+                        #circles:hover #g1-0 #p1-0-1-20,
+                        #circles:hover #g1-0 #p1-0-1-21,
+                        #circles:hover #g1-0 #p1-0-1-22,
+                        #circles:hover #g1-0 #p1-0-1-23,
+                        #circles:hover #g1-0 #p1-0-1-24,
+                        #circles:hover #g1-0 #p1-0-1-25,
+                        #circles:hover #g1-0 #p1-0-1-26,
+                        #circles:hover #g1-0 #p1-0-1-27,
+                        #circles:hover #g1-0 #p1-0-1-28,
+                        #circles:hover #g1-0 #p1-0-1-29,
+                        #circles:hover #g1-0 #p1-0-1-30,
+                        #circles:hover #g1-0 #p1-0-1-31 {
                         fill: $title-color !important;
                         transition-delay: .2s;
                         }
                 
-                        #circles:hover #g2 #p1,
-                        #circles:hover #g2 #p2,
-                        #circles:hover #g2 #p3,
-                        #circles:hover #g2 #p4,
-                        #circles:hover #g2 #p5,
-                        #circles:hover #g2 #p6,
-                        #circles:hover #g2 #p7,
-                        #circles:hover #g2 #p8,
-                        #circles:hover #g2 #p9,
-                        #circles:hover #g2 #p10,
-                        #circles:hover #g2 #p11,
-                        #circles:hover #g2 #p12,
-                        #circles:hover #g2 #p13,
-                        #circles:hover #g2 #p14,
-                        #circles:hover #g2 #p15,
-                        #circles:hover #g2 #p16,
-                        #circles:hover #g2 #p17,
-                        #circles:hover #g2 #p18,
-                        #circles:hover #g2 #p19,
-                        #circles:hover #g2 #p20,
-                        #circles:hover #g2 #p21,
-                        #circles:hover #g2 #p22,
-                        #circles:hover #g2 #p23,
-                        #circles:hover #g2 #p24,
-                        #circles:hover #g2 #p25,
-                        #circles:hover #g2 #p26,
-                        #circles:hover #g2 #p27,
-                        #circles:hover #g2 #p28,
-                        #circles:hover #g2 #p29,
-                        #circles:hover #g2 #p30,
-                        #circles:hover #g2 #p31,
-                        #circles:hover #g2 #p32,
-                        #circles:hover #g2 #p33,
-                        #circles:hover #g2 #p34,
-                        #circles:hover #g2 #p35,
-                        #circles:hover #g2 #p36,
-                        #circles:hover #g2 #p37,
-                        #circles:hover #g2 #p38,
-                        #circles:hover #g2 #p39,
-                        #circles:hover #g2 #p40,
-                        #circles:hover #g2 #p41,
-                        #circles:hover #g2 #p42 {
+                        #circles:hover #g2-0 #p2-0-2-1,
+                        #circles:hover #g2-0 #p2-0-2-2,
+                        #circles:hover #g2-0 #p2-0-2-3,
+                        #circles:hover #g2-0 #p2-0-2-4,
+                        #circles:hover #g2-0 #p2-0-2-5,
+                        #circles:hover #g2-0 #p2-0-2-6,
+                        #circles:hover #g2-0 #p2-0-2-7,
+                        #circles:hover #g2-0 #p2-0-2-8,
+                        #circles:hover #g2-0 #p2-0-2-9,
+                        #circles:hover #g2-0 #p2-0-2-10,
+                        #circles:hover #g2-0 #p2-0-2-11,
+                        #circles:hover #g2-0 #p2-0-2-12,
+                        #circles:hover #g2-0 #p2-0-2-13,
+                        #circles:hover #g2-0 #p2-0-2-14,
+                        #circles:hover #g2-0 #p2-0-2-15,
+                        #circles:hover #g2-0 #p2-0-2-16,
+                        #circles:hover #g2-0 #p2-0-2-17,
+                        #circles:hover #g2-0 #p2-0-2-18,
+                        #circles:hover #g2-0 #p2-0-2-19,
+                        #circles:hover #g2-0 #p2-0-2-20,
+                        #circles:hover #g2-0 #p2-0-2-21,
+                        #circles:hover #g2-0 #p2-0-2-22,
+                        #circles:hover #g2-0 #p2-0-2-23,
+                        #circles:hover #g2-0 #p2-0-2-24,
+                        #circles:hover #g2-0 #p2-0-2-25,
+                        #circles:hover #g2-0 #p2-0-2-26,
+                        #circles:hover #g2-0 #p2-0-2-27,
+                        #circles:hover #g2-0 #p2-0-2-28,
+                        #circles:hover #g2-0 #p2-0-2-29,
+                        #circles:hover #g2-0 #p2-0-2-30,
+                        #circles:hover #g2-0 #p2-0-2-31,
+                        #circles:hover #g2-0 #p2-0-2-32,
+                        #circles:hover #g2-0 #p2-0-2-33,
+                        #circles:hover #g2-0 #p2-0-2-34,
+                        #circles:hover #g2-0 #p2-0-2-35,
+                        #circles:hover #g2-0 #p2-0-2-36,
+                        #circles:hover #g2-0 #p2-0-2-37,
+                        #circles:hover #g2-0 #p2-0-2-38,
+                        #circles:hover #g2-0 #p2-0-2-39,
+                        #circles:hover #g2-0 #p2-0-2-40,
+                        #circles:hover #g2-0 #p2-0-2-41,
+                        #circles:hover #g2-0 #p2-0-2-42 {
                         fill: $title-color !important;
                         transition-delay: .3s;
                         }
                 
-                        #circles:hover #g3 #p1,
-                        #circles:hover #g3 #p2,
-                        #circles:hover #g3 #p3,
-                        #circles:hover #g3 #p4,
-                        #circles:hover #g3 #p5,
-                        #circles:hover #g3 #p6,
-                        #circles:hover #g3 #p7,
-                        #circles:hover #g3 #p8,
-                        #circles:hover #g3 #p9,
-                        #circles:hover #g3 #p10,
-                        #circles:hover #g3 #p11,
-                        #circles:hover #g3 #p12,
-                        #circles:hover #g3 #p13,
-                        #circles:hover #g3 #p14,
-                        #circles:hover #g3 #p15,
-                        #circles:hover #g3 #p16,
-                        #circles:hover #g3 #p17,
-                        #circles:hover #g3 #p18,
-                        #circles:hover #g3 #p19,
-                        #circles:hover #g3 #p20,
-                        #circles:hover #g3 #p21,
-                        #circles:hover #g3 #p22,
-                        #circles:hover #g3 #p23,
-                        #circles:hover #g3 #p24,
-                        #circles:hover #g3 #p25 {
+                        #circles:hover #g3-0 #p3-0-3-1,
+                        #circles:hover #g3-0 #p3-0-3-2,
+                        #circles:hover #g3-0 #p3-0-3-3,
+                        #circles:hover #g3-0 #p3-0-3-4,
+                        #circles:hover #g3-0 #p3-0-3-5,
+                        #circles:hover #g3-0 #p3-0-3-6,
+                        #circles:hover #g3-0 #p3-0-3-7,
+                        #circles:hover #g3-0 #p3-0-3-8,
+                        #circles:hover #g3-0 #p3-0-3-9,
+                        #circles:hover #g3-0 #p3-0-3-10,
+                        #circles:hover #g3-0 #p3-0-3-11,
+                        #circles:hover #g3-0 #p3-0-3-12,
+                        #circles:hover #g3-0 #p3-0-3-13,
+                        #circles:hover #g3-0 #p3-0-3-14,
+                        #circles:hover #g3-0 #p3-0-3-15,
+                        #circles:hover #g3-0 #p3-0-3-16,
+                        #circles:hover #g3-0 #p3-0-3-17,
+                        #circles:hover #g3-0 #p3-0-3-18,
+                        #circles:hover #g3-0 #p3-0-3-19,
+                        #circles:hover #g3-0 #p3-0-3-20,
+                        #circles:hover #g3-0 #p3-0-3-21,
+                        #circles:hover #g3-0 #p3-0-3-22,
+                        #circles:hover #g3-0 #p3-0-3-23,
+                        #circles:hover #g3-0 #p3-0-3-24,
+                        #circles:hover #g3-0 #p3-0-3-25 {
                         fill: $title-color !important;
                         transition-delay: .4s;
                         }
                 
-                        #circles:hover #g4 #p1,
-                        #circles:hover #g4 #p2,
-                        #circles:hover #g4 #p3,
-                        #circles:hover #g4 #p4,
-                        #circles:hover #g4 #p5,
-                        #circles:hover #g4 #p6,
-                        #circles:hover #g4 #p7,
-                        #circles:hover #g4 #p8,
-                        #circles:hover #g4 #p9,
-                        #circles:hover #g4 #p10,
-                        #circles:hover #g4 #p11,
-                        #circles:hover #g4 #p12,
-                        #circles:hover #g4 #p13,
-                        #circles:hover #g4 #p14 {
+                        #circles:hover #g4-0 #p4-0-4-1,
+                        #circles:hover #g4-0 #p4-0-4-2,
+                        #circles:hover #g4-0 #p4-0-4-3,
+                        #circles:hover #g4-0 #p4-0-4-4,
+                        #circles:hover #g4-0 #p4-0-4-5,
+                        #circles:hover #g4-0 #p4-0-4-6,
+                        #circles:hover #g4-0 #p4-0-4-7,
+                        #circles:hover #g4-0 #p4-0-4-8,
+                        #circles:hover #g4-0 #p4-0-4-9,
+                        #circles:hover #g4-0 #p4-0-4-10,
+                        #circles:hover #g4-0 #p4-0-4-11,
+                        #circles:hover #g4-0 #p4-0-4-12,
+                        #circles:hover #g4-0 #p4-0-4-13,
+                        #circles:hover #g4-0 #p4-0-4-14 {
                         fill: $title-color !important;
                         transition-delay: .5s;
                         }
@@ -775,6 +775,438 @@ body {
                             background-color: $title-color;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    /* contact form section */
+    .section-contactform-padding{
+        padding: 80px 0 120px;
+        background-color: $bf-bg;
+        position: relative;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        
+        .auto-container{
+            position: static;
+            max-width: 1320px;
+            padding: 0 15px;
+            margin: 0 auto;
+            
+            .row{
+                margin: 0 -15px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                
+                .contact-discription{
+                    padding: 20px 10px;
+                    flex: 0 0 auto;
+                    width: 50%;
+                    max-width: 100%;
+
+                    .section-heading{
+                        position: relative;
+                        z-index: 1;
+                        margin-bottom: 20px;
+                        
+                        span{
+                            font-size: $simple-text;
+                            color: $yellow;
+                            margin-bottom: 6px;
+                            display: inline-block;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            letter-spacing: 5px;
+                            position: relative;
+                        }
+                        h2{
+                            font-size: $logo-text * 1.9 - 4px;
+                            font-weight: 700;
+                            line-height: 1;
+                            position: relative;
+                            color: $bf-text;
+                            font-family: $title;
+                            padding-right: 15px;
+                            text-transform: capitalize;
+                        }
+                        p{
+                            position: relative;
+                            padding-right: 15px;
+                            margin-bottom: 0;
+                            line-height: 1.8;
+                            font-size: $simple-text;
+                        }
+                    }
+                }
+                .contact-form{
+                    padding: 0 15px;
+                    flex: 0 0 auto;
+                    width: auto;
+                    max-width: 100%;
+                    position: relative;
+
+                    .contact-form-group{
+                        position: relative;
+                        
+                        #circles {
+                            position: absolute;
+                            left: -80px;
+                            bottom: -110px;
+                            transition: all .7s ease;
+                        }
+                        #circles:hover{
+                            transform: rotate(150deg);
+                        }
+                
+                        #circles:hover #g1-0-1 #p1-1-1-1,
+                        #circles:hover #g1-0-1 #p1-1-1-2,
+                        #circles:hover #g1-0-1 #p1-1-1-3,
+                        #circles:hover #g1-0-1 #p1-1-1-4,
+                        #circles:hover #g1-0-1 #p1-1-1-5,
+                        #circles:hover #g1-0-1 #p1-1-1-6,
+                        #circles:hover #g1-0-1 #p1-1-1-7,
+                        #circles:hover #g1-0-1 #p1-1-1-8,
+                        #circles:hover #g1-0-1 #p1-1-1-9,
+                        #circles:hover #g1-0-1 #p1-1-1-10,
+                        #circles:hover #g1-0-1 #p1-1-1-11,
+                        #circles:hover #g1-0-1 #p1-1-1-12,
+                        #circles:hover #g1-0-1 #p1-1-1-13,
+                        #circles:hover #g1-0-1 #p1-1-1-14,
+                        #circles:hover #g1-0-1 #p1-1-1-15,
+                        #circles:hover #g1-0-1 #p1-1-1-16,
+                        #circles:hover #g1-0-1 #p1-1-1-17,
+                        #circles:hover #g1-0-1 #p1-1-1-18,
+                        #circles:hover #g1-0-1 #p1-1-1-19,
+                        #circles:hover #g1-0-1 #p1-1-1-20,
+                        #circles:hover #g1-0-1 #p1-1-1-21,
+                        #circles:hover #g1-0-1 #p1-1-1-22,
+                        #circles:hover #g1-0-1 #p1-1-1-23,
+                        #circles:hover #g1-0-1 #p1-1-1-24,
+                        #circles:hover #g1-0-1 #p1-1-1-25,
+                        #circles:hover #g1-0-1 #p1-1-1-26,
+                        #circles:hover #g1-0-1 #p1-1-1-27,
+                        #circles:hover #g1-0-1 #p1-1-1-28,
+                        #circles:hover #g1-0-1 #p1-1-1-29,
+                        #circles:hover #g1-0-1 #p1-1-1-30,
+                        #circles:hover #g1-0-1 #p1-1-1-31 {
+                        fill: $title-color !important;
+                        transition-delay: .2s;
+                        }
+                
+                        #circles:hover #g2-0-1 #p2-1-2-1,
+                        #circles:hover #g2-0-1 #p2-1-2-2,
+                        #circles:hover #g2-0-1 #p2-1-2-3,
+                        #circles:hover #g2-0-1 #p2-1-2-4,
+                        #circles:hover #g2-0-1 #p2-1-2-5,
+                        #circles:hover #g2-0-1 #p2-1-2-6,
+                        #circles:hover #g2-0-1 #p2-1-2-7,
+                        #circles:hover #g2-0-1 #p2-1-2-8,
+                        #circles:hover #g2-0-1 #p2-1-2-9,
+                        #circles:hover #g2-0-1 #p2-1-2-10,
+                        #circles:hover #g2-0-1 #p2-1-2-11,
+                        #circles:hover #g2-0-1 #p2-1-2-12,
+                        #circles:hover #g2-0-1 #p2-1-2-13,
+                        #circles:hover #g2-0-1 #p2-1-2-14,
+                        #circles:hover #g2-0-1 #p2-1-2-15,
+                        #circles:hover #g2-0-1 #p2-1-2-16,
+                        #circles:hover #g2-0-1 #p2-1-2-17,
+                        #circles:hover #g2-0-1 #p2-1-2-18,
+                        #circles:hover #g2-0-1 #p2-1-2-19,
+                        #circles:hover #g2-0-1 #p2-1-2-20,
+                        #circles:hover #g2-0-1 #p2-1-2-21,
+                        #circles:hover #g2-0-1 #p2-1-2-22,
+                        #circles:hover #g2-0-1 #p2-1-2-23,
+                        #circles:hover #g2-0-1 #p2-1-2-24,
+                        #circles:hover #g2-0-1 #p2-1-2-25,
+                        #circles:hover #g2-0-1 #p2-1-2-26,
+                        #circles:hover #g2-0-1 #p2-1-2-27,
+                        #circles:hover #g2-0-1 #p2-1-2-28,
+                        #circles:hover #g2-0-1 #p2-1-2-29,
+                        #circles:hover #g2-0-1 #p2-1-2-30,
+                        #circles:hover #g2-0-1 #p2-1-2-31,
+                        #circles:hover #g2-0-1 #p2-1-2-32,
+                        #circles:hover #g2-0-1 #p2-1-2-33,
+                        #circles:hover #g2-0-1 #p2-1-2-34,
+                        #circles:hover #g2-0-1 #p2-1-2-35,
+                        #circles:hover #g2-0-1 #p2-1-2-36,
+                        #circles:hover #g2-0-1 #p2-1-2-37,
+                        #circles:hover #g2-0-1 #p2-1-2-38,
+                        #circles:hover #g2-0-1 #p2-1-2-39,
+                        #circles:hover #g2-0-1 #p2-1-2-40,
+                        #circles:hover #g2-0-1 #p2-1-2-41,
+                        #circles:hover #g2-0-1 #p2-1-2-42 {
+                        fill: $title-color !important;
+                        transition-delay: .3s;
+                        }
+                
+                        #circles:hover #g3-0-1 #p3-1-3-1,
+                        #circles:hover #g3-0-1 #p3-1-3-2,
+                        #circles:hover #g3-0-1 #p3-1-3-3,
+                        #circles:hover #g3-0-1 #p3-1-3-4,
+                        #circles:hover #g3-0-1 #p3-1-3-5,
+                        #circles:hover #g3-0-1 #p3-1-3-6,
+                        #circles:hover #g3-0-1 #p3-1-3-7,
+                        #circles:hover #g3-0-1 #p3-1-3-8,
+                        #circles:hover #g3-0-1 #p3-1-3-9,
+                        #circles:hover #g3-0-1 #p3-1-3-10,
+                        #circles:hover #g3-0-1 #p3-1-3-11,
+                        #circles:hover #g3-0-1 #p3-1-3-12,
+                        #circles:hover #g3-0-1 #p3-1-3-13,
+                        #circles:hover #g3-0-1 #p3-1-3-14,
+                        #circles:hover #g3-0-1 #p3-1-3-15,
+                        #circles:hover #g3-0-1 #p3-1-3-16,
+                        #circles:hover #g3-0-1 #p3-1-3-17,
+                        #circles:hover #g3-0-1 #p3-1-3-18,
+                        #circles:hover #g3-0-1 #p3-1-3-19,
+                        #circles:hover #g3-0-1 #p3-1-3-20,
+                        #circles:hover #g3-0-1 #p3-1-3-21,
+                        #circles:hover #g3-0-1 #p3-1-3-22,
+                        #circles:hover #g3-0-1 #p3-1-3-23,
+                        #circles:hover #g3-0-1 #p3-1-3-24,
+                        #circles:hover #g3-0-1 #p3-1-3-25 {
+                        fill: $title-color !important;
+                        transition-delay: .4s;
+                        }
+                
+                        #circles:hover #g4-0-1 #p4-1-1-1,
+                        #circles:hover #g4-0-1 #p4-1-1-2,
+                        #circles:hover #g4-0-1 #p4-1-1-3,
+                        #circles:hover #g4-0-1 #p4-1-1-4,
+                        #circles:hover #g4-0-1 #p4-1-1-5,
+                        #circles:hover #g4-0-1 #p4-1-1-6,
+                        #circles:hover #g4-0-1 #p4-1-1-7,
+                        #circles:hover #g4-0-1 #p4-1-1-8,
+                        #circles:hover #g4-0-1 #p4-1-1-9,
+                        #circles:hover #g4-0-1 #p4-1-1-10,
+                        #circles:hover #g4-0-1 #p4-1-1-11,
+                        #circles:hover #g4-0-1 #p4-1-1-12,
+                        #circles:hover #g4-0-1 #p4-1-1-13,
+                        #circles:hover #g4-0-1 #p4-1-1-14 {
+                        fill: $title-color !important;
+                        transition-delay: .5s;
+                        }
+
+                        .form{
+                            position: relative;
+                            background: $backg;
+                            padding: 50px 70px;
+                            max-width: 560px;
+                            margin: 0 0 30px auto;
+
+                            .flex-form{
+                                margin-left: -15px;
+                                margin-right: -15px;
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                .form-group{
+                                    margin-bottom: 20px;
+                                    padding: 0 15px;
+                                    flex: 0 0 auto;
+                                    width: 100%;
+                                    max-width: 100%;
+
+                                    input[type="text"]{
+                                        background: $backg;
+                                        border: 1px solid;
+                                        border-color: transparent transparent $btn-border;
+                                        padding: 0 10px;
+                                        width: 85%;
+                                        height: 50px;
+                                        color: $common;
+                                    }
+
+                                    textarea{
+                                        background: $backg;
+                                        border: 1px solid;
+                                        border-color: transparent transparent $btn-border;
+                                        padding: 0 10px;
+                                        padding-top: 20px;
+                                        width: 85%;
+                                        height: 85px;
+                                        color: $common;
+                                        overflow: hidden;
+                                        resize: vertical;
+                                    }
+
+                                    p{
+                                        color: $common;
+                                        line-height: 1.8;
+                                        font-size: $simple-text;
+                                        margin-top: 0;
+                                        margin-bottom: 1rem;
+
+                                        input[type="checkbox"]{
+                                            margin-right: 5px;
+                                            position: relative;
+                                            top: 2px;
+                                        }
+                                    }
+                                }
+                                .contact-btn{
+                                    position: relative;
+                                    padding-top: 20px;
+                                    margin: 0 -10px;
+
+                                    button[type="submit"]{
+                                        cursor: pointer;
+                                        color: $backg;
+                                        position: relative;
+                                        display: inline-flex;
+                                        overflow: hidden;
+                                        padding: 17px 35px 16px;
+                                        text-align: center;
+                                        z-index: 1;
+                                        letter-spacing: 1px;
+                                        font-weight: 500;
+                                        text-transform: uppercase;
+                                        transition: .5s;
+                                        background-color: $yellow;
+                                    }
+                    
+                                    [type="submit"]:hover {
+                                        color: $backg;
+                                        background-color: $title-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    /* footer */
+    footer{
+        position: relative;
+        padding: 120px 0 60px;
+        background: $footer-bg;
+
+        .auto-container{
+            position: static;
+            max-width: 1320px;
+            padding: 0 15px;
+            margin: 0 auto;
+
+            .row{
+                margin-left: -15px;
+                margin-right: -15px;
+                background: $footer-bg;
+                display: flex;
+                flex-wrap: wrap;
+
+                .contact-block{
+                    padding: 0 15px;
+                    flex: 0 0 auto;
+                    width: 25%;
+                    flex-shrink: 0;
+
+                    .contact-block-title{
+
+                        h4{
+                            color: $backg;
+                            margin-bottom: 30px;
+                            font-size: $logo-text - 2px;
+                            line-height: 1.25em;
+                            font-family: $title;
+                        }
+                    }
+
+                    .contact-block-list{
+                        list-style: none;
+                        
+                        li{
+                            margin-bottom: 8px;
+                            color: $footer-li;
+
+                            a, address{
+                            font-style: normal;
+                            text-decoration: none;
+                            color: $footer-li;
+                            transition: all 0.2s ease;
+                            }
+
+                            a:hover{
+                                color: $yellow;
+                            }
+                        }
+
+                    }
+
+                    .contact-block-social{
+                        list-style: none;
+
+                        a{
+                            display: inline-block;
+                            margin-top: 30px;
+                            margin-right: 25px;
+                            margin-bottom: 15px;
+                            font-size: $book-text;
+                            color: $footer-li;
+                            transition: all .2s ease;
+                        }
+
+                        a[href*="facebook"]:hover #path4532,
+                        a[href*="instagram"]:hover #path6,
+                        a[href*="vk"]:hover #rect4569{
+                            fill: $yellow !important;
+                        }
+                    }
+                    
+                    .footer-form{
+                        position: relative;
+
+                        form{
+                            line-height: inherit;
+
+                            input{
+                                background: transparent;
+                                border-color: hsla(0,0%,100%,.15);
+                                color: $footer-li;
+                                width: 85%;
+                                height: 60px;
+                                border: 1px solid $footer-li;
+                            }
+
+                            button[type="submit"]{
+                                cursor: pointer;
+                                color: $backg;
+                                height: 60px;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                display: inline-flex;
+                                overflow: hidden;
+                                padding: 17px 35px 16px;
+                                text-align: center;
+                                z-index: 1;
+                                letter-spacing: 1px;
+                                font-weight: 500;
+                                text-transform: uppercase;
+                                transition: .5s;
+                                background-color: $yellow;
+                            }
+            
+                            [type="submit"]:hover {
+                                color: $backg;
+                                background-color: $title-color;
+                            }
+
+                        }
+                    }
+                }
+
+                .contact-block:nth-child(2){
+                    width: 15%;
+                }
+
+                .contact-block:last-child{
+                    width: 35%;
                 }
             }
         }

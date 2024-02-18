@@ -26,8 +26,10 @@ body {
   /* header */
   /* main */
   /* booking form */
-  /* spesial offers block */
-  /* about us section */ }
+  /* spesial offers section */
+  /* about us section */
+  /* contact form section */
+  /* footer */ }
   body header {
     position: relative;
     width: 100%;
@@ -293,7 +295,7 @@ body {
           text-align: center;
           line-height: 1.8; }
         body .auto-container .booking-form .form-group input[type=date], body .auto-container .booking-form .form-group select {
-          border-color: 1px solid #fff;
+          border: 1px solid #fff;
           background: #fff;
           width: 85%;
           height: 80px;
@@ -517,127 +519,127 @@ body {
             body .section-about-padding .auto-container .row .about-block .about-image #circles:hover {
               -webkit-transform: rotate(-150deg);
                       transform: rotate(-150deg); }
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p1,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p2,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p3,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p4,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p5,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p6,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p7,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p8,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p9,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p10,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p11,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p12,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p13,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p14,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p15,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p16,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p17,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p18,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p19,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p20,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p21,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p22,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p23,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p24,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p25,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p26,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p27,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p28,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p29,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p30,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1 #p31 {
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-1,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-2,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-3,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-4,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-5,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-6,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-7,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-8,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-9,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-10,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-11,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-12,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-13,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-14,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-15,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-16,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-17,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-18,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-19,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-20,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-21,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-22,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-23,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-24,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-25,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-26,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-27,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-28,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-29,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-30,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g1-0 #p1-0-1-31 {
               fill: #2c2a49 !important;
               -webkit-transition-delay: .2s;
                       transition-delay: .2s; }
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p1,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p2,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p3,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p4,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p5,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p6,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p7,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p8,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p9,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p10,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p11,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p12,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p13,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p14,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p15,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p16,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p17,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p18,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p19,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p20,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p21,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p22,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p23,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p24,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p25,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p26,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p27,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p28,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p29,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p30,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p31,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p32,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p33,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p34,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p35,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p36,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p37,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p38,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p39,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p40,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p41,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2 #p42 {
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-1,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-2,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-3,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-4,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-5,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-6,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-7,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-8,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-9,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-10,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-11,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-12,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-13,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-14,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-15,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-16,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-17,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-18,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-19,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-20,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-21,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-22,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-23,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-24,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-25,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-26,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-27,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-28,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-29,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-30,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-31,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-32,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-33,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-34,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-35,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-36,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-37,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-38,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-39,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-40,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-41,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g2-0 #p2-0-2-42 {
               fill: #2c2a49 !important;
               -webkit-transition-delay: .3s;
                       transition-delay: .3s; }
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p1,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p2,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p3,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p4,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p5,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p6,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p7,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p8,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p9,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p10,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p11,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p12,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p13,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p14,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p15,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p16,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p17,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p18,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p19,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p20,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p21,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p22,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p23,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p24,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3 #p25 {
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-1,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-2,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-3,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-4,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-5,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-6,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-7,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-8,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-9,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-10,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-11,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-12,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-13,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-14,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-15,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-16,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-17,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-18,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-19,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-20,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-21,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-22,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-23,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-24,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g3-0 #p3-0-3-25 {
               fill: #2c2a49 !important;
               -webkit-transition-delay: .4s;
                       transition-delay: .4s; }
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p1,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p2,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p3,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p4,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p5,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p6,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p7,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p8,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p9,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p10,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p11,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p12,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p13,
-            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4 #p14 {
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-1,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-2,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-3,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-4,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-5,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-6,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-7,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-8,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-9,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-10,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-11,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-12,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-13,
+            body .section-about-padding .auto-container .row .about-block .about-image #circles:hover #g4-0 #p4-0-4-14 {
               fill: #2c2a49 !important;
               -webkit-transition-delay: .5s;
                       transition-delay: .5s; }
@@ -710,5 +712,378 @@ body {
             body .section-about-padding .auto-container .row .about-discription .about-btn a:hover {
               color: #fff;
               background-color: #2c2a49; }
+  body .section-contactform-padding {
+    padding: 80px 0 120px;
+    background-color: #faf5f2;
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto; }
+    body .section-contactform-padding .auto-container {
+      position: static;
+      max-width: 1320px;
+      padding: 0 15px;
+      margin: 0 auto; }
+      body .section-contactform-padding .auto-container .row {
+        margin: 0 -15px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        body .section-contactform-padding .auto-container .row .contact-discription {
+          padding: 20px 10px;
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 auto;
+                  flex: 0 0 auto;
+          width: 50%;
+          max-width: 100%; }
+          body .section-contactform-padding .auto-container .row .contact-discription .section-heading {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px; }
+            body .section-contactform-padding .auto-container .row .contact-discription .section-heading span {
+              font-size: 16px;
+              color: #ffc107;
+              margin-bottom: 6px;
+              display: inline-block;
+              font-weight: 500;
+              text-transform: uppercase;
+              letter-spacing: 5px;
+              position: relative; }
+            body .section-contactform-padding .auto-container .row .contact-discription .section-heading h2 {
+              font-size: 56.8px;
+              font-weight: 700;
+              line-height: 1;
+              position: relative;
+              color: #2b2d42;
+              font-family: "Cormorant", Georgia, "Times New Roman", Times, serif;
+              padding-right: 15px;
+              text-transform: capitalize; }
+            body .section-contactform-padding .auto-container .row .contact-discription .section-heading p {
+              position: relative;
+              padding-right: 15px;
+              margin-bottom: 0;
+              line-height: 1.8;
+              font-size: 16px; }
+        body .section-contactform-padding .auto-container .row .contact-form {
+          padding: 0 15px;
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 auto;
+                  flex: 0 0 auto;
+          width: auto;
+          max-width: 100%;
+          position: relative; }
+          body .section-contactform-padding .auto-container .row .contact-form .contact-form-group {
+            position: relative; }
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles {
+              position: absolute;
+              left: -80px;
+              bottom: -110px;
+              -webkit-transition: all .7s ease;
+              transition: all .7s ease; }
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover {
+              -webkit-transform: rotate(150deg);
+                      transform: rotate(150deg); }
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-1,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-2,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-3,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-4,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-5,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-6,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-7,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-8,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-9,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-10,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-11,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-12,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-13,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-14,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-15,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-16,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-17,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-18,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-19,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-20,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-21,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-22,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-23,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-24,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-25,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-26,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-27,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-28,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-29,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-30,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g1-0-1 #p1-1-1-31 {
+              fill: #2c2a49 !important;
+              -webkit-transition-delay: .2s;
+                      transition-delay: .2s; }
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-1,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-2,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-3,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-4,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-5,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-6,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-7,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-8,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-9,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-10,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-11,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-12,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-13,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-14,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-15,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-16,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-17,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-18,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-19,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-20,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-21,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-22,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-23,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-24,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-25,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-26,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-27,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-28,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-29,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-30,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-31,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-32,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-33,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-34,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-35,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-36,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-37,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-38,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-39,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-40,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-41,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g2-0-1 #p2-1-2-42 {
+              fill: #2c2a49 !important;
+              -webkit-transition-delay: .3s;
+                      transition-delay: .3s; }
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-1,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-2,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-3,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-4,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-5,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-6,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-7,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-8,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-9,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-10,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-11,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-12,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-13,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-14,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-15,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-16,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-17,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-18,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-19,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-20,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-21,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-22,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-23,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-24,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g3-0-1 #p3-1-3-25 {
+              fill: #2c2a49 !important;
+              -webkit-transition-delay: .4s;
+                      transition-delay: .4s; }
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-1,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-2,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-3,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-4,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-5,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-6,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-7,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-8,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-9,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-10,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-11,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-12,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-13,
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles:hover #g4-0-1 #p4-1-1-14 {
+              fill: #2c2a49 !important;
+              -webkit-transition-delay: .5s;
+                      transition-delay: .5s; }
+            body .section-contactform-padding .auto-container .row .contact-form .contact-form-group .form {
+              position: relative;
+              background: #fff;
+              padding: 50px 70px;
+              max-width: 560px;
+              margin: 0 0 30px auto; }
+              body .section-contactform-padding .auto-container .row .contact-form .contact-form-group .form .flex-form {
+                margin-left: -15px;
+                margin-right: -15px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap; }
+                body .section-contactform-padding .auto-container .row .contact-form .contact-form-group .form .flex-form .form-group {
+                  margin-bottom: 20px;
+                  padding: 0 15px;
+                  -webkit-box-flex: 0;
+                      -ms-flex: 0 0 auto;
+                          flex: 0 0 auto;
+                  width: 100%;
+                  max-width: 100%; }
+                  body .section-contactform-padding .auto-container .row .contact-form .contact-form-group .form .flex-form .form-group input[type="text"] {
+                    background: #fff;
+                    border: 1px solid;
+                    border-color: transparent transparent #e5e5e5;
+                    padding: 0 10px;
+                    width: 85%;
+                    height: 50px;
+                    color: #6e6e6e; }
+                  body .section-contactform-padding .auto-container .row .contact-form .contact-form-group .form .flex-form .form-group textarea {
+                    background: #fff;
+                    border: 1px solid;
+                    border-color: transparent transparent #e5e5e5;
+                    padding: 0 10px;
+                    padding-top: 20px;
+                    width: 85%;
+                    height: 85px;
+                    color: #6e6e6e;
+                    overflow: hidden;
+                    resize: vertical; }
+                  body .section-contactform-padding .auto-container .row .contact-form .contact-form-group .form .flex-form .form-group p {
+                    color: #6e6e6e;
+                    line-height: 1.8;
+                    font-size: 16px;
+                    margin-top: 0;
+                    margin-bottom: 1rem; }
+                    body .section-contactform-padding .auto-container .row .contact-form .contact-form-group .form .flex-form .form-group p input[type="checkbox"] {
+                      margin-right: 5px;
+                      position: relative;
+                      top: 2px; }
+                body .section-contactform-padding .auto-container .row .contact-form .contact-form-group .form .flex-form .contact-btn {
+                  position: relative;
+                  padding-top: 20px;
+                  margin: 0 -10px; }
+                  body .section-contactform-padding .auto-container .row .contact-form .contact-form-group .form .flex-form .contact-btn button[type="submit"] {
+                    cursor: pointer;
+                    color: #fff;
+                    position: relative;
+                    display: -webkit-inline-box;
+                    display: -ms-inline-flexbox;
+                    display: inline-flex;
+                    overflow: hidden;
+                    padding: 17px 35px 16px;
+                    text-align: center;
+                    z-index: 1;
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    -webkit-transition: .5s;
+                    transition: .5s;
+                    background-color: #ffc107; }
+                  body .section-contactform-padding .auto-container .row .contact-form .contact-form-group .form .flex-form .contact-btn [type="submit"]:hover {
+                    color: #fff;
+                    background-color: #2c2a49; }
+  body footer {
+    position: relative;
+    padding: 120px 0 60px;
+    background: #252638; }
+    body footer .auto-container {
+      position: static;
+      max-width: 1320px;
+      padding: 0 15px;
+      margin: 0 auto; }
+      body footer .auto-container .row {
+        margin-left: -15px;
+        margin-right: -15px;
+        background: #252638;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+        body footer .auto-container .row .contact-block {
+          padding: 0 15px;
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 auto;
+                  flex: 0 0 auto;
+          width: 25%;
+          -ms-flex-negative: 0;
+              flex-shrink: 0; }
+          body footer .auto-container .row .contact-block .contact-block-title h4 {
+            color: #fff;
+            margin-bottom: 30px;
+            font-size: 30px;
+            line-height: 1.25em;
+            font-family: "Cormorant", Georgia, "Times New Roman", Times, serif; }
+          body footer .auto-container .row .contact-block .contact-block-list {
+            list-style: none; }
+            body footer .auto-container .row .contact-block .contact-block-list li {
+              margin-bottom: 8px;
+              color: #bebec3; }
+              body footer .auto-container .row .contact-block .contact-block-list li a, body footer .auto-container .row .contact-block .contact-block-list li address {
+                font-style: normal;
+                text-decoration: none;
+                color: #bebec3;
+                -webkit-transition: all 0.2s ease;
+                transition: all 0.2s ease; }
+              body footer .auto-container .row .contact-block .contact-block-list li a:hover {
+                color: #ffc107; }
+          body footer .auto-container .row .contact-block .contact-block-social {
+            list-style: none; }
+            body footer .auto-container .row .contact-block .contact-block-social a {
+              display: inline-block;
+              margin-top: 30px;
+              margin-right: 25px;
+              margin-bottom: 15px;
+              font-size: 15px;
+              color: #bebec3;
+              -webkit-transition: all .2s ease;
+              transition: all .2s ease; }
+            body footer .auto-container .row .contact-block .contact-block-social a[href*="facebook"]:hover #path4532,
+            body footer .auto-container .row .contact-block .contact-block-social a[href*="instagram"]:hover #path6,
+            body footer .auto-container .row .contact-block .contact-block-social a[href*="vk"]:hover #rect4569 {
+              fill: #ffc107 !important; }
+          body footer .auto-container .row .contact-block .footer-form {
+            position: relative; }
+            body footer .auto-container .row .contact-block .footer-form form {
+              line-height: inherit; }
+              body footer .auto-container .row .contact-block .footer-form form input {
+                background: transparent;
+                border-color: rgba(255, 255, 255, 0.15);
+                color: #bebec3;
+                width: 85%;
+                height: 60px;
+                border: 1px solid #bebec3; }
+              body footer .auto-container .row .contact-block .footer-form form button[type="submit"] {
+                cursor: pointer;
+                color: #fff;
+                height: 60px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                overflow: hidden;
+                padding: 17px 35px 16px;
+                text-align: center;
+                z-index: 1;
+                letter-spacing: 1px;
+                font-weight: 500;
+                text-transform: uppercase;
+                -webkit-transition: .5s;
+                transition: .5s;
+                background-color: #ffc107; }
+              body footer .auto-container .row .contact-block .footer-form form [type="submit"]:hover {
+                color: #fff;
+                background-color: #2c2a49; }
+        body footer .auto-container .row .contact-block:nth-child(2) {
+          width: 15%; }
+        body footer .auto-container .row .contact-block:last-child {
+          width: 35%; }
 
 /*# sourceMappingURL=style.css.map */
