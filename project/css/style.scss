@@ -1,6 +1,5 @@
 @import 'fonts.scss';
 @import 'variables.scss';
-@import 'media.scss';
 
 /* normolize */
 * {
@@ -20,7 +19,13 @@ body {
     line-height: 1.7em;
     font-weight: 400;
     background: $backg;
+}
 
+#top{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 300px;
 
     /* header */
     header {
@@ -110,6 +115,7 @@ body {
                             font-weight: 500;
                             line-height: 30px;
                             text-transform: capitalize;
+                            text-decoration: none;
                             color: $title-color;
                             padding: 3px 0;
                             opacity: 1;
@@ -128,18 +134,50 @@ body {
                         }
 
                         ul {
+                            display: block !important;
+                            visibility: hidden;
+                            opacity: 0;
                             position: absolute;
                             left: 0;
                             top: 100%;
                             width: max-content;
-                            min-width: 250px;
+                            height: auto;
                             z-index: 100;
                             background-color: $title-color;
+                            transform: translateY(30px);
+                            transition: .5s;
+                            box-shadow: 2px 2px 5px 1px rgba(0,0,0,.05),-2px 0 5px 1px rgba(0,0,0,.05);
+                            border-top: 1px solid $yellow;
 
                             li {
                                 position: relative;
                                 width: 100%;
+                                height: 40px;
                                 padding: 0 25px;
+
+                                a{
+                                    position: relative;
+                                    display: block;
+                                    border-bottom: 1px solid $li-border;
+                                    line-height: 24px;
+                                    text-align: left;
+                                    transition: all .5s ease;
+                                    font-size: $links-text;
+                                    color: $backg;
+                                    font-weight: 500;
+                                    text-decoration: none;
+                                }
+                            }
+                            
+                            li::before {
+                                position: absolute;
+                                content: "";
+                                left: 0;
+                                top: 0;
+                                width: 0;
+                                height: 100%;
+                                display: block;
+                                transition: all .5s ease;
                             }
                         }
                     }
@@ -152,6 +190,13 @@ body {
                         width: 23px;
                         height: 1px;
                         opacity: 0;
+                    }
+
+                    li:hover ul{
+                        visibility: visible;
+                        opacity: 1;
+                        top: 62px;
+                        left: -50px;
                     }
 
                     a:hover {
@@ -201,7 +246,7 @@ body {
         margin: 0 auto;
         background: url(../img/main_background.jpg) no-repeat;
         background-size: cover;
-        background-position: 0 0;
+        background-position: center;
 
         .container {
             min-height: 750px;
@@ -416,10 +461,10 @@ body {
 
                 .offer-block{
                     position: relative;
-                    visibility: visible;
                     padding: 0 40px;
                     margin-bottom: 60px;
                     text-align: center;
+                    flex: 0 1 auto;
 
                     .offer-image{
                         position: relative;
@@ -561,140 +606,140 @@ body {
                         margin-bottom: 30px;
                         position: relative;
 
-                        #circles {
+                        #circles-0 {
                             position: absolute;
                             left: -120px;
                             top: -110px;
                             transition: all .7s ease;
                         }
-                        #circles:hover{
+                        #circles-0:hover{
                             transform: rotate(-150deg);
                         }
                 
-                        #circles:hover #g1-0 #p1-0-1-1,
-                        #circles:hover #g1-0 #p1-0-1-2,
-                        #circles:hover #g1-0 #p1-0-1-3,
-                        #circles:hover #g1-0 #p1-0-1-4,
-                        #circles:hover #g1-0 #p1-0-1-5,
-                        #circles:hover #g1-0 #p1-0-1-6,
-                        #circles:hover #g1-0 #p1-0-1-7,
-                        #circles:hover #g1-0 #p1-0-1-8,
-                        #circles:hover #g1-0 #p1-0-1-9,
-                        #circles:hover #g1-0 #p1-0-1-10,
-                        #circles:hover #g1-0 #p1-0-1-11,
-                        #circles:hover #g1-0 #p1-0-1-12,
-                        #circles:hover #g1-0 #p1-0-1-13,
-                        #circles:hover #g1-0 #p1-0-1-14,
-                        #circles:hover #g1-0 #p1-0-1-15,
-                        #circles:hover #g1-0 #p1-0-1-16,
-                        #circles:hover #g1-0 #p1-0-1-17,
-                        #circles:hover #g1-0 #p1-0-1-18,
-                        #circles:hover #g1-0 #p1-0-1-19,
-                        #circles:hover #g1-0 #p1-0-1-20,
-                        #circles:hover #g1-0 #p1-0-1-21,
-                        #circles:hover #g1-0 #p1-0-1-22,
-                        #circles:hover #g1-0 #p1-0-1-23,
-                        #circles:hover #g1-0 #p1-0-1-24,
-                        #circles:hover #g1-0 #p1-0-1-25,
-                        #circles:hover #g1-0 #p1-0-1-26,
-                        #circles:hover #g1-0 #p1-0-1-27,
-                        #circles:hover #g1-0 #p1-0-1-28,
-                        #circles:hover #g1-0 #p1-0-1-29,
-                        #circles:hover #g1-0 #p1-0-1-30,
-                        #circles:hover #g1-0 #p1-0-1-31 {
+                        #circles-0:hover #g1-0 #p1-0-1-1,
+                        #circles-0:hover #g1-0 #p1-0-1-2,
+                        #circles-0:hover #g1-0 #p1-0-1-3,
+                        #circles-0:hover #g1-0 #p1-0-1-4,
+                        #circles-0:hover #g1-0 #p1-0-1-5,
+                        #circles-0:hover #g1-0 #p1-0-1-6,
+                        #circles-0:hover #g1-0 #p1-0-1-7,
+                        #circles-0:hover #g1-0 #p1-0-1-8,
+                        #circles-0:hover #g1-0 #p1-0-1-9,
+                        #circles-0:hover #g1-0 #p1-0-1-10,
+                        #circles-0:hover #g1-0 #p1-0-1-11,
+                        #circles-0:hover #g1-0 #p1-0-1-12,
+                        #circles-0:hover #g1-0 #p1-0-1-13,
+                        #circles-0:hover #g1-0 #p1-0-1-14,
+                        #circles-0:hover #g1-0 #p1-0-1-15,
+                        #circles-0:hover #g1-0 #p1-0-1-16,
+                        #circles-0:hover #g1-0 #p1-0-1-17,
+                        #circles-0:hover #g1-0 #p1-0-1-18,
+                        #circles-0:hover #g1-0 #p1-0-1-19,
+                        #circles-0:hover #g1-0 #p1-0-1-20,
+                        #circles-0:hover #g1-0 #p1-0-1-21,
+                        #circles-0:hover #g1-0 #p1-0-1-22,
+                        #circles-0:hover #g1-0 #p1-0-1-23,
+                        #circles-0:hover #g1-0 #p1-0-1-24,
+                        #circles-0:hover #g1-0 #p1-0-1-25,
+                        #circles-0:hover #g1-0 #p1-0-1-26,
+                        #circles-0:hover #g1-0 #p1-0-1-27,
+                        #circles-0:hover #g1-0 #p1-0-1-28,
+                        #circles-0:hover #g1-0 #p1-0-1-29,
+                        #circles-0:hover #g1-0 #p1-0-1-30,
+                        #circles-0:hover #g1-0 #p1-0-1-31 {
                         fill: $title-color !important;
                         transition-delay: .2s;
                         }
                 
-                        #circles:hover #g2-0 #p2-0-2-1,
-                        #circles:hover #g2-0 #p2-0-2-2,
-                        #circles:hover #g2-0 #p2-0-2-3,
-                        #circles:hover #g2-0 #p2-0-2-4,
-                        #circles:hover #g2-0 #p2-0-2-5,
-                        #circles:hover #g2-0 #p2-0-2-6,
-                        #circles:hover #g2-0 #p2-0-2-7,
-                        #circles:hover #g2-0 #p2-0-2-8,
-                        #circles:hover #g2-0 #p2-0-2-9,
-                        #circles:hover #g2-0 #p2-0-2-10,
-                        #circles:hover #g2-0 #p2-0-2-11,
-                        #circles:hover #g2-0 #p2-0-2-12,
-                        #circles:hover #g2-0 #p2-0-2-13,
-                        #circles:hover #g2-0 #p2-0-2-14,
-                        #circles:hover #g2-0 #p2-0-2-15,
-                        #circles:hover #g2-0 #p2-0-2-16,
-                        #circles:hover #g2-0 #p2-0-2-17,
-                        #circles:hover #g2-0 #p2-0-2-18,
-                        #circles:hover #g2-0 #p2-0-2-19,
-                        #circles:hover #g2-0 #p2-0-2-20,
-                        #circles:hover #g2-0 #p2-0-2-21,
-                        #circles:hover #g2-0 #p2-0-2-22,
-                        #circles:hover #g2-0 #p2-0-2-23,
-                        #circles:hover #g2-0 #p2-0-2-24,
-                        #circles:hover #g2-0 #p2-0-2-25,
-                        #circles:hover #g2-0 #p2-0-2-26,
-                        #circles:hover #g2-0 #p2-0-2-27,
-                        #circles:hover #g2-0 #p2-0-2-28,
-                        #circles:hover #g2-0 #p2-0-2-29,
-                        #circles:hover #g2-0 #p2-0-2-30,
-                        #circles:hover #g2-0 #p2-0-2-31,
-                        #circles:hover #g2-0 #p2-0-2-32,
-                        #circles:hover #g2-0 #p2-0-2-33,
-                        #circles:hover #g2-0 #p2-0-2-34,
-                        #circles:hover #g2-0 #p2-0-2-35,
-                        #circles:hover #g2-0 #p2-0-2-36,
-                        #circles:hover #g2-0 #p2-0-2-37,
-                        #circles:hover #g2-0 #p2-0-2-38,
-                        #circles:hover #g2-0 #p2-0-2-39,
-                        #circles:hover #g2-0 #p2-0-2-40,
-                        #circles:hover #g2-0 #p2-0-2-41,
-                        #circles:hover #g2-0 #p2-0-2-42 {
+                        #circles-0:hover #g2-0 #p2-0-2-1,
+                        #circles-0:hover #g2-0 #p2-0-2-2,
+                        #circles-0:hover #g2-0 #p2-0-2-3,
+                        #circles-0:hover #g2-0 #p2-0-2-4,
+                        #circles-0:hover #g2-0 #p2-0-2-5,
+                        #circles-0:hover #g2-0 #p2-0-2-6,
+                        #circles-0:hover #g2-0 #p2-0-2-7,
+                        #circles-0:hover #g2-0 #p2-0-2-8,
+                        #circles-0:hover #g2-0 #p2-0-2-9,
+                        #circles-0:hover #g2-0 #p2-0-2-10,
+                        #circles-0:hover #g2-0 #p2-0-2-11,
+                        #circles-0:hover #g2-0 #p2-0-2-12,
+                        #circles-0:hover #g2-0 #p2-0-2-13,
+                        #circles-0:hover #g2-0 #p2-0-2-14,
+                        #circles-0:hover #g2-0 #p2-0-2-15,
+                        #circles-0:hover #g2-0 #p2-0-2-16,
+                        #circles-0:hover #g2-0 #p2-0-2-17,
+                        #circles-0:hover #g2-0 #p2-0-2-18,
+                        #circles-0:hover #g2-0 #p2-0-2-19,
+                        #circles-0:hover #g2-0 #p2-0-2-20,
+                        #circles-0:hover #g2-0 #p2-0-2-21,
+                        #circles-0:hover #g2-0 #p2-0-2-22,
+                        #circles-0:hover #g2-0 #p2-0-2-23,
+                        #circles-0:hover #g2-0 #p2-0-2-24,
+                        #circles-0:hover #g2-0 #p2-0-2-25,
+                        #circles-0:hover #g2-0 #p2-0-2-26,
+                        #circles-0:hover #g2-0 #p2-0-2-27,
+                        #circles-0:hover #g2-0 #p2-0-2-28,
+                        #circles-0:hover #g2-0 #p2-0-2-29,
+                        #circles-0:hover #g2-0 #p2-0-2-30,
+                        #circles-0:hover #g2-0 #p2-0-2-31,
+                        #circles-0:hover #g2-0 #p2-0-2-32,
+                        #circles-0:hover #g2-0 #p2-0-2-33,
+                        #circles-0:hover #g2-0 #p2-0-2-34,
+                        #circles-0:hover #g2-0 #p2-0-2-35,
+                        #circles-0:hover #g2-0 #p2-0-2-36,
+                        #circles-0:hover #g2-0 #p2-0-2-37,
+                        #circles-0:hover #g2-0 #p2-0-2-38,
+                        #circles-0:hover #g2-0 #p2-0-2-39,
+                        #circles-0:hover #g2-0 #p2-0-2-40,
+                        #circles-0:hover #g2-0 #p2-0-2-41,
+                        #circles-0:hover #g2-0 #p2-0-2-42 {
                         fill: $title-color !important;
                         transition-delay: .3s;
                         }
                 
-                        #circles:hover #g3-0 #p3-0-3-1,
-                        #circles:hover #g3-0 #p3-0-3-2,
-                        #circles:hover #g3-0 #p3-0-3-3,
-                        #circles:hover #g3-0 #p3-0-3-4,
-                        #circles:hover #g3-0 #p3-0-3-5,
-                        #circles:hover #g3-0 #p3-0-3-6,
-                        #circles:hover #g3-0 #p3-0-3-7,
-                        #circles:hover #g3-0 #p3-0-3-8,
-                        #circles:hover #g3-0 #p3-0-3-9,
-                        #circles:hover #g3-0 #p3-0-3-10,
-                        #circles:hover #g3-0 #p3-0-3-11,
-                        #circles:hover #g3-0 #p3-0-3-12,
-                        #circles:hover #g3-0 #p3-0-3-13,
-                        #circles:hover #g3-0 #p3-0-3-14,
-                        #circles:hover #g3-0 #p3-0-3-15,
-                        #circles:hover #g3-0 #p3-0-3-16,
-                        #circles:hover #g3-0 #p3-0-3-17,
-                        #circles:hover #g3-0 #p3-0-3-18,
-                        #circles:hover #g3-0 #p3-0-3-19,
-                        #circles:hover #g3-0 #p3-0-3-20,
-                        #circles:hover #g3-0 #p3-0-3-21,
-                        #circles:hover #g3-0 #p3-0-3-22,
-                        #circles:hover #g3-0 #p3-0-3-23,
-                        #circles:hover #g3-0 #p3-0-3-24,
-                        #circles:hover #g3-0 #p3-0-3-25 {
+                        #circles-0:hover #g3-0 #p3-0-3-1,
+                        #circles-0:hover #g3-0 #p3-0-3-2,
+                        #circles-0:hover #g3-0 #p3-0-3-3,
+                        #circles-0:hover #g3-0 #p3-0-3-4,
+                        #circles-0:hover #g3-0 #p3-0-3-5,
+                        #circles-0:hover #g3-0 #p3-0-3-6,
+                        #circles-0:hover #g3-0 #p3-0-3-7,
+                        #circles-0:hover #g3-0 #p3-0-3-8,
+                        #circles-0:hover #g3-0 #p3-0-3-9,
+                        #circles-0:hover #g3-0 #p3-0-3-10,
+                        #circles-0:hover #g3-0 #p3-0-3-11,
+                        #circles-0:hover #g3-0 #p3-0-3-12,
+                        #circles-0:hover #g3-0 #p3-0-3-13,
+                        #circles-0:hover #g3-0 #p3-0-3-14,
+                        #circles-0:hover #g3-0 #p3-0-3-15,
+                        #circles-0:hover #g3-0 #p3-0-3-16,
+                        #circles-0:hover #g3-0 #p3-0-3-17,
+                        #circles-0:hover #g3-0 #p3-0-3-18,
+                        #circles-0:hover #g3-0 #p3-0-3-19,
+                        #circles-0:hover #g3-0 #p3-0-3-20,
+                        #circles-0:hover #g3-0 #p3-0-3-21,
+                        #circles-0:hover #g3-0 #p3-0-3-22,
+                        #circles-0:hover #g3-0 #p3-0-3-23,
+                        #circles-0:hover #g3-0 #p3-0-3-24,
+                        #circles-0:hover #g3-0 #p3-0-3-25 {
                         fill: $title-color !important;
                         transition-delay: .4s;
                         }
                 
-                        #circles:hover #g4-0 #p4-0-4-1,
-                        #circles:hover #g4-0 #p4-0-4-2,
-                        #circles:hover #g4-0 #p4-0-4-3,
-                        #circles:hover #g4-0 #p4-0-4-4,
-                        #circles:hover #g4-0 #p4-0-4-5,
-                        #circles:hover #g4-0 #p4-0-4-6,
-                        #circles:hover #g4-0 #p4-0-4-7,
-                        #circles:hover #g4-0 #p4-0-4-8,
-                        #circles:hover #g4-0 #p4-0-4-9,
-                        #circles:hover #g4-0 #p4-0-4-10,
-                        #circles:hover #g4-0 #p4-0-4-11,
-                        #circles:hover #g4-0 #p4-0-4-12,
-                        #circles:hover #g4-0 #p4-0-4-13,
-                        #circles:hover #g4-0 #p4-0-4-14 {
+                        #circles-0:hover #g4-0 #p4-0-4-1,
+                        #circles-0:hover #g4-0 #p4-0-4-2,
+                        #circles-0:hover #g4-0 #p4-0-4-3,
+                        #circles-0:hover #g4-0 #p4-0-4-4,
+                        #circles-0:hover #g4-0 #p4-0-4-5,
+                        #circles-0:hover #g4-0 #p4-0-4-6,
+                        #circles-0:hover #g4-0 #p4-0-4-7,
+                        #circles-0:hover #g4-0 #p4-0-4-8,
+                        #circles-0:hover #g4-0 #p4-0-4-9,
+                        #circles-0:hover #g4-0 #p4-0-4-10,
+                        #circles-0:hover #g4-0 #p4-0-4-11,
+                        #circles-0:hover #g4-0 #p4-0-4-12,
+                        #circles-0:hover #g4-0 #p4-0-4-13,
+                        #circles-0:hover #g4-0 #p4-0-4-14 {
                         fill: $title-color !important;
                         transition-delay: .5s;
                         }
@@ -832,12 +877,20 @@ body {
                             padding-right: 15px;
                             text-transform: capitalize;
                         }
-                        p{
-                            position: relative;
-                            padding-right: 15px;
-                            margin-bottom: 0;
-                            line-height: 1.8;
-                            font-size: $simple-text;
+                    }
+                    p{
+                        position: relative;
+                        padding-right: 15px;
+                        margin-bottom: 0;
+                        line-height: 1.8;
+                        font-size: $simple-text;
+                        
+                        a{
+                            text-decoration: none;
+                            color: $bf-text;
+                        }
+                        a:hover{
+                            color: $yellow;
                         }
                     }
                 }
@@ -861,130 +914,130 @@ body {
                             transform: rotate(150deg);
                         }
                 
-                        #circles:hover #g1-0-1 #p1-1-1-1,
-                        #circles:hover #g1-0-1 #p1-1-1-2,
-                        #circles:hover #g1-0-1 #p1-1-1-3,
-                        #circles:hover #g1-0-1 #p1-1-1-4,
-                        #circles:hover #g1-0-1 #p1-1-1-5,
-                        #circles:hover #g1-0-1 #p1-1-1-6,
-                        #circles:hover #g1-0-1 #p1-1-1-7,
-                        #circles:hover #g1-0-1 #p1-1-1-8,
-                        #circles:hover #g1-0-1 #p1-1-1-9,
-                        #circles:hover #g1-0-1 #p1-1-1-10,
-                        #circles:hover #g1-0-1 #p1-1-1-11,
-                        #circles:hover #g1-0-1 #p1-1-1-12,
-                        #circles:hover #g1-0-1 #p1-1-1-13,
-                        #circles:hover #g1-0-1 #p1-1-1-14,
-                        #circles:hover #g1-0-1 #p1-1-1-15,
-                        #circles:hover #g1-0-1 #p1-1-1-16,
-                        #circles:hover #g1-0-1 #p1-1-1-17,
-                        #circles:hover #g1-0-1 #p1-1-1-18,
-                        #circles:hover #g1-0-1 #p1-1-1-19,
-                        #circles:hover #g1-0-1 #p1-1-1-20,
-                        #circles:hover #g1-0-1 #p1-1-1-21,
-                        #circles:hover #g1-0-1 #p1-1-1-22,
-                        #circles:hover #g1-0-1 #p1-1-1-23,
-                        #circles:hover #g1-0-1 #p1-1-1-24,
-                        #circles:hover #g1-0-1 #p1-1-1-25,
-                        #circles:hover #g1-0-1 #p1-1-1-26,
-                        #circles:hover #g1-0-1 #p1-1-1-27,
-                        #circles:hover #g1-0-1 #p1-1-1-28,
-                        #circles:hover #g1-0-1 #p1-1-1-29,
-                        #circles:hover #g1-0-1 #p1-1-1-30,
-                        #circles:hover #g1-0-1 #p1-1-1-31 {
+                        #circles:hover #g1-1 #p1-1-1-1,
+                        #circles:hover #g1-1 #p1-1-1-2,
+                        #circles:hover #g1-1 #p1-1-1-3,
+                        #circles:hover #g1-1 #p1-1-1-4,
+                        #circles:hover #g1-1 #p1-1-1-5,
+                        #circles:hover #g1-1 #p1-1-1-6,
+                        #circles:hover #g1-1 #p1-1-1-7,
+                        #circles:hover #g1-1 #p1-1-1-8,
+                        #circles:hover #g1-1 #p1-1-1-9,
+                        #circles:hover #g1-1 #p1-1-1-10,
+                        #circles:hover #g1-1 #p1-1-1-11,
+                        #circles:hover #g1-1 #p1-1-1-12,
+                        #circles:hover #g1-1 #p1-1-1-13,
+                        #circles:hover #g1-1 #p1-1-1-14,
+                        #circles:hover #g1-1 #p1-1-1-15,
+                        #circles:hover #g1-1 #p1-1-1-16,
+                        #circles:hover #g1-1 #p1-1-1-17,
+                        #circles:hover #g1-1 #p1-1-1-18,
+                        #circles:hover #g1-1 #p1-1-1-19,
+                        #circles:hover #g1-1 #p1-1-1-20,
+                        #circles:hover #g1-1 #p1-1-1-21,
+                        #circles:hover #g1-1 #p1-1-1-22,
+                        #circles:hover #g1-1 #p1-1-1-23,
+                        #circles:hover #g1-1 #p1-1-1-24,
+                        #circles:hover #g1-1 #p1-1-1-25,
+                        #circles:hover #g1-1 #p1-1-1-26,
+                        #circles:hover #g1-1 #p1-1-1-27,
+                        #circles:hover #g1-1 #p1-1-1-28,
+                        #circles:hover #g1-1 #p1-1-1-29,
+                        #circles:hover #g1-1 #p1-1-1-30,
+                        #circles:hover #g1-1 #p1-1-1-31 {
                         fill: $title-color !important;
                         transition-delay: .2s;
                         }
                 
-                        #circles:hover #g2-0-1 #p2-1-2-1,
-                        #circles:hover #g2-0-1 #p2-1-2-2,
-                        #circles:hover #g2-0-1 #p2-1-2-3,
-                        #circles:hover #g2-0-1 #p2-1-2-4,
-                        #circles:hover #g2-0-1 #p2-1-2-5,
-                        #circles:hover #g2-0-1 #p2-1-2-6,
-                        #circles:hover #g2-0-1 #p2-1-2-7,
-                        #circles:hover #g2-0-1 #p2-1-2-8,
-                        #circles:hover #g2-0-1 #p2-1-2-9,
-                        #circles:hover #g2-0-1 #p2-1-2-10,
-                        #circles:hover #g2-0-1 #p2-1-2-11,
-                        #circles:hover #g2-0-1 #p2-1-2-12,
-                        #circles:hover #g2-0-1 #p2-1-2-13,
-                        #circles:hover #g2-0-1 #p2-1-2-14,
-                        #circles:hover #g2-0-1 #p2-1-2-15,
-                        #circles:hover #g2-0-1 #p2-1-2-16,
-                        #circles:hover #g2-0-1 #p2-1-2-17,
-                        #circles:hover #g2-0-1 #p2-1-2-18,
-                        #circles:hover #g2-0-1 #p2-1-2-19,
-                        #circles:hover #g2-0-1 #p2-1-2-20,
-                        #circles:hover #g2-0-1 #p2-1-2-21,
-                        #circles:hover #g2-0-1 #p2-1-2-22,
-                        #circles:hover #g2-0-1 #p2-1-2-23,
-                        #circles:hover #g2-0-1 #p2-1-2-24,
-                        #circles:hover #g2-0-1 #p2-1-2-25,
-                        #circles:hover #g2-0-1 #p2-1-2-26,
-                        #circles:hover #g2-0-1 #p2-1-2-27,
-                        #circles:hover #g2-0-1 #p2-1-2-28,
-                        #circles:hover #g2-0-1 #p2-1-2-29,
-                        #circles:hover #g2-0-1 #p2-1-2-30,
-                        #circles:hover #g2-0-1 #p2-1-2-31,
-                        #circles:hover #g2-0-1 #p2-1-2-32,
-                        #circles:hover #g2-0-1 #p2-1-2-33,
-                        #circles:hover #g2-0-1 #p2-1-2-34,
-                        #circles:hover #g2-0-1 #p2-1-2-35,
-                        #circles:hover #g2-0-1 #p2-1-2-36,
-                        #circles:hover #g2-0-1 #p2-1-2-37,
-                        #circles:hover #g2-0-1 #p2-1-2-38,
-                        #circles:hover #g2-0-1 #p2-1-2-39,
-                        #circles:hover #g2-0-1 #p2-1-2-40,
-                        #circles:hover #g2-0-1 #p2-1-2-41,
-                        #circles:hover #g2-0-1 #p2-1-2-42 {
+                        #circles:hover #g2-1 #p2-1-2-1,
+                        #circles:hover #g2-1 #p2-1-2-2,
+                        #circles:hover #g2-1 #p2-1-2-3,
+                        #circles:hover #g2-1 #p2-1-2-4,
+                        #circles:hover #g2-1 #p2-1-2-5,
+                        #circles:hover #g2-1 #p2-1-2-6,
+                        #circles:hover #g2-1 #p2-1-2-7,
+                        #circles:hover #g2-1 #p2-1-2-8,
+                        #circles:hover #g2-1 #p2-1-2-9,
+                        #circles:hover #g2-1 #p2-1-2-10,
+                        #circles:hover #g2-1 #p2-1-2-11,
+                        #circles:hover #g2-1 #p2-1-2-12,
+                        #circles:hover #g2-1 #p2-1-2-13,
+                        #circles:hover #g2-1 #p2-1-2-14,
+                        #circles:hover #g2-1 #p2-1-2-15,
+                        #circles:hover #g2-1 #p2-1-2-16,
+                        #circles:hover #g2-1 #p2-1-2-17,
+                        #circles:hover #g2-1 #p2-1-2-18,
+                        #circles:hover #g2-1 #p2-1-2-19,
+                        #circles:hover #g2-1 #p2-1-2-20,
+                        #circles:hover #g2-1 #p2-1-2-21,
+                        #circles:hover #g2-1 #p2-1-2-22,
+                        #circles:hover #g2-1 #p2-1-2-23,
+                        #circles:hover #g2-1 #p2-1-2-24,
+                        #circles:hover #g2-1 #p2-1-2-25,
+                        #circles:hover #g2-1 #p2-1-2-26,
+                        #circles:hover #g2-1 #p2-1-2-27,
+                        #circles:hover #g2-1 #p2-1-2-28,
+                        #circles:hover #g2-1 #p2-1-2-29,
+                        #circles:hover #g2-1 #p2-1-2-30,
+                        #circles:hover #g2-1 #p2-1-2-31,
+                        #circles:hover #g2-1 #p2-1-2-32,
+                        #circles:hover #g2-1 #p2-1-2-33,
+                        #circles:hover #g2-1 #p2-1-2-34,
+                        #circles:hover #g2-1 #p2-1-2-35,
+                        #circles:hover #g2-1 #p2-1-2-36,
+                        #circles:hover #g2-1 #p2-1-2-37,
+                        #circles:hover #g2-1 #p2-1-2-38,
+                        #circles:hover #g2-1 #p2-1-2-39,
+                        #circles:hover #g2-1 #p2-1-2-40,
+                        #circles:hover #g2-1 #p2-1-2-41,
+                        #circles:hover #g2-1 #p2-1-2-42 {
                         fill: $title-color !important;
                         transition-delay: .3s;
                         }
                 
-                        #circles:hover #g3-0-1 #p3-1-3-1,
-                        #circles:hover #g3-0-1 #p3-1-3-2,
-                        #circles:hover #g3-0-1 #p3-1-3-3,
-                        #circles:hover #g3-0-1 #p3-1-3-4,
-                        #circles:hover #g3-0-1 #p3-1-3-5,
-                        #circles:hover #g3-0-1 #p3-1-3-6,
-                        #circles:hover #g3-0-1 #p3-1-3-7,
-                        #circles:hover #g3-0-1 #p3-1-3-8,
-                        #circles:hover #g3-0-1 #p3-1-3-9,
-                        #circles:hover #g3-0-1 #p3-1-3-10,
-                        #circles:hover #g3-0-1 #p3-1-3-11,
-                        #circles:hover #g3-0-1 #p3-1-3-12,
-                        #circles:hover #g3-0-1 #p3-1-3-13,
-                        #circles:hover #g3-0-1 #p3-1-3-14,
-                        #circles:hover #g3-0-1 #p3-1-3-15,
-                        #circles:hover #g3-0-1 #p3-1-3-16,
-                        #circles:hover #g3-0-1 #p3-1-3-17,
-                        #circles:hover #g3-0-1 #p3-1-3-18,
-                        #circles:hover #g3-0-1 #p3-1-3-19,
-                        #circles:hover #g3-0-1 #p3-1-3-20,
-                        #circles:hover #g3-0-1 #p3-1-3-21,
-                        #circles:hover #g3-0-1 #p3-1-3-22,
-                        #circles:hover #g3-0-1 #p3-1-3-23,
-                        #circles:hover #g3-0-1 #p3-1-3-24,
-                        #circles:hover #g3-0-1 #p3-1-3-25 {
+                        #circles:hover #g3-1 #p3-1-3-1,
+                        #circles:hover #g3-1 #p3-1-3-2,
+                        #circles:hover #g3-1 #p3-1-3-3,
+                        #circles:hover #g3-1 #p3-1-3-4,
+                        #circles:hover #g3-1 #p3-1-3-5,
+                        #circles:hover #g3-1 #p3-1-3-6,
+                        #circles:hover #g3-1 #p3-1-3-7,
+                        #circles:hover #g3-1 #p3-1-3-8,
+                        #circles:hover #g3-1 #p3-1-3-9,
+                        #circles:hover #g3-1 #p3-1-3-10,
+                        #circles:hover #g3-1 #p3-1-3-11,
+                        #circles:hover #g3-1 #p3-1-3-12,
+                        #circles:hover #g3-1 #p3-1-3-13,
+                        #circles:hover #g3-1 #p3-1-3-14,
+                        #circles:hover #g3-1 #p3-1-3-15,
+                        #circles:hover #g3-1 #p3-1-3-16,
+                        #circles:hover #g3-1 #p3-1-3-17,
+                        #circles:hover #g3-1 #p3-1-3-18,
+                        #circles:hover #g3-1 #p3-1-3-19,
+                        #circles:hover #g3-1 #p3-1-3-20,
+                        #circles:hover #g3-1 #p3-1-3-21,
+                        #circles:hover #g3-1 #p3-1-3-22,
+                        #circles:hover #g3-1 #p3-1-3-23,
+                        #circles:hover #g3-1 #p3-1-3-24,
+                        #circles:hover #g3-1 #p3-1-3-25 {
                         fill: $title-color !important;
                         transition-delay: .4s;
                         }
                 
-                        #circles:hover #g4-0-1 #p4-1-1-1,
-                        #circles:hover #g4-0-1 #p4-1-1-2,
-                        #circles:hover #g4-0-1 #p4-1-1-3,
-                        #circles:hover #g4-0-1 #p4-1-1-4,
-                        #circles:hover #g4-0-1 #p4-1-1-5,
-                        #circles:hover #g4-0-1 #p4-1-1-6,
-                        #circles:hover #g4-0-1 #p4-1-1-7,
-                        #circles:hover #g4-0-1 #p4-1-1-8,
-                        #circles:hover #g4-0-1 #p4-1-1-9,
-                        #circles:hover #g4-0-1 #p4-1-1-10,
-                        #circles:hover #g4-0-1 #p4-1-1-11,
-                        #circles:hover #g4-0-1 #p4-1-1-12,
-                        #circles:hover #g4-0-1 #p4-1-1-13,
-                        #circles:hover #g4-0-1 #p4-1-1-14 {
+                        #circles:hover #g4-1 #p4-1-4-1,
+                        #circles:hover #g4-1 #p4-1-4-2,
+                        #circles:hover #g4-1 #p4-1-4-3,
+                        #circles:hover #g4-1 #p4-1-4-4,
+                        #circles:hover #g4-1 #p4-1-4-5,
+                        #circles:hover #g4-1 #p4-1-4-6,
+                        #circles:hover #g4-1 #p4-1-4-7,
+                        #circles:hover #g4-1 #p4-1-4-8,
+                        #circles:hover #g4-1 #p4-1-4-9,
+                        #circles:hover #g4-1 #p4-1-4-10,
+                        #circles:hover #g4-1 #p4-1-4-11,
+                        #circles:hover #g4-1 #p4-1-4-12,
+                        #circles:hover #g4-1 #p4-1-4-13,
+                        #circles:hover #g4-1 #p4-1-4-14 {
                         fill: $title-color !important;
                         transition-delay: .5s;
                         }
@@ -1099,12 +1152,12 @@ body {
                 background: $footer-bg;
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: center;
 
                 .contact-block{
                     padding: 0 15px;
                     flex: 0 0 auto;
                     width: 25%;
-                    flex-shrink: 0;
 
                     .contact-block-title{
 
@@ -1140,6 +1193,7 @@ body {
 
                     .contact-block-social{
                         list-style: none;
+                        min-width: 250px;
 
                         a{
                             display: inline-block;
@@ -1203,12 +1257,40 @@ body {
 
                 .contact-block:nth-child(2){
                     width: 15%;
+                    min-width: 150px;
                 }
 
                 .contact-block:last-child{
                     width: 35%;
+                    min-width: 350px;
                 }
             }
         }
     }
+}
+.scroll-top{
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+    transform: rotate(90deg);
+    z-index: 99;
+    display: block !important;
+    text-decoration: none;
+    transition: .3s;
+    color: $scroll-text;
+
+    .scroll-text{
+        font-size: $book-text - 1px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all .5s ease;
+    }
+
+    .scroll-text:hover{
+        transform: scale(1.1);
+    }
+}
+
+.scroll-top:hover{
+    color: $yellow;
 }
