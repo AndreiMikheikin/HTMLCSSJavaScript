@@ -457,14 +457,16 @@ body {
                 margin: 0 -15px;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-around;
+                justify-content: center;
 
                 .offer-block{
                     position: relative;
                     padding: 0 40px;
-                    margin-bottom: 60px;
+                    margin: 0 1.2rem 60px;
                     text-align: center;
                     flex: 0 1 auto;
+                    width: 30%;
+                    min-width: 360px;
 
                     .offer-image{
                         position: relative;
@@ -819,6 +821,160 @@ body {
                             color: $backg;
                             background-color: $title-color;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    /* amenities section */
+    .section-amenities-padding{
+        position: relative;
+        padding: 150px 0 120px;
+        background-color: $backg;
+
+        .auto-container{
+            position: static;
+            padding: 0 15px;
+            margin: 0 auto;
+
+            .wrapper{
+                background-color: $backg;
+
+                .section-heading{
+                    position: relative;
+                    z-index: 1;
+                    margin-bottom: 50px;
+                    text-align: center;
+
+                    .section-heading-title-small{
+                       font-size: $simple-text;
+                       color: $yellow;
+                       margin-bottom: 6px;
+                       display: inline-block;
+                       font-weight: 500;
+                       text-transform: uppercase;
+                       letter-spacing: 5px;
+                       position: relative;
+                    }
+
+                    .section-heading-title-big{
+                        margin-bottom: 20px;
+                        font-size: 3rem;
+                        font-weight: 700;
+                        line-height: 1;
+                        position: relative;
+                        color: $bf-text;
+                        font-family: $title;
+                        text-transform: capitalize;
+                    }
+
+                    p{
+                        color: $common;
+                        line-height: 1.8;
+                        font-size: $simple-text;
+                    }
+                }
+
+                .row{
+                    margin: 0 -15px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    .icon-box{
+                        position: relative;
+                        margin: 0 1.5rem 30px;
+                        background: $bf-bg;
+                        text-align: center;
+                        padding: 73px 30px;
+                        transition: .5s;
+                        flex: 0 0 auto;
+                        width: 20%;
+                        min-width: 230px;
+
+
+                        .icon{
+                            font-size: $book-text * 3;
+                            color: $bf-text;
+                            margin-bottom: 15px;
+                            transition: .5s;
+
+                            [class*="icon-"]{
+                                font-family: $icon !important;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-feature-settings: normal;
+                                font-variant: normal;
+                                text-transform: none;
+                                line-height: 1;
+                            }
+
+                            .icon-1::before{
+                                content: "\e63e";
+                            }
+
+                            .icon-2::before{
+                                content: "\efdd";
+                            }
+
+                            .icon-3::before{
+                                content: "\e9c7";
+                            }
+
+                            .icon-4::before{
+                                content: "\f6f9";
+                            }
+
+                            .icon-5::before{
+                                content: "\ea43";
+                            }
+
+                            .icon-6::before{
+                                content: "\f00c";
+                            }
+
+                            .icon-7::before{
+                                content: "\ea47";
+                            }
+
+                            .icon-8::before{
+                                content: "\e406";
+                            }
+
+                            .icon-9::before{
+                                content: "\f8a2";
+                            }
+
+                            .icon-10::before{
+                                content: "\f168";
+                            }
+
+                            .icon-11::before{
+                                content: "\e6f8";
+                            }
+
+                            .icon-12::before{
+                                content: "\e561";
+                            }
+                        }
+
+                        p{
+                            text-transform: uppercase;
+                            margin-bottom: 0;
+                            font-weight: 500;
+                            line-height: 1.8;
+                            font-size: $simple-text;
+                        }
+                    }
+
+                    .icon-box:hover,{
+                        box-shadow: 0 10px 80px rgba(0,0,0,.1);
+                    }
+
+                    .icon-box:hover>.icon>[class*="icon-"]{
+                        color: $yellow;
+                        transition: .5s;
                     }
                 }
             }

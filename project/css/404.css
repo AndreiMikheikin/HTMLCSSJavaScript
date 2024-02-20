@@ -2,6 +2,20 @@
 /* font-family */
 /* font-size */
 /* color */
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 /* normolize */
 * {
   margin: 0;
@@ -32,6 +46,7 @@ body {
   /* back to home div */
   /* back to home section */
   /* about us section */
+  /* amenities section */
   /* footer */ }
   #top header {
     position: absolute;
@@ -358,7 +373,7 @@ body {
             background-color: #2c2a49; }
   #top .section-about-padding {
     padding: 80px 0 120px;
-    background-color: #faf5f2;
+    background-color: #fff;
     position: relative;
     width: 100%;
     max-width: 1920px;
@@ -577,10 +592,9 @@ body {
                     #top .section-about-padding .auto-container .row .about-block .about-image .video-area .area-btn .video-btn a .icon-1::before {
                       content: "\e037"; }
                     #top .section-about-padding .auto-container .row .about-block .about-image .video-area .area-btn .video-btn a .icon-1:hover {
-                      border: 5px dashed #2c2a49;
-                      border-radius: 50%;
-                      -webkit-transform: rotate(350deg);
-                              transform: rotate(350deg); }
+                      border: 5px dashed;
+                      border-color: #2c2a49;
+                      border-radius: 50%; }
         #top .section-about-padding .auto-container .row .about-discription {
           padding: 20px 10px;
           padding-left: 20px;
@@ -642,6 +656,116 @@ body {
             #top .section-about-padding .auto-container .row .about-discription .about-btn a:hover {
               color: #fff;
               background-color: #2c2a49; }
+  #top .section-amenities-padding {
+    position: relative;
+    padding: 150px 0 120px;
+    background-color: #faf5f2; }
+    #top .section-amenities-padding .auto-container {
+      position: static;
+      padding: 0 15px;
+      margin: 0 auto; }
+      #top .section-amenities-padding .auto-container .wrapper .section-heading {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 50px;
+        text-align: center; }
+        #top .section-amenities-padding .auto-container .wrapper .section-heading .section-heading-title-small {
+          font-size: 16px;
+          color: #ffc107;
+          margin-bottom: 6px;
+          display: inline-block;
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 5px;
+          position: relative; }
+        #top .section-amenities-padding .auto-container .wrapper .section-heading .section-heading-title-big {
+          margin-bottom: 20px;
+          font-size: 3rem;
+          font-weight: 700;
+          line-height: 1;
+          position: relative;
+          color: #2b2d42;
+          font-family: "Cormorant", Georgia, "Times New Roman", Times, serif;
+          text-transform: capitalize; }
+        #top .section-amenities-padding .auto-container .wrapper .section-heading p {
+          color: #6e6e6e;
+          line-height: 1.8;
+          font-size: 16px; }
+      #top .section-amenities-padding .auto-container .wrapper .row {
+        margin: 0 -15px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        #top .section-amenities-padding .auto-container .wrapper .row .icon-box {
+          position: relative;
+          margin: 0 1.5rem 30px;
+          background: #fff;
+          text-align: center;
+          padding: 73px 30px;
+          -webkit-transition: .5s;
+          transition: .5s;
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 auto;
+                  flex: 0 0 auto;
+          width: 20%;
+          min-width: 230px; }
+          #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon {
+            font-size: 45px;
+            color: #2b2d42;
+            margin-bottom: 15px;
+            -webkit-transition: .5s;
+            transition: .5s; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon [class*="icon-"] {
+              font-family: "Material Symbols Outlined" !important;
+              font-style: normal;
+              font-weight: 400;
+              -webkit-font-feature-settings: normal;
+                      font-feature-settings: normal;
+              font-variant: normal;
+              text-transform: none;
+              line-height: 1; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon .icon-1::before {
+              content: "\e63e"; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon .icon-2::before {
+              content: "\efdd"; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon .icon-3::before {
+              content: "\e9c7"; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon .icon-4::before {
+              content: "\f6f9"; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon .icon-5::before {
+              content: "\ea43"; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon .icon-6::before {
+              content: "\f00c"; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon .icon-7::before {
+              content: "\ea47"; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon .icon-8::before {
+              content: "\e406"; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon .icon-9::before {
+              content: "\f8a2"; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon .icon-10::before {
+              content: "\f168"; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon .icon-11::before {
+              content: "\e6f8"; }
+            #top .section-amenities-padding .auto-container .wrapper .row .icon-box .icon .icon-12::before {
+              content: "\e561"; }
+          #top .section-amenities-padding .auto-container .wrapper .row .icon-box p {
+            text-transform: uppercase;
+            margin-bottom: 0;
+            font-weight: 500;
+            line-height: 1.8;
+            font-size: 16px; }
+        #top .section-amenities-padding .auto-container .wrapper .row .icon-box:hover {
+          -webkit-box-shadow: 0 10px 80px rgba(0, 0, 0, 0.1);
+                  box-shadow: 0 10px 80px rgba(0, 0, 0, 0.1); }
+        #top .section-amenities-padding .auto-container .wrapper .row .icon-box:hover > .icon > [class*="icon-"] {
+          color: #ffc107;
+          -webkit-transition: .5s;
+          transition: .5s; }
   #top footer {
     position: relative;
     padding: 120px 0 60px;
