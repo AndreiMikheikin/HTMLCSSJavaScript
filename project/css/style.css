@@ -866,6 +866,8 @@ body {
               line-height: 1.8;
               font-size: 16px; }
           #top .section-amenities-padding .auto-container .wrapper .row .icon-box:hover {
+            -webkit-transform: scale(1.05);
+                    transform: scale(1.05);
             -webkit-box-shadow: 0 10px 80px rgba(0, 0, 0, 0.1);
                     box-shadow: 0 10px 80px rgba(0, 0, 0, 0.1); }
           #top .section-amenities-padding .auto-container .wrapper .row .icon-box:hover > .icon > [class*="icon-"] {
@@ -1254,30 +1256,28 @@ body {
         #top footer .auto-container .row .contact-block:last-child {
           width: 35%;
           min-width: 350px; }
-
-.scroll-top {
-  position: fixed;
-  right: 0;
-  bottom: 50px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  z-index: 99;
-  display: block !important;
-  text-decoration: none;
-  -webkit-transition: .3s;
-  transition: .3s;
-  color: #999; }
-  .scroll-top .scroll-text {
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease; }
-  .scroll-top .scroll-text:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
-
-.scroll-top:hover {
-  color: #ffc107; }
+  #top .scroll-top {
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    z-index: 99;
+    display: block !important;
+    text-decoration: none;
+    -webkit-transition: .3s;
+    transition: .3s;
+    color: #999; }
+    #top .scroll-top .scroll-text {
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease; }
+    #top .scroll-top .scroll-text:hover {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+  #top .scroll-top:hover {
+    color: #ffc107; }
 
 /*# sourceMappingURL=style.css.map */
