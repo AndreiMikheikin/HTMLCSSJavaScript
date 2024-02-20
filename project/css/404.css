@@ -602,7 +602,35 @@ body {
               -ms-flex: 0 0 auto;
                   flex: 0 0 auto;
           width: 50%;
-          max-width: 100%; }
+          max-width: 100%;
+                /* .about-btn{
+                    position: relative;
+                    padding-top: 20px;
+                    margin: 0 -10px;
+
+                    a {
+                        margin: 0 10px 10px;
+                        padding: 17px 35px 16px;
+                        color: $btn-text;
+                        background: $yellow;
+                        border: 1px solid $btn-border;
+                        position: relative;
+                        display: inline-flex;
+                        overflow: hidden;
+                        text-align: center;
+                        z-index: 1;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                        transition: .5s;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        color: $backg;
+                        background-color: $title-color;
+                    }
+                } */ }
           #top .section-about-padding .auto-container .row .about-discription .section-heading {
             position: relative;
             z-index: 1;
@@ -630,32 +658,6 @@ body {
             margin-bottom: 0;
             line-height: 1.8;
             font-size: 16px; }
-          #top .section-about-padding .auto-container .row .about-discription .about-btn {
-            position: relative;
-            padding-top: 20px;
-            margin: 0 -10px; }
-            #top .section-about-padding .auto-container .row .about-discription .about-btn a {
-              margin: 0 10px 10px;
-              padding: 17px 35px 16px;
-              color: #222;
-              background: #ffc107;
-              border: 1px solid #e5e5e5;
-              position: relative;
-              display: -webkit-inline-box;
-              display: -ms-inline-flexbox;
-              display: inline-flex;
-              overflow: hidden;
-              text-align: center;
-              z-index: 1;
-              letter-spacing: 1px;
-              font-weight: 500;
-              -webkit-transition: .5s;
-              transition: .5s;
-              text-transform: uppercase;
-              text-decoration: none; }
-            #top .section-about-padding .auto-container .row .about-discription .about-btn a:hover {
-              color: #fff;
-              background-color: #2c2a49; }
   #top .section-amenities-padding {
     position: relative;
     padding: 150px 0 120px;
