@@ -421,7 +421,7 @@ body {
 
         .auto-container{
             position: static;
-            max-width: 1290px;
+           /*  max-width: 1290px; */
             padding: 0 15px;
             margin: 0 auto;
             background: $backg;
@@ -464,7 +464,7 @@ body {
                     padding: 0 40px;
                     margin: 0 1.2rem 60px;
                     text-align: center;
-                    flex: 0 1 auto;
+                    flex: 0 0 auto;
                     width: 30%;
                     min-width: 360px;
 
@@ -475,6 +475,7 @@ body {
 
                         img{
                             width: 100%;
+                            height: auto;
                             transition: .7s;
                         }
                     }
@@ -837,6 +838,7 @@ body {
             position: static;
             padding: 0 15px;
             margin: 0 auto;
+            background-color: $backg;
 
             .wrapper{
                 background-color: $backg;

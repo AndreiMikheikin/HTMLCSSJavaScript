@@ -602,6 +602,7 @@ body {
               -ms-flex: 0 0 auto;
                   flex: 0 0 auto;
           width: 50%;
+          min-width: 430px;
           max-width: 100%;
                 /* .about-btn{
                     position: relative;
