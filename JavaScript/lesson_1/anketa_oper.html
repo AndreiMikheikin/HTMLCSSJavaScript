@@ -12,27 +12,34 @@
         var surname=prompt('Введите фамилию:');
         var name=prompt('Введите имя:');
         var pname=prompt('Введите отчество:');
+
         var ageStr=prompt('Введите ваш возраст:');
         var age=parseInt(ageStr);
-        var gender=prompt('Введите пол (М или Ж):');
+
+        var gender=confirm('Выберите пол ("ОК"-"М" или "Отмена"-"Ж"):');
+        if (gender == true)
+            var sex='М';
+        else
+            var sex='Ж';
+
         var a=('ваше ФИО: '+ (surname) + ' ' + (name) + ' ' + (pname) + '\n' +
                     'ваш возраст в годах: ' + (age) + '\n' +
                     'ваш возраст в днях: ' + (age*365) + '\n' +
                     'через 5 лет вам будет: ' + (age+5) + '\n' +
-                    'ваш пол: ' + (gender) + '\n' +
+                    'ваш пол: ' + (sex) + '\n' +
                     'вы на пенсии: '
                 );
         var b=(age<58)?'нет':'да';
         var c=(age<63)?'нет':'да';    
 
-        switch (gender) {
+        switch (sex) {
             case 'М':
-                alert (a+c);
-                break;
+                var alertMsg=(a+c);   
             case 'Ж':
-                alert (a+b);
-                break;
-            }  
+                var alertMsg=(a+b);
+            };
+        
+        alert(alertMsg);
         
     </script>
 </body>
