@@ -1,5 +1,30 @@
-@media only all and (max-width: 1500px){
-    main{
-        background-position-x: -600px !important;
+@media only all and (max-width: 1050px){
+    body{
+        #top{
+            header{
+                .mobile-column {
+                    display: block !important;
+                }
+                .main-menu {
+                    display: none;
+                }
+            }
+        }
     }
+    
+}
+
+@media only all and (max-width: 560px){
+    body{
+        #top{
+            header{
+                .container{
+                    .link-btn{
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+    
 }

@@ -136,7 +136,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="social-links">
                         <a href="https://www.facebook.com/staryjhutor" target="_blank"><svg
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="20" height="20"
@@ -271,7 +270,7 @@
                     <span></span>
                 </div>
             </form>
-        </в>
+        </div>
 
         <!-- special offers section -->
         <section class="section-offer-padding">
@@ -1085,6 +1084,19 @@
             <div class="scroll-text">Вверх</div>
         </a>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function($) {
+            $('#top>header>#mobMenu>.close-btn').click( function (){
+            $('#top>header>.mobile-menu').css('display', 'none');
+            });
+
+            $('#top>header>.mobile-column>.mobile-column-btn').click( function (){
+            $('#top>header>.mobile-menu').css('display', 'block');
+            });
+        });
+    </script>
 </body>
 
 </html>

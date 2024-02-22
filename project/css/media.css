@@ -1,0 +1,7 @@
+@media only all and (max-width: 1050px) {
+  body #top header .mobile-column {
+    display: block !important; }
+  body #top header .main-menu {
+    display: none; } }
+
+/*# sourceMappingURL=media.css.map */
