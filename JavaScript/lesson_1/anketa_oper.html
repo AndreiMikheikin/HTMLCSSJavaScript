@@ -20,8 +20,10 @@
         switch (gender) {
             case true:
                 var sex='М';
+                break;
             case false:
                 var sex='Ж';
+                break;
         }
 
         var a=( 'ваше ФИО: '+ (surname) + ' ' + (name) + ' ' + (pname) + '\n' +
@@ -36,9 +38,11 @@
 
         switch (sex) {
             case 'М':
-                var alertMsg=(a+c);   
+                var alertMsg=(a+c);
+                break;   
             case 'Ж':
                 var alertMsg=(a+b);
+                break;
             };
         
         alert(alertMsg);
