@@ -449,6 +449,27 @@ body {
                         content: "";
                     }
                 }
+
+                .social-links {
+                    list-style: none;
+                    min-width: 250px;
+
+                    a{
+                        display: inline-block;
+                        margin-top: 30px;
+                        margin-right: 25px;
+                        margin-bottom: 15px;
+                        font-size: $book-text;
+                        color: $footer-li;
+                        transition: all .2s ease;
+                    }
+
+                    a[href*="facebook"]:hover #path4533,
+                    a[href*="instagram"]:hover #path5,
+                    a[href*="vk"]:hover #rect4570{
+                        fill: $yellow !important;
+                    }
+                }    
             }
         }
     }
