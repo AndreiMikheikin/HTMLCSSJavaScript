@@ -1,7 +1,16 @@
 @media only all and (max-width: 1050px) {
-  body #top header .mobile-column {
-    display: block !important; }
-  body #top header .main-menu {
+  body #top header .container .mobile-column {
+    display: block; }
+  body #top header .container .main-menu {
     display: none; } }
+@media only all and (max-width: 500px) {
+  body #top header .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    body #top header .container .mobile-column {
+      right: 20px; }
+    body #top header .container .link-btn {
+      display: none; } }
 
 /*# sourceMappingURL=media.css.map */

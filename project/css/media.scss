@@ -2,11 +2,13 @@
     body{
         #top{
             header{
-                .mobile-column {
-                    display: block !important;
-                }
-                .main-menu {
-                    display: none;
+                .container{
+                    .mobile-column {
+                        display: block;
+                    }
+                    .main-menu {
+                        display: none;
+                    }
                 }
             }
         }
@@ -14,13 +16,17 @@
     
 }
 
-@media only all and (max-width: 560px){
+@media only all and (max-width: 500px){
     body{
         #top{
             header{
                 .container{
+                    justify-content: center;
+                    .mobile-column{
+                        right: 20px;
+                    }
                     .link-btn{
-                        display: none !important;
+                        display: none;
                     }
                 }
             }
