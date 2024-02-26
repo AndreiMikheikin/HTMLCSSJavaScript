@@ -785,7 +785,7 @@ body {
 
         .auto-container{
             position: static;
-           /*  max-width: 1290px; */
+            max-width: 1290px;
             padding: 0 15px;
             margin: 0 auto;
             background: $backg;
@@ -826,15 +826,15 @@ body {
                 .offer-block{
                     position: relative;
                     padding: 0 40px;
-                    margin: 0 1.2rem 60px;
+                    margin: 0 10px 60px;
                     text-align: center;
-                    flex: 0 0 auto;
-                    width: 30%;
-                    min-width: 360px;
+                    flex: 360px 1 1;
+                    max-width: 450px;
 
                     .offer-image{
                         position: relative;
                         margin-bottom: 31px;
+                        width: 100%;
                         overflow: hidden;
 
                         img{
