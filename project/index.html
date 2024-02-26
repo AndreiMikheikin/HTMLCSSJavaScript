@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Старый Хутор | Главная</title>
 </head>
 
@@ -57,9 +57,9 @@
                         </li>
                         <li class="dropdown"><a class="expand-more" href="#!">Блог</a>
                             <ul>
-                                <li><a href="404.html">Рецепты от шефа</a></li>
-                                <li><a href="404.html">Выращиваем голубику</a></li>
-                                <li><a href="404.html">Что за ферма?</a></li>
+                                <li><a href="404.html">Рецепты</a></li>
+                                <li><a href="404.html">Голубика</a></li>
+                                <li><a href="404.html">Ферма</a></li>
                             </ul>
                         </li>
                         <li><a href="404.html">Контакты</a></li>
@@ -216,8 +216,7 @@
                 <div class="form-group">
                     <label>
                         <span>Выбор:</span>
-                        <br>
-                    </label>
+                    </label><br>
                     <input type="checkbox" name="house" id="house"><span>дом</span><br>
                     <input type="checkbox" name="hall" id="hall"><span>каминый зал</span><br>
                     <input type="checkbox" name="big-hall" id="big-hall"><span>банкетный зал</span>
@@ -696,8 +695,8 @@
                                 забронировать</h2>
                         </div>
                         <p class="about-text">Если у Вас возникли вопросы по поводу проведения мероприятий и организации
-                            отдыха, вы можете связаться с нами по телефону<br> <a href="tel:+375292882701">+375 29 288
-                                27 01</a> или написать нам сообщение, и мы обязательно Вам ответим.
+                            отдыха, вы можете связаться с нами по телефону <a href="tel:+375292882701">+375&nbsp;29&nbsp;288&nbsp;27&nbsp;01</a>
+                            или написать нам сообщение, и мы обязательно Вам ответим.
                         </p>
                     </div>
                     <div class="contact-form">
@@ -1086,6 +1085,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
     <script>
         $(document).ready(function ($) {
             $('#top>header>#mobMenu>.close-btn').click(function () {
@@ -1095,7 +1095,7 @@
 
         $(document).ready(function ($) {
             $('#top>header>.container>.mobile-column>.mobile-column-btn').click(function () {
-                $('#top>header>.mobile-menu').css('display', 'block');
+            $('#top>header>.mobile-menu').css('display', 'block');
             });
         });
 

@@ -33,7 +33,7 @@ body {
         width: 100%;
         max-width: 1920px;
         margin: 0 auto;
-        height: 75.15px;
+        height: 75px;
         min-height: 75px;
 
         .container {
@@ -41,7 +41,7 @@ body {
             width: 100%;
             max-width: 1290px;
             margin: 0 auto;
-            height: 75.15px;
+            height: 75px;
             min-height: 75px;
             display: flex;
             align-items: center;
@@ -105,7 +105,7 @@ body {
                         content: "\e5d2";
                         right: center;
                         top: center;
-                        font-family: 'Material Symbols Outlined';
+                        font-family: $icon;
                     }
                 }
 
@@ -116,34 +116,27 @@ body {
 
             /* navigation */
             .main-menu {
+                background-color: $backg;
+                box-shadow: none;
+                text-align: center;
+                width: max-content;
                 position: relative;
-                font-size: 100%;
-                visibility: visible;
-                color: $common;
-                font-weight: 400;
-                font-family: $text;
+                height: 75px;
 
                 ul {
-                    width: 500px;
-                    height: 110px;
                     position: relative;
-                    margin: 0 0 0 50px;
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
                     list-style: none;
-                    border: none;
-                    outline: none;
-                    font-size: 100%;
 
                     li {
                         position: relative;
-                        padding: 37px 0;
+                        padding: 20px 0;
                         margin-right: 30px;
                         transition: all .3s ease;
 
                         a {
-                            padding-right: 15px;
                             position: relative;
                             display: block;
                             text-align: center;
@@ -159,6 +152,7 @@ body {
 
                         a:hover {
                             color: $yellow;
+                            background-color: $backg;
                         }
 
                         a.expand-more::before {
@@ -170,13 +164,14 @@ body {
                         }
 
                         ul {
+                            padding: 0;
                             display: block !important;
                             visibility: hidden;
                             opacity: 0;
                             position: absolute;
                             left: 0;
                             top: 100%;
-                            width: max-content;
+                            width: auto;
                             height: auto;
                             z-index: 100;
                             background-color: $title-color;
@@ -204,7 +199,7 @@ body {
                                     text-decoration: none;
                                 }
                             }
-                            
+
                             li::before {
                                 position: absolute;
                                 content: "";
@@ -231,8 +226,7 @@ body {
                     li:hover ul{
                         visibility: visible;
                         opacity: 1;
-                        top: 62px;
-                        left: -50px;
+                        top: 45px;
                     }
 
                     a:hover {
@@ -589,7 +583,7 @@ body {
 
                     a{
                         margin-top: 30px;
-                        margin-right: 25px;
+                        margin-right: 20px;
                         font-size: $book-text;
                         transition: all .2s ease;
                     }
@@ -619,7 +613,6 @@ body {
         background-position: center;
 
         .container {
-            min-height: 750px;
             padding: 100px 15px;
             position: relative;
             max-width: 1290px;
@@ -645,7 +638,7 @@ body {
                     letter-spacing: 3px;
                     line-height: 1.25em;
                 }
-
+                
                 h1 {
                     color: $title-color;
                     position: relative;
@@ -729,6 +722,7 @@ body {
                 }
 
                 input[type=date], select{
+                    display: block;
                     border: 1px solid $backg;
                     background: $backg;
                     width: 85%;
@@ -1687,6 +1681,7 @@ body {
                     padding: 0 15px;
                     flex: 0 0 auto;
                     width: 25%;
+                    min-width: 200px;
 
                     .contact-block-title{
 
@@ -1701,6 +1696,7 @@ body {
 
                     .contact-block-list{
                         list-style: none;
+                        padding-left: 0;
                         
                         li{
                             margin-bottom: 8px;
@@ -1723,6 +1719,7 @@ body {
                     .contact-block-social{
                         list-style: none;
                         min-width: 250px;
+                        height: auto;
 
                         a{
                             display: inline-block;
@@ -1792,6 +1789,7 @@ body {
                 .contact-block:last-child{
                     width: 35%;
                     min-width: 350px;
+                    
                 }
             }
         }
@@ -1825,4 +1823,4 @@ body {
     }
 }
 
-@import 'media.scss';
+@import 'media_main.scss';

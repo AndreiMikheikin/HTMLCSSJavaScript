@@ -40,7 +40,7 @@ body {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    height: 75.15px;
+    height: 75px;
     min-height: 75px;
     /* mobile menu */ }
     #top header .container {
@@ -48,7 +48,7 @@ body {
       width: 100%;
       max-width: 1290px;
       margin: 0 auto;
-      height: 75.15px;
+      height: 75px;
       min-height: 75px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -118,21 +118,21 @@ body {
             content: "\e5d2";
             right: center;
             top: center;
-            font-family: 'Material Symbols Outlined'; }
+            font-family: "Material Symbols Outlined"; }
         #top header .container .mobile-column .mobile-column-btn:hover {
           color: #ffc107; }
       #top header .container .main-menu {
+        background-color: #fff;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        text-align: center;
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
         position: relative;
-        font-size: 100%;
-        visibility: visible;
-        color: #6e6e6e;
-        font-weight: 400;
-        font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+        height: 75px; }
         #top header .container .main-menu ul {
-          width: 500px;
-          height: 110px;
           position: relative;
-          margin: 0 0 0 50px;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -141,18 +141,14 @@ body {
           -webkit-box-align: center;
               -ms-flex-align: center;
                   align-items: center;
-          list-style: none;
-          border: none;
-          outline: none;
-          font-size: 100%; }
+          list-style: none; }
           #top header .container .main-menu ul li {
             position: relative;
-            padding: 37px 0;
+            padding: 20px 0;
             margin-right: 30px;
             -webkit-transition: all .3s ease;
             transition: all .3s ease; }
             #top header .container .main-menu ul li a {
-              padding-right: 15px;
               position: relative;
               display: block;
               text-align: center;
@@ -165,7 +161,8 @@ body {
               padding: 3px 0;
               opacity: 1; }
             #top header .container .main-menu ul li a:hover {
-              color: #ffc107; }
+              color: #ffc107;
+              background-color: #fff; }
             #top header .container .main-menu ul li a.expand-more::before {
               position: absolute;
               content: "\e5cf";
@@ -173,15 +170,14 @@ body {
               top: 5px;
               font-family: "Material Symbols Outlined"; }
             #top header .container .main-menu ul li ul {
+              padding: 0;
               display: block !important;
               visibility: hidden;
               opacity: 0;
               position: absolute;
               left: 0;
               top: 100%;
-              width: -webkit-max-content;
-              width: -moz-max-content;
-              width: max-content;
+              width: auto;
               height: auto;
               z-index: 100;
               background-color: #2c2a49;
@@ -230,8 +226,7 @@ body {
           #top header .container .main-menu ul li:hover ul {
             visibility: visible;
             opacity: 1;
-            top: 62px;
-            left: -50px; }
+            top: 45px; }
           #top header .container .main-menu ul a:hover {
             color: #ffc107; }
       #top header .container .link-btn {
@@ -515,7 +510,7 @@ body {
                   justify-content: center; }
           #top header .mobile-menu .menu-box .social-links a {
             margin-top: 30px;
-            margin-right: 25px;
+            margin-right: 20px;
             font-size: 15px;
             -webkit-transition: all .2s ease;
             transition: all .2s ease; }
@@ -536,7 +531,6 @@ body {
     background-size: cover;
     background-position: center; }
     #top main .container {
-      min-height: 750px;
       padding: 100px 15px;
       position: relative;
       max-width: 1290px;
@@ -639,6 +633,7 @@ body {
           text-align: center;
           line-height: 1.8; }
         #top .auto-container .booking-form .form-group input[type=date], #top .auto-container .booking-form .form-group select {
+          display: block;
           border: 1px solid #fff;
           background: #fff;
           width: 85%;
@@ -1483,7 +1478,8 @@ body {
           -webkit-box-flex: 0;
               -ms-flex: 0 0 auto;
                   flex: 0 0 auto;
-          width: 25%; }
+          width: 25%;
+          min-width: 200px; }
           #top footer .auto-container .row .contact-block .contact-block-title h4 {
             color: #fff;
             margin-bottom: 30px;
@@ -1491,7 +1487,8 @@ body {
             line-height: 1.25em;
             font-family: "Cormorant", Georgia, "Times New Roman", Times, serif; }
           #top footer .auto-container .row .contact-block .contact-block-list {
-            list-style: none; }
+            list-style: none;
+            padding-left: 0; }
             #top footer .auto-container .row .contact-block .contact-block-list li {
               margin-bottom: 8px;
               color: #bebec3; }
@@ -1505,7 +1502,8 @@ body {
                 color: #ffc107; }
           #top footer .auto-container .row .contact-block .contact-block-social {
             list-style: none;
-            min-width: 250px; }
+            min-width: 250px;
+            height: auto; }
             #top footer .auto-container .row .contact-block .contact-block-social a {
               display: inline-block;
               margin-top: 30px;
@@ -1588,14 +1586,133 @@ body {
     display: block; }
   body #top header .container .main-menu {
     display: none; } }
-@media only all and (max-width: 500px) {
+@media only all and (max-width: 768px) {
+  [class*="padding"] {
+    padding: 70px 12px; }
+
+  h1, h2 {
+    font-size: 48px !important; }
+
+  body #top {
+    /* main */
+    /* book form */
+    /* about */
+    /* amenities */
+    /* contactform */
+    /* footer */ }
+    body #top main {
+      background: none; }
+      body #top main .container {
+        padding: 50px 5px; }
+    body #top main:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+      background-image: url("../img/main_background.jpg");
+      background-repeat: no-repeat;
+      background-position: 47% 0;
+      background-size: cover; }
+    body #top .section-about-padding .auto-container .row .about-block .about-image #circles-0 {
+      display: none; }
+    body #top .section-about-padding .auto-container .row .about-discription {
+      position: static;
+      padding: 0 25px;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center; }
+    body #top .section-amenities-padding .auto-container .wrapper .row .icon-box {
+      margin: 0 10px 15px;
+      padding: 20px 10px !important;
+      width: auto !important;
+      -webkit-box-flex: 100px;
+          -ms-flex: 100px 1 auto;
+              flex: 100px 1 auto; }
+    body #top .section-contactform-padding .auto-container .row .contact-discription {
+      position: static;
+      padding: 0 25px;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center; }
+    body #top .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles {
+      display: none; }
+    body #top footer {
+      padding: 50px 0 20px; }
+      body #top footer .auto-container .row .contact-block {
+        width: 50% !important;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #3a3a3a; } }
+@media only all and (max-width: 560px) {
   body #top header .container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    padding: 0 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
     body #top header .container .mobile-column {
-      right: 20px; }
+      right: 10px; }
     body #top header .container .link-btn {
       display: none; } }
+@media only all and (max-width: 400px) {
+  [class*="padding"] {
+    padding: 50px 5px; }
+
+  h1, h2 {
+    font-size: 32px !important; }
+
+  body #top {
+    /* main */
+    /* book form */
+    /* about */
+    /* amenities */
+    /* contctform */
+    /* footer */ }
+    body #top main {
+      background: none; }
+      body #top main .container {
+        padding: 50px 5px; }
+    body #top main:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+      background-image: url("../img/main_background.jpg");
+      background-repeat: no-repeat;
+      background-position: 47% 0;
+      background-size: cover; }
+    body #top .section-about-padding .auto-container .row .about-block .about-image #circles-0 {
+      display: none; }
+    body #top .section-about-padding .auto-container .row .about-discription {
+      position: static;
+      padding: 0 25px;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center; }
+    body #top .section-amenities-padding .auto-container .wrapper .row .icon-box {
+      margin: 0 15px 15px;
+      padding: 30px 0;
+      width: 150px;
+      min-width: 100px; }
+    body #top .section-contactform-padding .auto-container .row .contact-discription {
+      position: static;
+      padding: 0 25px;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center; }
+    body #top .section-contactform-padding .auto-container .row .contact-form .contact-form-group #circles {
+      display: none; }
+    body #top footer {
+      padding: 50px 0 20px; }
+      body #top footer .auto-container .row .contact-block {
+        width: 85% !important;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #3a3a3a; } }
 
 /*# sourceMappingURL=style.css.map */
