@@ -135,7 +135,7 @@ body {
             top: center;
             font-family: "Material Symbols Outlined"; }
         #top header .container .mobile-column .mobile-column-btn:hover {
-          color: #ffc107; }
+          color: #c7a610; }
       #top header .container .main-menu {
         position: relative; }
         #top header .container .main-menu ul {
@@ -168,7 +168,7 @@ body {
               padding: 3px 0;
               opacity: 1; }
             #top header .container .main-menu ul li a:hover {
-              color: #ffc107; }
+              color: #c7a610; }
             #top header .container .main-menu ul li a.expand-more::before {
               position: absolute;
               content: "\e5cf";
@@ -193,7 +193,7 @@ body {
               transition: .5s;
               -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0 5px 1px rgba(0, 0, 0, 0.05);
                       box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0 5px 1px rgba(0, 0, 0, 0.05);
-              border-top: 1px solid #ffc107; }
+              border-top: 1px solid #c7a610; }
               #top header .container .main-menu ul li ul li {
                 position: relative;
                 width: 100%;
@@ -234,7 +234,7 @@ body {
             opacity: 1;
             top: 45px; }
           #top header .container .main-menu ul a:hover {
-            color: #ffc107; }
+            color: #c7a610; }
       #top header .container .link-btn {
         position: relative; }
         #top header .container .link-btn a {
@@ -257,7 +257,7 @@ body {
           text-decoration: none; }
         #top header .container .link-btn a:hover {
           color: #fff;
-          background-color: #ffc107; }
+          background-color: #c7a610; }
     #top header .mobile-menu {
       display: none;
       opacity: 1;
@@ -283,7 +283,7 @@ body {
         width: 100%;
         height: 100%;
         z-index: 1;
-        background-color: #ffc107; }
+        background-color: #c7a610; }
       #top header .mobile-menu .close-btn {
         position: absolute;
         right: 20px;
@@ -312,7 +312,7 @@ body {
           right: 0;
           font-family: "Material Symbols Outlined"; }
       #top header .mobile-menu .close-btn:hover {
-        color: #ffc107; }
+        color: #c7a610; }
       #top header .mobile-menu .menu-box {
         opacity: 1;
         visibility: visible;
@@ -360,7 +360,7 @@ body {
               vertical-align: middle;
               font-family: "Cormorant", Georgia, "Times New Roman", Times, serif;
               font-size: 32px;
-              color: #ffc107;
+              color: #c7a610;
               font-weight: 500; }
         #top header .mobile-menu .menu-box .menu-wrapper {
           position: relative; }
@@ -414,7 +414,7 @@ body {
                     margin-left: 20px;
                     text-transform: capitalize; }
                   #top header .mobile-menu .menu-box .menu-wrapper .nav-collapse .nav-clearfix li .droped li a:hover {
-                    color: #ffc107; }
+                    color: #c7a610; }
                 #top header .mobile-menu .menu-box .menu-wrapper .nav-collapse .nav-clearfix li .dropdown-btn1 {
                   position: absolute;
                   right: 6px;
@@ -500,7 +500,7 @@ body {
                     font-family: "Material Symbols Outlined";
                     font-weight: 900; }
               #top header .mobile-menu .menu-box .menu-wrapper .nav-collapse .nav-clearfix .dropdown:hover .expand-more, #top header .mobile-menu .menu-box .menu-wrapper .nav-collapse .nav-clearfix .dropdown:hover [class*="dropdown"] {
-                color: #ffc107; }
+                color: #c7a610; }
             #top header .mobile-menu .menu-box .menu-wrapper .nav-collapse .nav-clearfix:last-child {
               border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
           #top header .mobile-menu .menu-box .menu-wrapper .nav-collapse::after {
@@ -523,7 +523,7 @@ body {
           #top header .mobile-menu .menu-box .social-links a[href*="www.facebook"]:hover #path4533,
           #top header .mobile-menu .menu-box .social-links a[href*="www.instagram"]:hover #path5,
           #top header .mobile-menu .menu-box .social-links a[href*="vk.com"]:hover #rect4570 {
-            fill: #ffc107 !important; }
+            fill: #c7a610 !important; }
   #top main {
     width: 100%;
     max-width: 1920px;
@@ -592,7 +592,7 @@ body {
             -webkit-transition: .3s;
             transition: .3s; }
           #top .back-to-home .auto-container .list li a:hover {
-            color: #ffc107; }
+            color: #c7a610; }
         #top .back-to-home .auto-container .list li + li::before {
           content: "\e5cc";
           font-family: 'Material Symbols Outlined';
@@ -640,7 +640,7 @@ body {
             margin: 0 10px 10px;
             padding: 17px 35px 16px;
             color: #222;
-            background: #ffc107;
+            background: #c7a610;
             border: 1px solid #e5e5e5;
             position: relative;
             display: -webkit-inline-box;
@@ -847,7 +847,7 @@ body {
               top: calc(50% - 100px);
               width: 200px;
               height: 200px;
-              background: #ffc107;
+              background: #c7a610;
               text-align: center;
               color: #fff;
               padding-top: 38px; }
@@ -925,7 +925,7 @@ body {
             margin-bottom: 20px; }
             #top .section-about-padding .auto-container .row .about-discription .section-heading span {
               font-size: 16px;
-              color: #ffc107;
+              color: #c7a610;
               margin-bottom: 6px;
               display: inline-block;
               font-weight: 500;
@@ -961,7 +961,7 @@ body {
         text-align: center; }
         #top .section-amenities-padding .auto-container .wrapper .section-heading .section-heading-title-small {
           font-size: 16px;
-          color: #ffc107;
+          color: #c7a610;
           margin-bottom: 6px;
           display: inline-block;
           font-weight: 500;
@@ -1055,7 +1055,7 @@ body {
           -webkit-box-shadow: 0 10px 80px rgba(0, 0, 0, 0.1);
                   box-shadow: 0 10px 80px rgba(0, 0, 0, 0.1); }
         #top .section-amenities-padding .auto-container .wrapper .row .icon-box:hover > .icon > [class*="icon-"] {
-          color: #ffc107;
+          color: #c7a610;
           -webkit-transition: .5s;
           transition: .5s; }
   #top footer {
@@ -1105,7 +1105,7 @@ body {
                 -webkit-transition: all 0.2s ease;
                 transition: all 0.2s ease; }
               #top footer .auto-container .row .contact-block .contact-block-list li a:hover {
-                color: #ffc107; }
+                color: #c7a610; }
           #top footer .auto-container .row .contact-block .contact-block-social {
             list-style: none;
             min-width: 250px;
@@ -1122,7 +1122,7 @@ body {
             #top footer .auto-container .row .contact-block .contact-block-social a[href*="facebook"]:hover #path4532,
             #top footer .auto-container .row .contact-block .contact-block-social a[href*="instagram"]:hover #path6,
             #top footer .auto-container .row .contact-block .contact-block-social a[href*="vk"]:hover #r4 {
-              fill: #ffc107 !important; }
+              fill: #c7a610 !important; }
           #top footer .auto-container .row .contact-block .footer-form {
             position: relative; }
             #top footer .auto-container .row .contact-block .footer-form form {
@@ -1153,7 +1153,7 @@ body {
                 text-transform: uppercase;
                 -webkit-transition: .5s;
                 transition: .5s;
-                background-color: #ffc107; }
+                background-color: #c7a610; }
               #top footer .auto-container .row .contact-block .footer-form form [type="submit"]:hover {
                 color: #fff;
                 background-color: #2c2a49; }
@@ -1185,7 +1185,7 @@ body {
       -webkit-transform: scale(1.1);
               transform: scale(1.1); }
   #top .scroll-top:hover {
-    color: #ffc107; }
+    color: #c7a610; }
 
 @media only all and (max-width: 1050px) {
   body #top header .container .mobile-column {
@@ -1207,6 +1207,9 @@ body {
       width: 85%; }
       body #top .section-about-padding .auto-container .row .about-block .about-image #circles-0 {
         display: none; }
+      body #top .section-about-padding .auto-container .row .about-block .about-image .image-1, body #top .section-about-padding .auto-container .row .about-block .about-image .image-2, body #top .section-about-padding .auto-container .row .about-block .about-image .video-area {
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9); }
     body #top .section-about-padding .auto-container .row .about-discription {
       width: 90%; }
     body #top .section-amenities-padding .auto-container {
@@ -1260,8 +1263,8 @@ body {
       body #top .section-about-padding .auto-container .row .about-block .about-image #circles-0 {
         display: none; }
       body #top .section-about-padding .auto-container .row .about-block .about-image .image-1, body #top .section-about-padding .auto-container .row .about-block .about-image .image-2, body #top .section-about-padding .auto-container .row .about-block .about-image .video-area {
-        -webkit-transform: scale(0.6);
-                transform: scale(0.6); }
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8); }
     body #top .section-about-padding .auto-container .row .about-discription {
       width: 90%; }
     body #top .section-amenities-padding .auto-container .wrapper .row .icon-box {
