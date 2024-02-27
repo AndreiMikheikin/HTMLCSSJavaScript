@@ -30,10 +30,8 @@ function userAddCountry() {
 function userGetCountryInfo() {
     var countryName = prompt('Введите страну: ');
     getCountryInfo(countryName);
-    if (countryName in countrysH)
-        alert('страна: ' + countryName + ' столица: ' + countrysH[countryName]);
-    else
-        alert('нет информации о стране ' + countryName + '!');
+    var res=getCountryInfo(countryName);
+    alert(res);
 }
 
 function userListCountrys() {
