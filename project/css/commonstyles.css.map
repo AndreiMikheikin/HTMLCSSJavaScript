@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAgB;EACZ,OAAO,EAAE,aAAa",
+"sources": ["commonstyles.scss"],
+"names": [],
+"file": "commonstyles.css"
+}
