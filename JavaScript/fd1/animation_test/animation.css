@@ -1,0 +1,27 @@
+.anim{
+    transform: translateX(-20%);
+    transition: all 1.5s;
+    opacity: 0;
+}
+.anim.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim{
+    transform: rotateY(90deg);
+    transition: 1.5s;
+}
+.anim.active{
+    transform: rotateY(0);
+}
+
+.anim{
+    transform: rotateX(90deg);
+    transition: all 2s;
+    opacity: 0;
+}
+.anim.active{
+    transform: rotateX(0);
+    opacity: 1;
+}
