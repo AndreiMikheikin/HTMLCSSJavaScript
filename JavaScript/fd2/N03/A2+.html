@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function clearSpaces(e) {
+            let eBefore = 0;
+            let eAfter = e.length - 1;
+
+            while (e[eBefore] === " ") {
+                eBefore++;
+            }
+
+            while (e[eAfter] === " ") {
+                eAfter--;
+            }
+
+            let eNew = "";
+            for (let i = eBefore; i <= eAfter; i++) {
+                if (i >= eBefore && i <= eAfter) {
+                    eNew += e[i];
+                } else if (i < eBefore || i > eAfter) {
+                    if (e[i] === " ") {
+                        eNew += "*";
+                    } else {
+                        eNew += e[i];
+                    }
+                }
+            }
+
+            return eNew;
+        }
+
+        let a = prompt('Enter smthng');
+        let b = clearSpaces(a);
+
+        alert(b);
+    </script>
+    
+</body>
+</html>
