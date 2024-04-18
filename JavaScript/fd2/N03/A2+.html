@@ -11,24 +11,22 @@
             let eBefore = 0;
             let eAfter = e.length - 1;
 
-            while (e[eBefore] === " ") {
+            while (eBefore <= eAfter && e[eBefore] === " ") {
                 eBefore++;
             }
 
-            while (e[eAfter] === " ") {
+            while (eAfter >= eBefore && e[eAfter] === " ") {
                 eAfter--;
             }
 
             let eNew = "";
-            for (let i = eBefore; i <= eAfter; i++) {
+            for (let i = 0; i < e.length; i++) {
                 if (i >= eBefore && i <= eAfter) {
                     eNew += e[i];
-                } else if (i < eBefore || i > eAfter) {
-                    if (e[i] === " ") {
-                        eNew += "*";
-                    } else {
-                        eNew += e[i];
-                    }
+                } else if (e[i] === " ") {
+                    eNew += "*";
+                } else {
+                    eNew += e[i];
                 }
             }
 
