@@ -19,24 +19,14 @@
                 eAfter--;
             }
 
-            let eNew = "";
-            for (let i = 0; i < e.length; i++) {
-                if (i >= eBefore && i <= eAfter) {
-                    eNew += e[i];
-                } else if (e[i] === " ") {
-                    eNew += "*";
-                } else {
-                    eNew += e[i];
-                }
-            }
-
-            return eNew;
+            return e.slice(eBefore, eAfter + 1);
         }
 
         let a = prompt('Enter smthng');
         let b = clearSpaces(a);
+        let c = "*" + b + "*"
 
-        alert(b);
+        alert(c);
     </script>
     
 </body>
