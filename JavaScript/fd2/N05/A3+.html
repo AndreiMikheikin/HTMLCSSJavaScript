@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPolyndrom(usersPrompt) {
+            var str = "";
+            var a = usersPrompt.toLowerCase().replace(/ё/g, 'е');
+            
+            for (var i = 0; i < a.length; i++) {
+                if (/[а-я]/.test(a[i])) {
+                    str += a[i];
+                }
+            }
+
+            function reverseString(str) {
+                var newStr = "";
+                for (var i = str.length - 1; i >= 0; i--) { 
+                    newStr += str[i];
+                }
+                return newStr;
+            }
+
+            var reversedStr = reverseString(str);
+
+            return str === reversedStr ? "Полиндром" : "Не полиндром";
+        }
+
+
+        var expression = prompt('Введите выражение')
+        console.log(isPolyndrom(expression));
+    </script>
+</body>
+</html>
