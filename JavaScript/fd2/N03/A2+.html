@@ -15,14 +15,30 @@
                 eBefore++;
             }
 
+            if (eBefore === e.length) {
+                console.log ('только пробелы');
+                return "";
+            }
+
             while (eAfter >= eBefore && e[eAfter] === " ") {
                 eAfter--;
             }
+            
+            if (eBefore === 0 && eAfter === e.length - 1) {
+                console.log ('пробелов нет');
+                return e;
+            }
 
+            console.log ('пробелы удалены')
             return e.slice(eBefore, eAfter + 1);
         }
 
         let a = prompt('Enter smthng');
+
+        while (a === null) {
+            a = prompt('Enter smthng');
+        }
+        
         let b = clearSpaces(a);
         let c = "*" + b + "*"
 
