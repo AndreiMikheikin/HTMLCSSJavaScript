@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function treeSum(myArray) {
+            var summary = 0;
+
+            for (var i=0; i <= myArray.length; i++) {
+                var item = myArray[i];
+                if (Array.isArray(item)) {
+                    summary += treeSum(item);
+                } else if (!isNaN(item)) {
+                    summary += item;
+                }
+            }
+
+            console.log (summary)
+            return summary;            
+        })([ 5, 7, [ 4, [2], 8, [1,3], 2 ], [ 9, [] ], 1, 8 ])
+    </script>
+</body>
+</html>
