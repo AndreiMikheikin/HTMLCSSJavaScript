@@ -9,28 +9,28 @@
     <script>
         function isPalindrome(usersPrompt) {
             var a = usersPrompt.toLowerCase().replace(/ё/g, 'е');
-            var aBefore = 0;
-            var aAfter = a.length -1;
+            var aFirst = 0;
+            var aLast = a.length -1;
             
-            function chckPalindrome(a, aBefore, aAfter) {
-                if (aBefore >= aAfter) {
+            function chckPalindrome(a, aFirst, aLast) {
+                if (aFirst >= aLast) {
                     return true;
                 }
 
-                if (!/[а-я]/.test(a[aBefore])) {
-                    return chckPalindrome(a, aBefore + 1, aAfter);
-                } else if (!/[а-я]/.test(a[aBefore])) {
-                    return chckPalindrome(a, aBefore, aAfter - 1);
+                if (!/[а-я]/.test(a[aFirst])) {
+                    return chckPalindrome(a, aFirst + 1, aLast);
+                } else if (!/[а-я]/.test(a[aLast])) {
+                    return chckPalindrome(a, aFirst, aLast - 1);
                 }
 
-                if (a[aBefore] === a[aAfter]) {
-                    return chckPalindrome(a, aBefore + 1, aAfter - 1);
+                if (a[aFirst] === a[aLast]) {
+                    return chckPalindrome(a, aFirst + 1, aLast - 1);
                 } 
 
                 return false;
             }
 
-            return chckPalindrome(a, aBefore, aAfter);
+            return chckPalindrome(a, aFirst, aLast);
         }
 
 
