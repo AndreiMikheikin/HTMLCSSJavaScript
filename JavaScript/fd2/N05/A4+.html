@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(usersPrompt) {
+            var a = usersPrompt.toLowerCase().replace(/ё/g, 'е');
+            var aBefore = 0;
+            var aAfter = a.length -1;
+            
+            function chckPalindrome(a, aBefore, aAfter) {
+                if (aBefore >= aAfter) {
+                    return true;
+                }
+
+                if (!/[а-я]/.test(a[aBefore])) {
+                    return chckPalindrome(a, aBefore + 1, aAfter);
+                } else if (!/[а-я]/.test(a[aBefore])) {
+                    return chckPalindrome(a, aBefore, aAfter - 1);
+                }
+
+                if (a[aBefore] === a[aAfter]) {
+                    return chckPalindrome(a, aBefore + 1, aAfter - 1);
+                } 
+
+                return false;
+            }
+
+            return chckPalindrome(a, aBefore, aAfter);
+        }
+
+
+        var expression = prompt('Введите выражение');
+        if (isPalindrome(expression)) {
+            alert('палиндром');
+        } else {
+            alert('не палиндром');
+        }
+    </script>
+</body>
+</html>
