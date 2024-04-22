@@ -7,32 +7,32 @@
 </head>
 <body>
     <script>
-        function isPolyndrom(usersPrompt) {
+        function isPalindrome(usersPrompt) {
             var str = "";
             var a = usersPrompt.toLowerCase().replace(/ё/g, 'е');
             
-            for (var i = 0; i < a.length; i++) {
+            for (i = 0; i < a.length; i++) {
                 if (/[а-я]/.test(a[i])) {
                     str += a[i];
                 }
             }
 
-            function reverseString(str) {
-                var newStr = "";
-                for (var i = str.length - 1; i >= 0; i--) { 
-                    newStr += str[i];
+            for (i = 0, ii = str.length - 1; i < ii; i++, ii--) {
+                if (str[i] !== str[ii]) {
+                    return false;
                 }
-                return newStr;
             }
 
-            var reversedStr = reverseString(str);
-
-            return str === reversedStr ? "Полиндром" : "Не полиндром";
+            return true;
         }
 
 
-        var expression = prompt('Введите выражение')
-        console.log(isPolyndrom(expression));
+        var expression = prompt('Введите выражение');
+        if (isPalindrome(expression)) {
+            alert('палиндром');
+        } else {
+            alert('не палиндром');
+        }
     </script>
 </body>
 </html>
