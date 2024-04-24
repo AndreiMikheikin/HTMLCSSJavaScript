@@ -15,12 +15,12 @@
                 for (var key in object) {
                     var attr = key;
                     var value = object[key].replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
-                    attrWithValue += ` ${attr}='${value}'`
+                    attrWithValue += ` ${attr}='${value}'`;
                 }
 
                 var attrWithValue = ` ${attrWithValue}` ? attrWithValue : '';
                 return `<${tag}${attrWithValue}>${newExpression}</${tag}>`;
-            };
+            }
         }
 
         var wrapP = buildWrapper("P");
