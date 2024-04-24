@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function buildWrapper(tag) {
+            return function(expression, object = {}) {
+                var newExpression = expression.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+
+                var attrWithValue = '';
+                for (var key in object) {
+                    var attr = key;
+                    var value = object[key].replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+                    attrWithValue += ` ${attr}='${value}'`
+                }
+
+                var attrWithValue = ` ${attrWithValue}` ? attrWithValue : '';
+                return `<${tag}${attrWithValue}>${newExpression}</${tag}>`;
+            };
+        }
+
+        var wrapP = buildWrapper("P");
+        console.log(wrapP("Однажды в студёную зимнюю пору"));
+        console.log(wrapP("Однажды в студёную зимнюю пору", {lang: "ru"}));
+        console.log(wrapP("Однажды в <студёную> зимнюю пору"));
+
+        var wrapH1 = buildWrapper("H1");
+        console.log(wrapH1("СТИХИ", {align: "center", title: "M&M's"}));
+    </script>
+</body>
+</html>
