@@ -18,7 +18,6 @@
                     attrWithValue += ` ${attr}='${value}'`;
                 }
 
-                var attrWithValue = attrWithValue ? attrWithValue : '';
                 return `<${tag}${attrWithValue}>${newExpression}</${tag}>`;
             }
 
