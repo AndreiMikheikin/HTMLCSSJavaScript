@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function formatNumber(number, mask) {
+            var formattedNumber = number.toFixed(2).toString();
+            var result = "";
+            console.log(formattedNumber, typeof(formattedNumber));
+            
+            for (var i = mask.length - 1, ii = formattedNumber.length - 1; i >= 0 && ii >= 0; i--) {
+                if (mask[i] === '#' || mask[i] === '.') {
+                    result = formattedNumber[ii] + result;
+                    ii--;
+                } else if (mask[i] === ' ') {
+                    result = ' ' + result;
+                }
+            }
+            return result;
+        }
+
+
+        console.log(formatNumber(12.3, '# ### ###.##'));
+        console.log(formatNumber(1234.568, '# ### ###.##'));
+        console.log(formatNumber(12387561234.568, '# ### ###.##'));
+    </script>
+</body>
+</html>
