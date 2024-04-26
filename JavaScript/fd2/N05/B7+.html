@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function formatNumber(number) {
+            var devision = number.toFixed(2).split('.');
+            var integerDevision = devision[0];
+            var decimalDevision = devision[1];
+            console.log(integerDevision, decimalDevision);
+
+            var integerGroups = [];
+            do {
+                integerGroups.unshift(integerDevision.substring(integerDevision.length - 3, integerDevision.length));
+                integerDevision = integerDevision.substring(0, integerDevision.length - 3);
+            }  while (integerDevision.length > 0);
+            console.log(integerGroups);
+
+            devision[0] = integerGroups.join(' ');
+
+            var result = devision.join('.');
+            return result;
+        }
+
+        console.log(formatNumber(12.3));
+        console.log(formatNumber(1234.568));
+        console.log(formatNumber(12387561234.568));
+    </script>
+</body>
+</html>
