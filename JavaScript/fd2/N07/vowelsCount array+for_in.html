@@ -9,22 +9,20 @@
     <script>
         function vowelsCount(f) {
             f = f.toLowerCase();
-            var vowels = 'аеёиоуыэюя';
-            var fl = f.length;
-            var vl = vowels.length;
+            var vowels = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я'];
             let count = 0;
 
             console.time('test');
-            for (i = 0; i <= fl - 1; i++){
-                for (ii = 0; ii <= vl - 1; ii++) {
-                    if (f[i] === vowels[ii]) {
+            for (let char in f) {
+                for (let vowel in vowels) {
+                    if (f[char] === vowels[vowel]) {
                         count++;
                         break;
                     }
                 }
             }
             console.timeEnd('test');
-
+             
             return count;
         }
 

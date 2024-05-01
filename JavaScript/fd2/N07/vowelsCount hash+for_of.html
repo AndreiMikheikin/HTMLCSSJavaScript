@@ -8,24 +8,23 @@
 <body>
     <script>
         function vowelsCount(f) {
-            f = f.toLowerCase();
-            var vowels = 'аеёиоуыэюя';
-            var fl = f.length;
-            var vl = vowels.length;
-            let count = 0;
+            var vowelsHash = {'а': 0, 'е': 0, 'ё': 0, 'и': 0, 'о': 0, 'у': 0, 'ы': 0, 'э': 0, 'ю': 0, 'я': 0};
+            var f = f.toLowerCase();
 
             console.time('test');
-            for (i = 0; i <= fl - 1; i++){
-                for (ii = 0; ii <= vl - 1; ii++) {
-                    if (f[i] === vowels[ii]) {
-                        count++;
-                        break;
-                    }
+            for (let char of f) {
+                if (char in vowelsHash) {
+                    vowelsHash[char]++;
                 }
+            }
+
+            let totalSum = 0;
+            for (let sum of Object.values(vowelsHash)) {
+                totalSum += sum;
             }
             console.timeEnd('test');
 
-            return count;
+            return totalSum;
         }
 
         var expression = prompt("Введите строку:");

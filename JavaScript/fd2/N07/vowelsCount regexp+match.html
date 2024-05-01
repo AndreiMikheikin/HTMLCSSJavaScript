@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function vowelsCount(f) {
+            var vowelsRegex = /[аеёиоуыэюя]/gi;
+            console.time('test');
+            var matches = f.match(vowelsRegex);
+            console.timeEnd('test');
+            console.log (f.match(vowelsRegex));
+
+            
+            return matches ? matches.length : 0;
+            
+        }
+    
+        var expression = prompt("Введите строку:");
+        alert('Гласных' + ' ' + vowelsCount(expression));
+    </script>
+    
+</body>
+</html>
