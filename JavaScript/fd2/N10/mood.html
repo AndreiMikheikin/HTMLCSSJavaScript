@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function randomDiap(n,m) {
+                return Math.floor(Math.random()*(m-n+1))+n;
+        }
+    
+        function mood(colorsCount) {
+            const colors=[ '', 'красный', 'оранжевый', 'жёлтый', 'зелёный', 'голубой', 'синий', 'фиолетовый' ];
+            const selectedColors = {};
+            let scl = Object.keys(selectedColors).length;
+
+            console.log( 'цветов: ' + colorsCount );
+            do {
+                const n=randomDiap(1,7);
+                const colorName=colors[n];
+                if (!selectedColors[colorName]) {
+                    selectedColors[colorName] = true;
+                    console.log( colorName );
+                }
+                scl = Object.keys(selectedColors).length;
+                console.log (selectedColors);
+            } while (scl < colorsCount);
+        }
+        mood(4);
+    
+    </script> 
+</body>
+</html>
