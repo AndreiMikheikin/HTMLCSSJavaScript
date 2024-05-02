@@ -14,8 +14,8 @@
 
             console.time('test');
             for (let char in f) {
-                for (let vowel in vowels) {
-                    if (f[char] === vowels[vowel]) {
+                for (let vowel of vowels) {
+                    if (f[char] === vowel) {
                         count++;
                         break;
                     }
