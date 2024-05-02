@@ -15,7 +15,7 @@
         function mood(colorsCount) {
             const colors=[ '', 'красный', 'оранжевый', 'жёлтый', 'зелёный', 'голубой', 'синий', 'фиолетовый' ];
             const selectedColors = {};
-            let scl = Object.keys(selectedColors).length;
+            let scl = 0;
 
             console.log( 'цветов: ' + colorsCount );
             do {
@@ -25,7 +25,7 @@
                     selectedColors[colorName] = true;
                     console.log (colorName);
                 }
-                scl = Object.keys(selectedColors).length;
+                scl++;
                 console.log (selectedColors);
             } while (scl < colorsCount);
         }
