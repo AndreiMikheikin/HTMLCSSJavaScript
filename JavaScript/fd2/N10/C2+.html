@@ -8,8 +8,7 @@
 <body>
     <script>
         const deepCopy = (input) => {
-            let result = Array.isArray(input) ? [] : {};
-
+            
             if (typeof input !== 'object' || input === null){
                 return input;
             }
@@ -22,10 +21,10 @@
                 return newArray;
             }
 
+            let result = {};
             for (let key in input) {
                 result[key] = deepCopy(input[key]);
             }
-
             return result;
         }
 
@@ -33,132 +32,96 @@
             /* Object */
             const h1 = { a: 5, b: { b1: 6, b2: 7 }, c: [33, 22], d: null, e: undefined, f: Number.NaN };
             const h2 = deepCopy(h1);
-            const objResult = {
-                "h1===h2": h1 === h2,
-                "h1.a===h2.a": h1.a === h2.a,
-                "h1.b===h2.b": h1.b === h2.b,
-                "h1.b.b1===h2.b.b1": h1.b.b1 === h2.b.b1,
-                "h1.c===h2.c": h1.c === h2.c,
-                "h1.c[0]===h2.c[0]": h1.c[0] === h2.c[0],
-                "h1.d===h2.d": h1.d === h2.d,
-                "h1.e===h2.e": h1.e === h2.e,
-                "isNaN(h2.f)": isNaN(h2.f),
-                "h2.c instanceof Array": h2.c instanceof Array
-            };
-            const expObjResult = {
-                "h1===h2": false,
-                "h1.a===h2.a": true,
-                "h1.b===h2.b": false,
-                "h1.b.b1===h2.b.b1": true,
-                "h1.c===h2.c": false,
-                "h1.c[0]===h2.c[0]": true,
-                "h1.d===h2.d": true,
-                "h1.e===h2.e": true,
-                "isNaN(h2.f)": true,
-                "h2.c instanceof Array": true
-            };
+            const testObjPattern = [
+                {name: "h1===h2", result: h1 === h2, expResult: false},
+                {name: "h1.a===h2.a", result: h1.a === h2.a, expResult: true},
+                {name: "h1.b===h2.b", result: h1.b === h2.b, expResult: false},
+                {name: "h1.b.b1===h2.b.b1", result: h1.b.b1 === h2.b.b1, expResult: true},
+                {name: "h1.c===h2.c", result: h1.c === h2.c, expResult: false},
+                {name: "h1.c[0]===h2.c[0]", result: h1.c[0] === h2.c[0], expResult: true},
+                {name: "h1.d===h2.d", result: h1.d === h2.d, expResult: true},
+                {name: "h1.e===h2.e", result: h1.e === h2.e, expResult: true},
+                {name: "isNaN(h2.f)", result: isNaN(h2.f), expResult: true},
+                {name: "h2.c instanceof Array", result: h2.c instanceof Array, expResult: true}
+            ]
 
             /* Array */
             const a1 = [5, { b1: 6, b2: 7 }, [33, 22], null, undefined, Number.NaN];
             const a2 = deepCopy(a1);
-            const arrResult = {
-                "a1===a2": a1 === a2,
-                "typeof(a2)===typeof(a1)": typeof a2 === typeof a1,
-                "a1[0]===a2[0]": a1[0] === a2[0],
-                "a1[1]===a2[1]": a1[1] === a2[1],
-                "a1[1].b1===a2[1].b1": a1[1].b1 === a2[1].b1,
-                "a1[2]===a2[2]": a1[2] === a2[2],
-                "a1[2][0]===a2[2][0]": a1[2][0] === a2[2][0],
-                "a1[3]===a2[3]": a1[3] === a2[3],
-                "a1[4]===a2[4]": a1[4] === a2[4],
-                "isNaN(a2[5])": isNaN(a2[5]),
-                "a2[2] instanceof Array": a2[2] instanceof Array
-            };
-            const expArrResult = {
-                "a1===a2": false,
-                "typeof(a2)===typeof(a1)": true,
-                "a1[0]===a2[0]": true,
-                "a1[1]===a2[1]": false,
-                "a1[1].b1===a2[1].b1": true,
-                "a1[2]===a2[2]": false,
-                "a1[2][0]===a2[2][0]": true,
-                "a1[3]===a2[3]": true,
-                "a1[4]===a2[4]": true,
-                "isNaN(a2[5])": true,
-                "a2[2] instanceof Array": true
-            }
+            const testArrPattern = [
+                {name: "a1===a2", result: a1 === a2, expResult: false},
+                {name: "typeof(a2)===typeof(a1)", result: typeof a2 === typeof a1, expResult: true},
+                {name: "a1[0]===a2[0]", result: a1[0] === a2[0], expResult: true},
+                {name: "a1[1]===a2[1]", result: a1[1] === a2[1], expResult: false},
+                {name: "a1[1].b1===a2[1].b1", result: a1[1].b1 === a2[1].b1, expResult: true},
+                {name: "a1[2]===a2[2]", result: a1[2] === a2[2], expResult: false},
+                {name: "a1[2][0]===a2[2][0]", result: a1[2][0] === a2[2][0], expResult: true},
+                {name: "a1[3]===a2[3]", result: a1[3] === a2[3], expResult: true},
+                {name: "a1[4]===a2[4]", result: a1[4] === a2[4], expResult: true},
+                {name: "isNaN(a2[5])", result: isNaN(a2[5]), expResult: true},
+                {name: "a2[2] instanceof Array", result: a2[2] instanceof Array, expResult: true}
+            ];
 
             /* String */
             const v1 = "sss";
             const v2 = deepCopy(v1);
-            const strResult = {
-                "typeof(v2)===typeof(v1)": typeof v2 === typeof v1,
-                "v1===v2": v1 === v2
-            };
-            const expStrResult = {
-                "typeof(v2)===typeof(v1)": true,
-                "v1===v2": true
-            };
+            const testStrPattern = [
+                {name: "typeof(v2)===typeof(v1)", result: typeof v2 === typeof v1, expResult: true},
+                {name: "v1===v2", result: v1 === v2, expResult: true}
+            ];
 
             /* Null */
             const z1 = null;
             const z2 = deepCopy(z1);
-            const NullResult = {
-                "typeof(z2)===typeof(z1)": typeof z2 === typeof z1,
-                "z1===z2": z1 === z2
-            };
-            const expNullResult = {
-                "typeof(z2)===typeof(z1)": true,
-                "z1===z2": true
-            };
+            const testNullPattern = [
+                {name: "typeof(z2)===typeof(z1)", result: typeof z2 === typeof z1, expResult: true},
+                {name: "z1===z2", result: z1 === z2, expResult: true}
+            ];
 
             /* NaN */
             const n1 = Number.NaN;
             const n2 = deepCopy(n1);
-            const NaNResult = {
-                "typeof(n2)===typeof(n1)": typeof n2 === typeof n1,
-                "isNaN(n2)": isNaN(n2)
-            };
-            const expNaNResult = {
-                "typeof(n2)===typeof(n1)": true,
-                "isNaN(n2)": true
-            };
+            const testNaNPattern = [
+                {name: "typeof(n2)===typeof(n1)", result: typeof n2 === typeof n1, expResult: false}, // поменял expResult: value
+                {name: "isNaN(n2)", result: !isNaN(n2), expResult: true} // поменял Result: value
+            ];
 
-            const compare = (expResult, result) => {
+            const compare = (testPattern) => {
                 let testCount = 0;
                 let passedCount = 0;
                 let failedCount = 0;
-
-                for (let i in expResult) {
+                
+                testPattern.forEach(test => {
                     testCount++;
-                    const test = result[i] === expResult[i] ? 'пройден' : 'ПРОВАЛЕН';
-                    if (test === 'пройден') {
+                    const testResult = test.result === test.expResult ? 'пройден' : 'ПРОВАЛЕН';
+                    console.log (test.name);
+                    if (testResult === 'пройден') {
                         passedCount++;
                     } else {
                         failedCount++;
                     }
-                    console.log(`ТЕСТ ${i}: ${expResult[i]} => ${result[i]} => ${test}`);
-                }
+                    console.log(`ТЕСТ: ${test.name}: ${test.result} => ${test.expResult} - ${testResult}`);
+                });
 
                 console.log(`Всего тестов: ${testCount}`);
                 console.log(`пройдено: ${passedCount}`);
                 console.log(`ПРОВАЛЕНО: ${failedCount}`);
-            }
+            };
 
             console.log("Результат теста Object:");
-            compare(expObjResult, objResult);
+            compare(testObjPattern);
             console.log ('\n' + '=========================================' + '\n' +' ');
             console.log("Результат теста Array:");
-            compare(expArrResult, arrResult);
+            compare(testArrPattern);
             console.log ('\n' + '=========================================' + '\n' +' ');
             console.log("Результат теста String:");
-            compare(expStrResult, strResult);
+            compare(testStrPattern);
             console.log ('\n' + '=========================================' + '\n' +' ');
             console.log("Результат теста Null:");
-            compare(expNullResult, NullResult);
+            compare(testNullPattern);
             console.log ('\n' + '=========================================' + '\n' +' ');
             console.log("Результат теста NaN:");
-            compare(expNaNResult, NaNResult);
+            compare(testNaNPattern);
         }
         
         testDeepCopy();
