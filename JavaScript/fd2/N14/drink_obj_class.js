@@ -8,7 +8,7 @@ class ObjStorageClass {
     }
 
     getValue = (key) => {
-        this.storage[key];
+        return this.storage[key];
     }
 
     deleteValue = (key) => {
