@@ -1,15 +1,20 @@
 const ObjStorageFunc = function() {
     const storage = {};
+
+    this.addValue = this.addValue.bind(this);
+    this.getValue = this.getValue.bind(this);
+    this.deleteValue = this.deleteValue.bind(this);
+    this.getKeys = this.getKeys.bind(this);
   
-    function addValue(key, value) {
+    this.addValue = function(key, value) {
       storage[key] = value;
     }
   
-    function getValue(key) {
+    this.getValue = function getValue(key) {
       return storage[key];
     }
   
-    function deleteValue(key) {
+    this.deleteValue = function deleteValue(key) {
       if (key in storage) {
         delete storage[key];
         return true;
@@ -17,15 +22,8 @@ const ObjStorageFunc = function() {
       return false;
     }
   
-    function getKeys() {
+    this.getKeys = function getKeys() {
       return Object.keys(storage);
     }
-  
-    return {
-      addValue,
-      getValue,
-      deleteValue,
-      getKeys
-    };
   };
   
