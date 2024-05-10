@@ -1,6 +1,6 @@
 class ObjStorageClass {
     constructor () {
-        this.storage = {}.bind(this);
+        this.storage = {};
     }
 
     addValue = (key, value) => {
