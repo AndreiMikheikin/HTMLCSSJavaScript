@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепты напитков:</title>
+    <style>
+        body {
+            font-family: serif;
+        }
+
+        button {
+            background: #0f0;
+            height: 40px;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Котейль Бар</h1>
+    <button onclick="addDrink()">Добавить напиток</button>
+    <button onclick="getDrink()">Информация о напитке</button>
+    <button onclick="deleteDrink()">Удалить напиток</button>
+    <button onclick="listAllDrinks()">Коктейльная карта</button>
+
+    <script src="drink_obj_class.js"></script>
+    <script>
+        'use strict';
+
+        const drinkStorage = new ObjStorageClass();
+
+        function addDrink() {
+            const name = prompt('Введите название напитка:');
+            if (name === null || name.trim() === '') {
+                alert('Название не может быть пустым или отменено!');
+                return;
+            }
+
+            const exDrink = drinkStorage.getValue(name);
+            if (exDrink) {
+                alert('Напиток с таким именем уже существует!');
+                return;
+            }
+
+            const alcoholic = confirm('Напиток алкогольный?');
+            const recipe = prompt('Введите рецепт:');
+
+            drinkStorage.addValue(name, { alcoholic, recipe });
+            alert('Напиток успешно добавлен!');
+        }
+
+        function getDrink() {
+            const name = prompt('Введите название напитка:');
+            const drink = drinkStorage.getValue(name);
+
+            if (drink) {
+                alert(`Название: ${name}\nАлкогольный: ${drink.alcoholic ? 'Да' : 'Нет'}\nРецепт: ${drink.recipe}`);
+            } else {
+                alert('Напиток с таким названием не найден!');
+            }
+        }
+
+        function deleteDrink() {
+            const name = prompt('Введите название напитка:');
+            const deleted = drinkStorage.deleteValue(name);
+
+            if (deleted) {
+                alert('Напиток успешно удален');
+            } else {
+                alert('Напиток с таким названием не найден!');
+            }
+        }
+
+        function listAllDrinks() {
+            const drinks = drinkStorage.getKeys();
+            if (drinks.length > 0) {
+                alert('Коктельная карта:\n' + drinks.join('\n'));
+            } else {
+                alert('Коктейльная карта пуста!');
+            }
+        }
+    </script>
+</body>
+
+</html>

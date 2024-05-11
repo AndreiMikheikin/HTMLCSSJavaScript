@@ -3,15 +3,15 @@ class ObjStorageClass {
         this.storage = {};
     }
 
-    addValue = (key, value) => {
+    addValue(key, value) {
         this.storage[key] = value;
     }
 
-    getValue = (key) => {
+    getValue(key) {
         return this.storage[key];
     }
 
-    deleteValue = (key) => {
+    deleteValue(key) {
         if (key in this.storage) {
             delete this.storage[key];
             return true;
@@ -19,7 +19,7 @@ class ObjStorageClass {
         return false;
     }
 
-    getKeys = () => {
+    getKeys() {
         return Object.keys(this.storage);
     }
 }
