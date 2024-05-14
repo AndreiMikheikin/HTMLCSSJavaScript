@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function countForEach(str) {
+            const vowels = 'аяуюоеэёиы';
+            let count = 0;
+            str.toLowerCase().split('').forEach(char => {
+                if (vowels.includes(char)) {
+                    count++;
+                }
+            });
+            return count;
+        }
+
+        function countFilter(str) {
+            const vowels = 'аяуюоеэёиы';
+            return str.toLowerCase().split('').filter(char => vowels.includes(char)).length;
+        }
+
+        function countReduce(str) {
+            const vowels = 'аяуюоеэёиы';
+            return str.toLowerCase().split('').reduce((count, char) => {
+                if (vowels.includes(char)) {
+                    return count + 1;
+                }
+                return count;
+            }, 0);
+        }
+
+        const userInput = prompt('Введите строку:');
+        const res1 = countForEach(userInput);
+        const res2 = countFilter(userInput);
+        const res3 = countReduce(userInput);
+
+        console.log(`Результат forEach: ${res1}`);
+        console.log(`Результат filter: ${res2}`);
+        console.log(`Результат reduce: ${res3}`);
+    </script>
+</body>
+
+</html>
