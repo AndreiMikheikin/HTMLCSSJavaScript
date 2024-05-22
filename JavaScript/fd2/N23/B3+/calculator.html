@@ -35,7 +35,6 @@
                 i++;
             }
 
-            console.log(arrExp);
             return arrExp;
         }
 
@@ -84,7 +83,6 @@
                 output.push(operators.pop());
             }
 
-            console.log(output);
             return output;
         }
 
@@ -95,11 +93,9 @@
             postfix.forEach(token => {
                 if (!isNaN(token)) {
                     stack.push(parseFloat(token));
-                    console.log(stack);
                 } else {
                     let b = stack.pop();
                     let a = stack.pop();
-                    console.log(a);
                     stack.push(operUse(a, b, token));
                 }
             });
