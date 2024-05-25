@@ -48,10 +48,10 @@ function bidirectionalBFS(graph, start, end) {
     let parentEnd = new Map([[end, null]]);
 
     while (queueStart.length > 0 && queueEnd.length > 0) {
-        console.log(`Очередь начала: ${queueStart}`);
+        /* console.log(`Очередь начала: ${queueStart}`);
         console.log(`Очередь конца: ${queueEnd}`);
         console.log(`Посещенные начала: ${Array.from(visitedStart)}`);
-        console.log(`Посещенные конца: ${Array.from(visitedEnd)}`);
+        console.log(`Посещенные конца: ${Array.from(visitedEnd)}`); */
 
         if (expandLevel(graph, queueStart, visitedStart, visitedEnd, parentStart)) {
             console.log("Путь найден через расширение очереди начала");
@@ -69,18 +69,18 @@ function expandLevel(graph, queue, visitedThisSide, visitedOtherSide, parent) {
     let levelSize = queue.length;
     for (let i = 0; i < levelSize; i++) {
         let node = queue.shift();
-        console.log(`Расширение узла: ${node}`);
+        /* console.log(`Расширение узла: ${node}`); */
         if (!graph[node]) {
             console.error(`Узел "${node}" отсутствует в графе.`);
             continue;
         }
         for (let neighbor of graph[node]) {
-            console.log(`Проверка соседа: ${neighbor}`);
+            /* console.log(`Проверка соседа: ${neighbor}`); */
             if (!visitedThisSide.has(neighbor)) {
                 visitedThisSide.add(neighbor);
                 parent.set(neighbor, node);
                 queue.push(neighbor);
-                console.log(`Добавлен ${neighbor} в очередь`);
+                /* console.log(`Добавлен ${neighbor} в очередь`); */
                 if (visitedOtherSide.has(neighbor)) {
                     console.log(`Сосед ${neighbor} посещен с другой стороны`);
                     return true;
@@ -125,9 +125,17 @@ let words = ["ЛУЖА","МУЗА","ЛИРА","МЕХА","ЛИГА","ТАРА","
 // Убедимся, что начальное и конечное слова включены в список слов
 let startWord = "МУХА";
 let endWord = "СЛОН";
+
 if (!words.includes(startWord)) words.push(startWord);
 if (!words.includes(endWord)) words.push(endWord);
+
+let startWord1 = "ЛИСА";
+let endWord1 = "ЛОСЬ";
+
+if (!words.includes(startWord1)) words.push(startWord1);
+if (!words.includes(endWord1)) words.push(endWord1);
 
 let graph = buildGraph(words);
 
 console.log(bidirectionalBFS(graph, startWord, endWord).join('-'));
+console.log(bidirectionalBFS(graph, startWord1, endWord1).join('-'));
