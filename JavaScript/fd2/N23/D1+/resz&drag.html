@@ -97,7 +97,9 @@
     <script>
         const el = document.querySelector(".container");
         const resizers = document.querySelectorAll(".resize");
+        const minSize = 25;
         let isResizing = false;
+        let isDragging = false;
         let curResizer;
         let prevX, prevY;
 
@@ -132,6 +134,8 @@
         }
 
         for (let resizer of resizers) {
+
+
             resizer.addEventListener('mousedown', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -155,6 +159,7 @@
                         newWidth = rect.width + (prevX - e.clientX);
                         newHeight = newWidth / aspectRatio;
                         el.style.left = rect.left - (prevX - e.clientX) + "px";
+                        console.log(el.style.left)
                     } else if (curResizer.classList.contains('ne')) {
                         newWidth = rect.width - (prevX - e.clientX);
                         newHeight = newWidth / aspectRatio;
@@ -184,6 +189,11 @@
                         curResizer.classList.contains('ne') || curResizer.classList.contains('nw')) {
                         el.style.width = newWidth + "px";
                         el.style.height = newHeight + "px";
+                    }
+
+                    if (newWidth < minSize || newHeight < minSize) {
+                        mouseup();
+                        return;
                     }
 
                     prevX = e.clientX;
