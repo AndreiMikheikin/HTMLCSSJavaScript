@@ -102,6 +102,7 @@
         let prevX, prevY;
 
         function mousemove(e) {
+            e.preventDefault();
             if (!isResizing) {
                 let curX = e.clientX - prevX;
                 let curY = e.clientY - prevY;
@@ -122,6 +123,7 @@
         }
 
         function mousedown(e) {
+            e.preventDefault();
             prevX = e.clientX;
             prevY = e.clientY;
 
@@ -131,6 +133,7 @@
 
         for (let resizer of resizers) {
             resizer.addEventListener('mousedown', function (e) {
+                e.preventDefault();
                 e.stopPropagation();
 
                 isResizing = true;
