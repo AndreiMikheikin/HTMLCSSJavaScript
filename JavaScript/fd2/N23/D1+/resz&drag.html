@@ -144,6 +144,7 @@
                 prevY = e.clientY;
 
                 function mousemove(e) {
+                    e.preventDefault();
                     const rect = el.getBoundingClientRect();
                     let newWidth, newHeight;
 
