@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            top: 10px;
+            left: 10px;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            background: green;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .resize {
+            height: 10px;
+            width: 10px;
+            position: absolute;
+            border: 5px solid blue;
+        }
+
+        .resize.nw {
+            top: -5px;
+            left: -5px;
+            cursor: nw-resize;
+        }
+
+        .resize.ne {
+            top: -5px;
+            right: -5px;
+            cursor: ne-resize;
+        }
+
+        .resize.se {
+            bottom: -5px;
+            right: -5px;
+            cursor: se-resize;
+        }
+
+        .resize.sw {
+            bottom: -5px;
+            left: -5px;
+            cursor: sw-resize;
+        }
+
+        .resize.n {
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: n-resize;
+        }
+
+        .resize.e {
+            top: 50%;
+            right: -5px;
+            transform: translateY(-50%);
+            cursor: e-resize;
+        }
+
+        .resize.s {
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: s-resize;
+        }
+
+        .resize.w {
+            top: 50%;
+            left: -5px;
+            transform: translateY(-50%);
+            cursor: w-resize;
+        }
+    </style>
+    <title>resz&drag</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="20210424_143952.jpg" alt="r&d img" title="r&d img">
+        <div class="resize ne"></div>
+        <div class="resize nw"></div>
+        <div class="resize se"></div>
+        <div class="resize sw"></div>
+        <div class="resize n"></div>
+        <div class="resize e"></div>
+        <div class="resize s"></div>
+        <div class="resize w"></div>
+    </div>
+    <script>
+        const el = document.querySelector(".container");
+        const resizers = document.querySelectorAll(".resize");
+        let isResizing = false;
+        let curResizer;
+        let prevX, prevY;
+
+        function mousemove(e) {
+            if (!isResizing) {
+                let curX = e.clientX - prevX;
+                let curY = e.clientY - prevY;
+
+                const rect = el.getBoundingClientRect();
+
+                el.style.left = rect.left + curX + "px";
+                el.style.top = rect.top + curY + "px";
+
+                prevX = e.clientX;
+                prevY = e.clientY;
+            }
+        }
+
+        function mouseup() {
+            window.removeEventListener("mousemove", mousemove);
+            window.removeEventListener("mouseup", mouseup);
+        }
+
+        function mousedown(e) {
+            prevX = e.clientX;
+            prevY = e.clientY;
+
+            window.addEventListener('mousemove', mousemove);
+            window.addEventListener('mouseup', mouseup);
+        }
+
+        for (let resizer of resizers) {
+            resizer.addEventListener('mousedown', function (e) {
+                e.stopPropagation();
+
+                isResizing = true;
+                curResizer = this;
+                const aspectRatio = el.offsetWidth / el.offsetHeight;
+
+                prevX = e.clientX;
+                prevY = e.clientY;
+
+                function mousemove(e) {
+                    const rect = el.getBoundingClientRect();
+                    let newWidth, newHeight;
+
+                    if (curResizer.classList.contains('se')) {
+                        newWidth = rect.width - (prevX - e.clientX);
+                        newHeight = newWidth / aspectRatio;
+                    } else if (curResizer.classList.contains('sw')) {
+                        newWidth = rect.width + (prevX - e.clientX);
+                        newHeight = newWidth / aspectRatio;
+                        el.style.left = rect.left - (prevX - e.clientX) + "px";
+                    } else if (curResizer.classList.contains('ne')) {
+                        newWidth = rect.width - (prevX - e.clientX);
+                        newHeight = newWidth / aspectRatio;
+                        el.style.top = rect.top - (newHeight - rect.height) + "px";
+                    } else if (curResizer.classList.contains('nw')) {
+                        newWidth = rect.width + (prevX - e.clientX);
+                        newHeight = newWidth / aspectRatio;
+                        el.style.top = rect.top - (newHeight - rect.height) + "px";
+                        el.style.left = rect.left - (prevX - e.clientX) + "px";
+                    } else if (curResizer.classList.contains('n')) {
+                        newHeight = rect.height + (prevY - e.clientY);
+                        el.style.height = newHeight + "px";
+                        el.style.top = rect.top - (prevY - e.clientY) + "px";
+                    } else if (curResizer.classList.contains('e')) {
+                        newWidth = rect.width - (prevX - e.clientX);
+                        el.style.width = newWidth + "px";
+                    } else if (curResizer.classList.contains('s')) {
+                        newHeight = rect.height - (prevY - e.clientY);
+                        el.style.height = newHeight + "px";
+                    } else if (curResizer.classList.contains('w')) {
+                        newWidth = rect.width + (prevX - e.clientX);
+                        el.style.width = newWidth + "px";
+                        el.style.left = rect.left - (prevX - e.clientX) + "px";
+                    }
+
+                    if (curResizer.classList.contains('se') || curResizer.classList.contains('sw') ||
+                        curResizer.classList.contains('ne') || curResizer.classList.contains('nw')) {
+                        el.style.width = newWidth + "px";
+                        el.style.height = newHeight + "px";
+                    }
+
+                    prevX = e.clientX;
+                    prevY = e.clientY;
+                }
+
+                function mouseup() {
+                    window.removeEventListener('mousemove', mousemove);
+                    window.removeEventListener('mouseup', mouseup);
+                    isResizing = false;
+                }
+
+                window.addEventListener('mousemove', mousemove);
+                window.addEventListener('mouseup', mouseup);
+            });
+        }
+
+        el.addEventListener('mousedown', mousedown);
+    </script>
+</body>
+
+</html>
