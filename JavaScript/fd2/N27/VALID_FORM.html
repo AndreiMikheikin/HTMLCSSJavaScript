@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        .form-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-section .form-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-section .form-group label {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-section .form-group .error-message {
+            flex: 0 0 auto;
+            color: red;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        .form-section input[type="text"],
+        .form-section input[type="date"],
+        .form-section select,
+        .form-section textarea {
+            width: 100%;
+        }
+
+        .form-section textarea {
+            height: 50px;
+        }
+
+        .submit-button {
+            margin-top: 20px;
+        }
+
+        .form-section .form-group .error-message.approved {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="mainForm" method="POST" action="https://fe.it-academy.by/TestForm.php" target="_blank">
+        <div class="form-container">
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="author">Разработчики:
+                        <input type="text" name="author" id="author">
+                    </label>
+                    <span class="error-message" id="author-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="title">Название сайта:
+                        <input type="text" name="title" id="title">
+                    </label>
+                    <span class="error-message" id="title-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="url">URL сайта:
+                        <input type="text" name="url" id="url">
+                    </label>
+                    <span class="error-message" id="url-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="startdate">Дата запуска сайта:
+                        <input type="date" name="startdate" id="startdate">
+                    </label>
+                    <span class="error-message" id="startdate-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="persons">Посетителей в сутки:
+                        <input type="text" name="persons" id="persons">
+                    </label>
+                    <span class="error-message" id="persons-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail для связи:
+                        <input type="text" name="email" id="email">
+                    </label>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="rubric">Рубрика каталога:
+                        <select name="rubric" id="rubric">
+                            <option value="" selected>Выберите...</option>
+                            <option value="1">здоровье</option>
+                            <option value="2">домашний уют</option>
+                            <option value="3">бытовая техника</option>
+                        </select>
+                    </label>
+                    <span class="error-message" id="rubric-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Размещение:</label>
+                    <div>
+                        <input type="radio" name="public" value="1" id="public1">
+                        <label for="public1">бесплатное</label>
+                        <input type="radio" name="public" value="2" id="public2">
+                        <label for="public2">платное</label>
+                        <input type="radio" name="public" value="3" id="public3">
+                        <label for="public3">VIP</label>
+                    </div>
+                    <span class="error-message" id="public-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Разрешить отзывы:
+                        <input type="checkbox" name="comments" id="comments">
+                    </label>
+                    <span class="error-message" id="comments-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="article">Описание сайта:</label>
+                    <textarea name="article" id="article" placeholder="максимальное количество символов 150"></textarea>
+                    <span class="error-message" id="article-error"></span>
+                </div>
+            </div>
+        </div>
+        <input class="submit-button" type="submit" value="Опубликовать">
+    </form>
+
+    <script>
+        function validateField(field) {
+            const errorElement = document.getElementById(field.id + '-error');
+            let isValid = true;
+
+            if (!field.value.trim()) {
+                errorElement.textContent = 'Поле обязательно для заполнения';
+                isValid = false;
+            } else {
+                errorElement.textContent = '';
+            }
+
+            if (field.id === 'author' || field.id === 'title') {
+                if (field.value.length > 20) {
+                    errorElement.textContent = 'максимальная длина 20 символов';
+                    isValid = false;
+                }
+            }
+
+            if (field.id === 'url') {
+                if (!/^https?:\/\//.test(field.value)) {
+                    errorElement.textContent = 'Введите полный URL сайта';
+                    isValid = false;
+                }
+            }
+
+            if (field.id === 'persons') {
+                if (!/^\d+$/.test(field.value)) {
+                    errorElement.textContent = 'Введите только цифры';
+                    isValid = false;
+                }
+            }
+
+            if (field.id === 'email') {
+                if (!/\.[a-zA-Z]{2,}$/.test(field.value)) {
+                    errorElement.textContent = 'Введите корректный e-mail';
+                    isValid = false;
+                }
+            }
+
+            if (field.id === 'article') {
+                if (field.value.length > 150) {
+                    errorElement.textContent = 'Превышено допустимое количество символов';
+                    isValid = false;
+                }
+            }
+
+            if (isValid) {
+                errorElement.textContent = 'Принято';
+                errorElement.classList.add('approved');
+            } else {
+                errorElement.classList.remove('approved');
+            }
+
+            return isValid;
+        }
+
+        function validateRadioGroup(name) {
+            const radios = document.querySelectorAll(`input[name="${name}"]`);
+            const errorElement = document.getElementById(name + '-error');
+            let isChecked = false;
+            radios.forEach(radio => {
+                if (radio.checked) {
+                    isChecked = true;
+                }
+            });
+            if (!isChecked) {
+                errorElement.textContent = 'Выберите один из вариантов';
+                errorElement.classList.remove('approved');
+                return false;
+            } else {
+                errorElement.textContent = 'Принято';
+                errorElement.classList.add('approved');
+                return true;
+            }
+        }
+
+        function validateCheckbox(field) {
+            const errorElement = document.getElementById(field.id + '-error');
+            if (!field.checked) {
+                errorElement.textContent = 'Необходимо разрешить отзывы';
+                errorElement.classList.remove('approved');
+                return false;
+            } else {
+                errorElement.textContent = 'Принято';
+                errorElement.classList.add('approved');
+                return true;
+            }
+        }
+
+        function validateForm() {
+            const form = document.getElementById('mainForm');
+            const fields = form.querySelectorAll('input[type="text"], input[type="date"], select, textarea, input[type="checkbox"]');
+            let isValid = true;
+            fields.forEach(field => {
+                if (field.type === 'checkbox') {
+                    if (!validateCheckbox(field)) {
+                        isValid = false;
+                    }
+                } else if (!validateField(field)) {
+                    isValid = false;
+                }
+            });
+            if (!validateRadioGroup('public')) {
+                isValid = false;
+            }
+            if (!isValid) {
+                const firstErrorElement = form.querySelector('.error-message:not(:empty)');
+                if (firstErrorElement) {
+                    firstErrorElement.scrollIntoView({ behavior: 'smooth' });
+                    firstErrorElement.previousElementSibling.querySelector('input, select, textarea').focus();
+                }
+            }
+            return isValid;
+        }
+
+        document.getElementById('mainForm').addEventListener('submit', function (e) {
+            if (!validateForm()) {
+                e.preventDefault();
+            }
+        });
+
+        document.querySelectorAll('input[type="text"], input[type="date"], select, textarea').forEach(field => {
+            field.addEventListener('blur', () => validateField(field));
+        });
+
+        document.querySelectorAll('input[name="public"]').forEach(radio => {
+            radio.addEventListener('change', () => validateRadioGroup('public'));
+        });
+
+        document.getElementById('comments').addEventListener('change', function () {
+            validateCheckbox(this);
+        });
+    </script>
+
+
+</body>
+
+</html>
