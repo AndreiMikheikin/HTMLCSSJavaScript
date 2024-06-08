@@ -107,7 +107,7 @@
                 <div class="form-group">
                     <label for="rubric">Рубрика каталога:
                         <select name="rubric" id="rubric">
-                            <option value="" selected>Выберите...</option>
+                            <option value="" selected disabled hidden>Выберите...</option>
                             <option value="1">здоровье</option>
                             <option value="2">домашний уют</option>
                             <option value="3">бытовая техника</option>
@@ -240,25 +240,34 @@
             const form = document.getElementById('mainForm');
             const fields = form.querySelectorAll('input[type="text"], input[type="date"], select, textarea, input[type="checkbox"]');
             let isValid = true;
+            let firstInvalidField = null;
+
             fields.forEach(field => {
+                let fieldIsValid;
                 if (field.type === 'checkbox') {
-                    if (!validateCheckbox(field)) {
-                        isValid = false;
-                    }
-                } else if (!validateField(field)) {
+                    fieldIsValid = validateCheckbox(field);
+                } else {
+                    fieldIsValid = validateField(field);
+                }
+                if (!fieldIsValid) {
                     isValid = false;
+                    if (!firstInvalidField) {
+                        firstInvalidField = field;
+                    }
                 }
             });
+
             if (!validateRadioGroup('public')) {
                 isValid = false;
-            }
-            if (!isValid) {
-                const firstErrorElement = form.querySelector('.error-message:not(:empty)');
-                if (firstErrorElement) {
-                    firstErrorElement.scrollIntoView({ behavior: 'smooth' });
-                    firstErrorElement.previousElementSibling.querySelector('input, select, textarea').focus();
+                if (!firstInvalidField) {
+                    firstInvalidField = document.querySelector('input[name="public"]');
                 }
             }
+
+            if (!isValid && firstInvalidField) {
+                firstInvalidField.focus();
+            }
+
             return isValid;
         }
 
@@ -278,6 +287,10 @@
 
         document.getElementById('comments').addEventListener('change', function () {
             validateCheckbox(this);
+        });
+
+        document.getElementById('rubric').addEventListener('change', function () {
+            validateField(this);
         });
     </script>
 
