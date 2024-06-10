@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>drag&amp;drop</title>
+    <style>
+        img {
+            position: absolute;
+            cursor: grab;
+            margin: 10px;
+        }
+
+        img.dragging {
+            cursor: grabbing;
+        }
+    </style>
+</head>
+
+<body style="min-height: 100vh">
+    <img src="http://fe.it-academy.by/Sites/0000007/sax.jpg">
+    <img src="http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png" width="100" style="border-radius: 50%;">
+    <img src="http://fe.it-academy.by/Sites/0000007/Man-and-woman.png" width="150">
+    <img src="http://fe.it-academy.by/Sites/0000007/No_smoking.png" style="padding-left: 50px">
+
+    <script>
+        let zIndex = 1; // базовое значение z-index
+
+        const images = document.querySelectorAll('img');
+
+        // это нахождение максимальной height среди всех картинок
+        let maxHeight = 0;
+        images.forEach(img => {
+            const imgHeight = img.getBoundingClientRect().height;
+            if (imgHeight > maxHeight) {
+                maxHeight = imgHeight;
+            }
+        });
+
+        // расчет и установка начальных позиций
+        let leftOffset = 10; // ночальный отступ слева
+        images.forEach(img => {
+            const rect = img.getBoundingClientRect();
+            const imgHeight = rect.height;
+
+            // установка начальных позиций
+            img.style.left = `${leftOffset}px`;
+            img.style.top = `${(maxHeight - imgHeight)}px`;
+            img.style.zIndex = zIndex++; // присвоение значения z-index
+
+            // перевычисление левого отступа для следующего img
+            leftOffset += rect.width;
+
+            img.addEventListener('mousedown', (e) => {
+                e.preventDefault();
+                const element = event.target;
+                const offsetX = event.clientX - element.getBoundingClientRect().left;
+                const offsetY = event.clientY - element.getBoundingClientRect().top;
+
+                // перенос кликнутого img наверх наращивая zIndex
+                element.style.zIndex = zIndex++;
+
+                images.forEach(img => {
+                    console.log(img.src, img.style.zIndex);
+                });
+
+                element.classList.add('dragging');
+
+                const onMouseMove = (moveEvent) => {
+                    element.style.left = `${moveEvent.clientX - offsetX}px`;
+                    element.style.top = `${moveEvent.clientY - offsetY}px`;
+                    element.style.padding = '0px';
+                };
+
+                const onMouseUp = () => {
+                    element.classList.remove('dragging');
+                    document.removeEventListener('mousemove', onMouseMove);
+                    document.removeEventListener('mouseup', onMouseUp);
+                };
+
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
