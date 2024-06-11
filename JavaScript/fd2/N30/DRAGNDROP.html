@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <title>drag&amp;drop</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         img {
             position: absolute;
             cursor: grab;
-            margin: 10px;
         }
 
         img.dragging {
@@ -21,71 +25,101 @@
     <img src="http://fe.it-academy.by/Sites/0000007/sax.jpg">
     <img src="http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png" width="100" style="border-radius: 50%;">
     <img src="http://fe.it-academy.by/Sites/0000007/Man-and-woman.png" width="150">
-    <img src="http://fe.it-academy.by/Sites/0000007/No_smoking.png" style="padding-left: 50px">
+    <img src="http://fe.it-academy.by/Sites/0000007/No_smoking.png" style="border-radius: 50%; padding-left: 50px">
 
     <script>
-        let zIndex = 1; // базовое значение z-index
+        document.addEventListener('DOMContentLoaded', () => {
+            let zIndex = 1; // базовое значение z-index
 
-        const images = document.querySelectorAll('img');
+            const images = document.querySelectorAll('img');
 
-        // это нахождение максимальной height среди всех картинок
-        let maxHeight = 0;
-        images.forEach(img => {
-            const imgHeight = img.getBoundingClientRect().height;
-            if (imgHeight > maxHeight) {
-                maxHeight = imgHeight;
-            }
-        });
-
-        // расчет и установка начальных позиций
-        let leftOffset = 10; // ночальный отступ слева
-        images.forEach(img => {
-            const rect = img.getBoundingClientRect();
-            const imgHeight = rect.height;
-
-            // установка начальных позиций
-            img.style.left = `${leftOffset}px`;
-            img.style.top = `${(maxHeight - imgHeight)}px`;
-            img.style.zIndex = zIndex++; // присвоение значения z-index
-
-            // перевычисление левого отступа для следующего img
-            leftOffset += rect.width;
-
-            img.addEventListener('mousedown', (e) => {
-                e.preventDefault();
-                const element = event.target;
-                const offsetX = event.clientX - element.getBoundingClientRect().left;
-                const offsetY = event.clientY - element.getBoundingClientRect().top;
-
-                // перенос кликнутого img наверх наращивая zIndex
-                element.style.zIndex = zIndex++;
-
+            const initializeImages = () => {
+                // это нахождение максимальной height среди всех картинок
+                let maxHeight = 0;
                 images.forEach(img => {
-                    console.log(img.src, img.style.zIndex);
+                    const style = getComputedStyle(img);
+                    const paddingTop = parseFloat(style.paddingTop);
+                    const paddingBottom = parseFloat(style.paddingBottom);
+                    const imgHeight = img.getBoundingClientRect().height + paddingTop + paddingBottom; // учитываем padding
+                    if (imgHeight > maxHeight) {
+                        maxHeight = imgHeight;
+                    }
                 });
 
-                element.classList.add('dragging');
+                // расчет и установка начальных позиций
+                let leftOffset = 8; // начальный отступ слева
+                let topOffset = 8; // начальный отступ сверху
+                let gap = 4; // отступ между
+                images.forEach(img => {
+                    const style = getComputedStyle(img);
+                    const paddingTop = parseFloat(style.paddingTop);
+                    const paddingLeft = parseFloat(style.paddingLeft);
+                    const paddingRight = parseFloat(style.paddingRight);
+                    const paddingBottom = parseFloat(style.paddingBottom);
 
-                const onMouseMove = (moveEvent) => {
-                    element.style.left = `${moveEvent.clientX - offsetX}px`;
-                    element.style.top = `${moveEvent.clientY - offsetY}px`;
-                    element.style.padding = '0px';
-                };
+                    const rect = img.getBoundingClientRect();
+                    const imgHeight = rect.height;
+                    const imgWidth = rect.width;
 
-                const onMouseUp = () => {
-                    element.classList.remove('dragging');
-                    document.removeEventListener('mousemove', onMouseMove);
-                    document.removeEventListener('mouseup', onMouseUp);
-                };
+                    // установка начальных позиций
+                    img.style.left = `${leftOffset + paddingLeft}px`;
+                    img.style.top = `${(topOffset + maxHeight - imgHeight - paddingTop - paddingBottom)}px`;
+                    img.style.zIndex = zIndex++; // присвоение значения z-index
 
-                document.addEventListener('mousemove', onMouseMove);
-                document.addEventListener('mouseup', onMouseUp);
+                    // перевычисление левого отступа и gap для следующего img
+                    
+                    leftOffset += imgWidth + paddingLeft + paddingRight + gap;
+
+                    // Устанавливаем padding на 0px
+                    img.style.padding = '0px';
+
+                    img.addEventListener('mousedown', (e) => {
+                        e.preventDefault();
+                        const element = e.target;
+                        const offsetX = e.clientX - element.getBoundingClientRect().left;
+                        const offsetY = e.clientY - element.getBoundingClientRect().top;
+
+                        // перенос кликнутого img наверх наращивая zIndex
+                        element.style.zIndex = zIndex++;
+
+                        element.classList.add('dragging');
+
+                        const onMouseMove = (moveEvent) => {
+                            element.style.left = `${moveEvent.clientX - offsetX}px`;
+                            element.style.top = `${moveEvent.clientY - offsetY}px`;
+                        };
+
+                        const onMouseUp = () => {
+                            element.classList.remove('dragging');
+                            document.removeEventListener('mousemove', onMouseMove);
+                            document.removeEventListener('mouseup', onMouseUp);
+                        };
+
+                        document.addEventListener('mousemove', onMouseMove);
+                        document.addEventListener('mouseup', onMouseUp);
+                    });
+                });
+            };
+
+            let imagesLoaded = 0;
+            images.forEach(img => {
+                if (img.complete) {
+                    imagesLoaded++;
+                    if (imagesLoaded === images.length) {
+                        initializeImages();
+                    }
+                } else {
+                    img.addEventListener('load', () => {
+                        imagesLoaded++;
+                        if (imagesLoaded === images.length) {
+                            initializeImages();
+                        }
+                    });
+                }
             });
         });
+
     </script>
-
-
-
 </body>
 
 </html>
