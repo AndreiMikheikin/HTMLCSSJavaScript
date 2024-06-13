@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#menu-container {
+    
+    background-color: #eee;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.main-menu{
+    display: flex;
+    list-style: none;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item > a {
+    display: block;
+    padding: 14px 20px;
+    color: #b44;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-item > a:hover {
+    background-color: #ddd;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #eee;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+}
+
+.submenu .menu-item > a {
+    white-space: nowrap;
+}
+
+.menu-item:hover > .submenu {
+    display: block;
+}
+
+.submenu .submenu {
+    top: 50%;
+    left: 100%;
+}
+
+.menu-item.has-submenu > a::after {
+    content: "\f0da";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 10px;
+}
