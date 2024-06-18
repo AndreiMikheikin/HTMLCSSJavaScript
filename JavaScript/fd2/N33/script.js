@@ -2,11 +2,15 @@ document.getElementById('clock-start').addEventListener('click', () => {
     const diameterInput = document.getElementById('d-input');
     const diameter = parseInt(diameterInput.value);
 
+    clearInterval(window.clockInterval);
+
     if (diameter < 200 || diameter > 800 || isNaN(diameter)) {
         alert('Введите правильный диаметр от 200 до 800.');
         return;
     }
 
+    clearInterval(window.clockInterval); // сбрасываем интервал
+    console.clear();
     createClock(diameter);
     startClock();
 });
@@ -33,6 +37,8 @@ function createClock(diameter) {
     clock.id = 'clock';
     clock.style.width = `${diameter}px`;
     clock.style.height = `${diameter}px`;
+    clock.style.borderWidth = `${diameter * 0.015}px`;
+    clock.style.boxShadow = `${diameter * 0}px ${diameter * 0}px ${diameter * 0.03}px ${diameter * 0.015}px rgba(0, 0, 0, 0.3)`;
 
     //Это часть боловства
     clock.addEventListener('click', () => {
@@ -44,17 +50,21 @@ function createClock(diameter) {
     const hourHand = document.createElement('div');
     hourHand.classList.add('hand', 'hour-hand');
     hourHand.style.height = `${diameter * 0.25}px`;// высота относительно диаметра
+    hourHand.style.width = `${diameter * 0.015}px`;// относительно диаметра
 
     //Минутная стрелка
     const minuteHand = document.createElement('div');
     minuteHand.classList.add('hand', 'minute-hand');
     minuteHand.style.height = `${diameter * 0.35}px`;// высота относительно диаметра
+    minuteHand.style.width = `${diameter * 0.01}px`;// высота относительно диаметра
 
     //Секундная стрелка
     const secondHand = document.createElement('div');
     secondHand.classList.add('hand', 'second-hand');
     secondHand.style.height = `${diameter * 0.45}px`;// высота относительно диаметра
+    secondHand.style.width = `${diameter * 0.005}px`;// высота относительно диаметра
 
+    //Отображение времени
     const timeDisplay = document.createElement('div');
     timeDisplay.id = 'time-display';
     timeDisplay.style.fontSize = `${diameter * 0.1}px`; // зависимость размера шрифта от диаметра
@@ -118,9 +128,11 @@ function startClock() {
         // обновляем отображение времени
         const timeDisplay = document.getElementById('time-display');
         timeDisplay.innerText = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+        console.log('Текущее время: ' + timeDisplay.innerText);
     }
 
-    //Обновляем часы раз в секунду
+    //Устанавливаем интервал обновления часов
     updateClock();
-    setInterval(updateClock, 1000);
+    window.clockInterval = setInterval(updateClock, 1000);
 }
