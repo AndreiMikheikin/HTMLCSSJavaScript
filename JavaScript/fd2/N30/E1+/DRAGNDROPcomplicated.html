@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>drag&amp;drop</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body.not-allowed {
+            cursor: not-allowed;
+        }
+
+        #container {
+            position: relative;
+            width: 80%;
+            height: 600px;
+            border: 1px solid black;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        img {
+            cursor: grab;
+        }
+
+        img.dragging {
+            cursor: grabbing;
+        }
+    </style>
+</head>
+
+<body style="min-height: 100vh">
+    <div id="container">
+        <img src="http://fe.it-academy.by/Sites/0000007/sax.jpg">
+        <img src="http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png" width="100">
+        <img src="http://fe.it-academy.by/Sites/0000007/Man-and-woman.png" width="150">
+        <img src="http://fe.it-academy.by/Sites/0000007/No_smoking.png" style="padding-left: 50px">
+        <img src="http://fe.it-academy.by/Sites/0000007/sax.jpg">
+        <img src="http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png" width="100">
+        <img src="http://fe.it-academy.by/Sites/0000007/Man-and-woman.png" width="150">
+        <img src="http://fe.it-academy.by/Sites/0000007/No_smoking.png" style="padding-left: 50px">
+        <img src="http://fe.it-academy.by/Sites/0000007/sax.jpg">
+        <img src="http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png" width="100">
+        <img src="http://fe.it-academy.by/Sites/0000007/Man-and-woman.png" width="150">
+        <img src="http://fe.it-academy.by/Sites/0000007/No_smoking.png" style="padding-left: 50px">
+        <img src="http://fe.it-academy.by/Sites/0000007/sax.jpg">
+        <img src="http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png" width="100">
+        <img src="http://fe.it-academy.by/Sites/0000007/Man-and-woman.png" width="150">
+        <img src="http://fe.it-academy.by/Sites/0000007/No_smoking.png" style="padding-left: 50px">
+        <img src="http://fe.it-academy.by/Sites/0000007/sax.jpg">
+        <img src="http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png" width="100">
+        <img src="http://fe.it-academy.by/Sites/0000007/Man-and-woman.png" width="150">
+        <img src="http://fe.it-academy.by/Sites/0000007/No_smoking.png" style="padding-left: 50px">
+        <img src="http://fe.it-academy.by/Sites/0000007/sax.jpg">
+        <img src="http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png" width="100">
+        <img src="http://fe.it-academy.by/Sites/0000007/Man-and-woman.png" width="150">
+        <img src="http://fe.it-academy.by/Sites/0000007/No_smoking.png" style="padding-left: 50px">
+        <img src="http://fe.it-academy.by/Sites/0000007/sax.jpg">
+        <img src="http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png" width="100">
+        <img src="http://fe.it-academy.by/Sites/0000007/Man-and-woman.png" width="150">
+        <img src="http://fe.it-academy.by/Sites/0000007/No_smoking.png" style="padding-left: 50px">
+        <img src="http://fe.it-academy.by/Sites/0000007/sax.jpg">
+        <img src="http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png" width="100">
+        <img src="http://fe.it-academy.by/Sites/0000007/Man-and-woman.png" width="150">
+        <img src="http://fe.it-academy.by/Sites/0000007/No_smoking.png" style="padding-left: 50px">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let zIndex = 1; // базовое значение z-index
+            let draggingImg = null; // переменная для хранения текущего перетаскиваемого изображения
+
+            const container = document.getElementById('container');
+            const images = container.querySelectorAll('img');
+            const coordinates = []; // массив объектов для хранения координат
+
+            const getCoordinates = () => {
+                images.forEach(img => {
+                    // получение актуальных координат относительно документа
+                    const rect = img.getBoundingClientRect();
+                    const left = rect.left + window.scrollX;
+                    const top = rect.top + window.scrollY;
+
+                    // запись координат в массив объектов
+                    coordinates.push({ left, top });
+                });
+            };
+
+            const setPosition = () => {
+                images.forEach((img, index) => {
+                    // получение координат из массива
+                    const { left, top } = coordinates[index];
+
+                    // установка абсолютного позиционирования с текущими координатами
+                    img.style.position = 'absolute';
+                    img.style.left = `${left - container.getBoundingClientRect().left}px`;
+                    img.style.top = `${top - container.getBoundingClientRect().top}px`;
+                    img.style.zIndex = zIndex++;
+
+                    img.addEventListener('mousedown', (e) => {
+                        e.preventDefault();
+                        draggingImg = e.target; // Устанавливаем текущее перетаскиваемое изображение
+                        const offsetX = e.clientX - draggingImg.getBoundingClientRect().left;
+                        const offsetY = e.clientY - draggingImg.getBoundingClientRect().top;
+
+                        // перенос кликнутого img наверх наращивая zIndex
+                        draggingImg.style.zIndex = zIndex++;
+                        draggingImg.classList.add('dragging');
+
+                        // установка padding на 0px
+                        draggingImg.style.padding = '0px';
+                        
+                        const onMouseMove = (moveEvent) => {
+                            let newLeft = moveEvent.clientX - offsetX - container.getBoundingClientRect().left + window.scrollX;
+                            let newTop = moveEvent.clientY - offsetY - container.getBoundingClientRect().top + window.scrollY;
+
+                            const containerRect = container.getBoundingClientRect();
+                            const imgRect = draggingImg.getBoundingClientRect();
+
+                            // Ограничение перемещения внутри контейнера
+                            if (newLeft < 0) newLeft = 0;
+                            else if (newLeft + imgRect.width > containerRect.width) newLeft = containerRect.width - imgRect.width;
+
+                            if (newTop < 0) newTop = 0;
+                            else if (newTop + imgRect.height > containerRect.height) newTop = containerRect.height - imgRect.height;
+
+                            draggingImg.style.left = `${newLeft}px`;
+                            draggingImg.style.top = `${newTop}px`;
+
+                            // Проверка, если курсор находится за пределами контейнера
+                            if (moveEvent.clientX < containerRect.left || moveEvent.clientX > containerRect.right ||
+                                moveEvent.clientY < containerRect.top || moveEvent.clientY > containerRect.bottom) {
+                                document.body.classList.add('not-allowed');
+                            } else {
+                                document.body.classList.remove('not-allowed');
+                            }
+                        };
+
+                        const onMouseUp = () => {
+                            draggingImg.classList.remove('dragging');
+                            draggingImg = null;
+                            document.body.classList.remove('not-allowed');
+                            document.removeEventListener('mousemove', onMouseMove);
+                            document.removeEventListener('mouseup', onMouseUp);
+                        };
+
+                        document.addEventListener('mousemove', onMouseMove);
+                        document.addEventListener('mouseup', onMouseUp);
+                    });
+                });
+            };
+
+            window.onload = () => {
+                getCoordinates();
+                setPosition();
+            };
+        });
+    </script>
+</body>
+
+</html>
