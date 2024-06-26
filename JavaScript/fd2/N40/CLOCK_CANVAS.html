@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Clock</title>
+    <style>
+        #clock-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+        }
+
+        #clock {
+            background-color: white;
+            border-radius: 50%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #d-input {
+            width: 200px;
+            padding: 10px;
+            margin-right: 10px;
+            box-sizing: border-box;
+        }
+
+        #clock-start {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock-container">
+        <canvas id="clock"></canvas>
+    </div>
+    <div id="controls">
+        <input type="number" id="d-input" min="200" max="800" placeholder="Введите диаметр (200-800)">
+        <button id="clock-start">Запуск часов</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('clock-start').addEventListener('click', () => {
+                const diameterInput = document.getElementById('d-input');
+                const diameter = parseInt(diameterInput.value);
+
+                if (diameter < 200 || diameter > 800 || isNaN(diameter)) {
+                    alert('Введите правильный диаметр от 200 до 800.');
+                    return;
+                }
+
+                clearInterval(window.clockInterval); // Сбрасываем интервал
+                console.clear();
+                createClock(diameter);
+                startClock(diameter);
+            });
+
+            // Цвета фона для часов
+            const bgColors = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',
+                '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
+                '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A',
+                '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
+                '#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC',
+                '#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
+                '#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680',
+                '#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
+                '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3',
+                '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
+            let currentColorIndex = 0;
+
+            //Создаем часы
+            function createClock(diameter) {
+                const clockCanvas = document.getElementById('clock');
+                clockCanvas.width = diameter;
+                clockCanvas.height = diameter;
+
+                const ctx = clockCanvas.getContext('2d');
+                ctx.clearRect(0, 0, diameter, diameter);
+
+                clockCanvas.addEventListener('click', () => {
+                    currentColorIndex = (currentColorIndex + 1) % bgColors.length;
+                    drawClockBackground(ctx, diameter, bgColors[currentColorIndex]);
+                });
+
+                drawClockBackground(ctx, diameter, 'white'); // Рисуем белый фон
+                drawClockFace(ctx, diameter); // Рисуем циферблат
+            }
+
+            // Функция для рисования фона часов
+            function drawClockBackground(ctx, diameter, color) {
+                const radius = diameter / 2;
+                ctx.beginPath();
+                ctx.arc(radius, radius, radius - radius * 0.03, 0, 2 * Math.PI);
+                ctx.fillStyle = color;
+                ctx.fill();
+                ctx.lineWidth = radius * 0.03;
+                ctx.strokeStyle = '#333';
+                ctx.stroke();
+            }
+
+            //Создаем циферблат
+            function drawClockFace(ctx, diameter) {
+                const radius = diameter / 2;
+                ctx.font = `${radius * 0.1}px Arial`;
+                ctx.textBaseline = 'middle';
+                ctx.textAlign = 'center';
+
+                for (let i = 1; i <= 12; i++) {
+                    const angle = (i * 30) * (Math.PI / 180) - Math.PI / 2;
+                    const x = radius + (radius * 0.8) * Math.cos(angle);
+                    const y = radius + (radius * 0.8) * Math.sin(angle);
+                    ctx.beginPath();
+                    ctx.arc(x, y, diameter * 0.045, 0, 2 * Math.PI);
+                    ctx.fillStyle = 'rgba(33,33,33,0.3)';
+                    ctx.fill();
+                    ctx.fillStyle = 'white';
+                    ctx.fillText(i, x, y);
+                }
+            }
+
+            //Запускаем часы
+            function startClock(diameter) {
+                const clockCanvas = document.getElementById('clock');
+                const ctx = clockCanvas.getContext('2d');
+                const radius = diameter / 2;
+
+                function updateClock() {
+                    ctx.clearRect(0, 0, diameter, diameter);
+                    drawClockBackground(ctx, diameter, bgColors[currentColorIndex]);
+                    drawClockFace(ctx, diameter);
+
+                    //Получаем время
+                    const now = new Date();
+                    const seconds = now.getSeconds();
+                    const minutes = now.getMinutes();
+                    const hours = now.getHours();
+
+                    const secondAngle = (seconds / 60) * 2 * Math.PI;
+                    const minuteAngle = (minutes / 60) * 2 * Math.PI;
+                    const hourAngle = (hours / 12) * 2 * Math.PI + (minutes / 60) * (Math.PI / 6);
+                    
+                    //Часовая
+                    drawHand(ctx, radius, hourAngle, radius * 0.6, diameter * 0.015, 'black');
+                    //Минутная
+                    drawHand(ctx, radius, minuteAngle, radius * 0.75, diameter * 0.01, 'black');
+                    //Секундная
+                    drawHand(ctx, radius, secondAngle, radius * 0.9, diameter * 0.005, 'red');
+                    
+                    // обновляем отображение времени
+                    ctx.font = `${diameter * 0.1}px Arial`;
+                    ctx.fillStyle = 'black';
+                    ctx.fillText(`${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`, radius, radius * 1.35);
+
+                    console.log('Текущее время: ' + `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`);
+                }
+
+                //Рисуем стрелки
+                function drawHand(ctx, center, angle, length, width, color) {
+                    ctx.save(); // Сохраняем текущее состояние
+                    ctx.translate(center, center);
+                    ctx.rotate(angle);
+                    ctx.beginPath();
+                    ctx.moveTo(0, length * 0.09);
+                    ctx.lineTo(0, -length);
+                    ctx.lineWidth = width;
+                    ctx.strokeStyle = color;
+                    ctx.stroke();
+                    ctx.restore(); // Восстанавливаем состояние
+                }
+
+                //Устанавливаем интервал обновления часов
+                updateClock();
+                window.clockInterval = setInterval(updateClock, 1000);
+            }
+        });
+    </script>
+</body>
+
+</html>
