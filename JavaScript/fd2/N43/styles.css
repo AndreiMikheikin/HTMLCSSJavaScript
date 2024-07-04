@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#game-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #ff5;
+    border: 1px solid black;
+}
+.cart {
+    position: absolute;
+    width: 10px;
+    height: 80px;
+}
+#cart-left {
+    left: 0;
+    background-color: green;
+}
+#cart-right {
+    right: 0;
+    background-color: blue;
+}
+#ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+#start-btn {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: lightgray;
+    cursor: pointer;
+}
+#score {
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 24px;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
         #chessboard {
             border: 1px solid black;
         }
+
         .mini-board {
             display: grid;
             grid-template-columns: repeat(8, 16px);
@@ -16,29 +18,36 @@
             margin: 2px;
             cursor: pointer;
         }
+
         .mini-board div {
             width: 16px;
             height: 16px;
         }
+
         .white {
             background-color: #FFFFFF;
         }
+
         .black {
             background-color: #000000;
         }
+
         .queen {
             background-image: url('queen.png');
             background-size: cover;
         }
+
         #allSolutions {
             display: flex;
             flex-wrap: wrap;
         }
+
         .selected {
             outline: 5px solid red;
         }
     </style>
 </head>
+
 <body>
     <canvas id="chessboard" width="480" height="480"></canvas>
     <div>
@@ -50,6 +59,39 @@
     <p id="solutionCount"></p>
     <div id="allSolutions"></div>
     <script>
+        // Функция для рисования ферзя
+        function drawQueen(col, row) {
+            ctx.drawImage(queenImg, col * size, row * size, size, size);
+        }
+
+        // Подсвечиваем клетки, атакуемые ферзем
+        function highlightAttacks(row, col) {
+            drawChessboard();
+            drawQueens(solutions[document.getElementById('solutionNumber').value - 1]);
+
+            ctx.filter = 'hue-rotate(180deg)'; // Применяем зеленый фильтр
+
+            // Подсвечиваем строку и столбец
+            for (let i = 0; i < 8; i++) {
+                if (i !== row) drawQueen(col, i);
+                if (i !== col) drawQueen(i, row);
+            }
+
+            // Подсвечиваем диагонали
+            for (let i = -7; i <= 7; i++) {
+                if (i !== 0) {
+                    if (row + i >= 0 && row + i < 8 && col + i >= 0 && col + i < 8) {
+                        drawQueen(col + i, row + i);
+                    }
+                    if (row + i >= 0 && row + i < 8 && col - i >= 0 && col - i < 8) {
+                        drawQueen(col - i, row + i);
+                    }
+                }
+            }
+
+            ctx.filter = 'none'; // Сбрасываем фильтр
+        }
+
         const canvas = document.getElementById('chessboard');
         const ctx = canvas.getContext('2d');
         const boardSize = 480;
@@ -74,7 +116,7 @@
         function drawQueens(queens) {
             for (let row = 0; row < 8; row++) {
                 const col = queens[row];
-                ctx.drawImage(queenImg, col * size, row * size, size, size);
+                drawQueen(col, row);
             }
         }
 
@@ -153,32 +195,6 @@
             });
         }
 
-        // Подсвечиваем клетки, атакуемые ферзем
-        function highlightAttacks(row, col) {
-            drawChessboard();
-            drawQueens(solutions[document.getElementById('solutionNumber').value - 1]);
-
-            ctx.filter = 'hue-rotate(180deg)'; // Применяем зеленый фильтр
-
-            // Подсвечиваем строку и столбец
-            for (let i = 0; i < 8; i++) {
-                if (i !== row) ctx.drawImage(queenImg, col * size, i * size, size, size);
-                if (i !== col) ctx.drawImage(queenImg, i * size, row * size, size, size);
-            }
-
-            // Подсвечиваем диагонали
-            for (let i = -7; i <= 7; i++) {
-                if (row + i >= 0 && row + i < 8 && col + i >= 0 && col + i < 8 && i !== 0) {
-                    ctx.drawImage(queenImg, (col + i) * size, (row + i) * size, size, size);
-                }
-                if (row + i >= 0 && row + i < 8 && col - i >= 0 && col - i < 8 && i !== 0) {
-                    ctx.drawImage(queenImg, (col - i) * size, (row + i) * size, size, size);
-                }
-            }
-
-            ctx.filter = 'none'; // Сбрасываем фильтр
-        }
-
         // Получаем позицию ферзя по клику и подсвечиваем атаки
         canvas.addEventListener('click', (event) => {
             const rect = canvas.getBoundingClientRect();
@@ -214,6 +230,8 @@
         }
 
         main();
+
     </script>
 </body>
+
 </html>
