@@ -1,25 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница аутентификации</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-    <script>
-        const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_PROJECT_ID.appspot.com",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
-        };
-        firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-    </script>
 </head>
+
 <body>
     <div class="container">
         <h2 id="form-title">Вход</h2>
@@ -30,8 +18,10 @@
         <form id="auth-form" action="javascript:void(0);" onsubmit="handleSubmit()">
             <input type="hidden" id="role" name="role">
             <input type="text" id="email" name="email" placeholder="Email" required>
-            <input type="password" id="password" name="password" placeholder="Пароль" required oninput="validatePassword()">
-            <input type="password" id="confirm-password" name="confirm-password" placeholder="Подтвердите пароль" required style="display: none;" oninput="validatePassword()">
+            <input type="password" id="password" name="password" placeholder="Пароль" required
+                oninput="validatePassword()">
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Подтвердите пароль"
+                required style="display: none;" oninput="validatePassword()">
             <div id="password-requirements" class="password-requirements" style="display: none;">
                 <div class="requirement" id="length-check">
                     <span class="check">✓</span> Не менее 8 символов
@@ -65,5 +55,37 @@
     </div>
 
     <script src="author.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+
+        const firebaseConfig = {
+
+            apiKey: "AIzaSyAjJIU3lCSJivMJ9UbihXD1dqu8ivf-8OU",
+
+            authDomain: "menuhelperapp.firebaseapp.com",
+
+            projectId: "menuhelperapp",
+
+            storageBucket: "menuhelperapp.appspot.com",
+
+            messagingSenderId: "118002716868",
+
+            appId: "1:118002716868:web:2623db6910ab0771c87991",
+
+            measurementId: "G-RNTTG6L21G"
+
+        };
+
+
+        // Initialize Firebase
+
+        const app = initializeApp(firebaseConfig);
+
+        const analytics = getAnalytics(app);
+
+    </script>
 </body>
+
 </html>
