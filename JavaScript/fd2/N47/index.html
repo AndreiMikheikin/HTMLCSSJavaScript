@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теннис SVG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="start-btn">старт!</div>
+    <svg id="game-container" width="600" height="400">
+        <rect id="cart-left" class="cart" x="0" y="160" width="10" height="80" fill="green"></rect>
+        <rect id="cart-right" class="cart" x="590" y="160" width="10" height="80" fill="blue"></rect>
+        <circle id="ball" cx="300" cy="200" r="10" fill="red"></circle>
+        <text id="score" x="50%" y="30" text-anchor="middle" font-size="24">0:0</text>
+    </svg>
+    <script src="script.js"></script>
+</body>
+</html>
