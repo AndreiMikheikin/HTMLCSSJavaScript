@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепты напитков и блюд</title>
+    <style>
+        body {
+            font-family: serif;
+        }
+
+        button {
+            background: #0f0;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .container {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Коктейль Бар и Ресторан</h1>
+
+    <div class="container">
+        <h2>Напитки</h2>
+        <button onclick="addDrink()">Добавить напиток</button>
+        <button onclick="getDrink()">Информация о напитке</button>
+        <button onclick="deleteDrink()">Удалить напиток</button>
+        <button onclick="listAllDrinks()">Коктейльная карта</button>
+    </div>
+
+    <div class="container">
+        <h2>Блюда</h2>
+        <button onclick="addDish()">Добавить блюдо</button>
+        <button onclick="getDish()">Информация о блюде</button>
+        <button onclick="deleteDish()">Удалить блюдо</button>
+        <button onclick="listAllDishes()">Меню</button>
+    </div>
+
+    <script src="LocStorage.js"></script>
+    <script>
+        'use strict';
+
+        const drinkStorage = new LocStorageClass('drinks');
+        const dishStorage = new LocStorageClass('dishes');
+
+        function addDrink() {
+            const name = prompt('Введите название напитка:');
+            if (name === null || name.trim() === '') {
+                alert('Название не может быть пустым или отменено!');
+                return;
+            }
+
+            const exDrink = drinkStorage.getValue(name);
+            if (exDrink) {
+                alert('Напиток с таким именем уже существует!');
+                return;
+            }
+
+            const alcoholic = confirm('Напиток алкогольный?');
+            const recipe = prompt('Введите рецепт:');
+
+            drinkStorage.addValue(name, { alcoholic, recipe });
+            alert('Напиток успешно добавлен!');
+        }
+
+        function getDrink() {
+            const name = prompt('Введите название напитка:');
+            const drink = drinkStorage.getValue(name);
+
+            if (drink) {
+                alert(`Название: ${name}\nАлкогольный: ${drink.alcoholic ? 'Да' : 'Нет'}\nРецепт: ${drink.recipe}`);
+            } else {
+                alert('Напиток с таким названием не найден!');
+            }
+        }
+
+        function deleteDrink() {
+            const name = prompt('Введите название напитка:');
+            const deleted = drinkStorage.deleteValue(name);
+
+            if (deleted) {
+                alert('Напиток успешно удален');
+            } else {
+                alert('Напиток с таким названием не найден!');
+            }
+        }
+
+        function listAllDrinks() {
+            const drinks = drinkStorage.getKeys();
+            if (drinks.length > 0) {
+                alert('Коктейльная карта:\n' + drinks.join('\n'));
+            } else {
+                alert('Коктейльная карта пуста!');
+            }
+        }
+
+        function addDish() {
+            const name = prompt('Введите название блюда:');
+            if (name === null || name.trim() === '') {
+                alert('Название не может быть пустым или отменено!');
+                return;
+            }
+
+            const exDish = dishStorage.getValue(name);
+            if (exDish) {
+                alert('Блюдо с таким именем уже существует!');
+                return;
+            }
+
+            const ingredients = prompt('Введите ингредиенты:');
+            const recipe = prompt('Введите рецепт:');
+
+            dishStorage.addValue(name, { ingredients, recipe });
+            alert('Блюдо успешно добавлено!');
+        }
+
+        function getDish() {
+            const name = prompt('Введите название блюда:');
+            const dish = dishStorage.getValue(name);
+
+            if (dish) {
+                alert(`Название: ${name}\nИнгредиенты: ${dish.ingredients}\nРецепт: ${dish.recipe}`);
+            } else {
+                alert('Блюдо с таким названием не найдено!');
+            }
+        }
+
+        function deleteDish() {
+            const name = prompt('Введите название блюда:');
+            const deleted = dishStorage.deleteValue(name);
+
+            if (deleted) {
+                alert('Блюдо успешно удалено');
+            } else {
+                alert('Блюдо с таким названием не найдено!');
+            }
+        }
+
+        function listAllDishes() {
+            const dishes = dishStorage.getKeys();
+            if (dishes.length > 0) {
+                alert('Меню:\n' + dishes.join('\n'));
+            } else {
+                alert('Меню пусто!');
+            }
+        }
+    </script>
+</body>
+
+</html>
